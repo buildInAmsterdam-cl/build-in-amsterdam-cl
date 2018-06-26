@@ -1,3 +1,8 @@
+--drop table admin_user;
+--drop table captions;
+--drop table media;
+--drop table cases;
+
 create table if not exists admin_user(
     admin_id serial primary key,
     name varchar(20),
@@ -25,7 +30,7 @@ values
 ('Two locations one museum', 'A platform that reflects the contemporary and classic duality of the museum.', 'Frans Hals Museum', 'Frans Hals Museum and KesselsKramer commissioned us to create a platform that reflects the contemporary and classic duality of the museum.', 'Awwwards Site of the Day, FWA Site of the Day, CSS Design Award', 'Deliverables: Design, development', 'www.franshalmuseum.nl', 'http://www.buildinamsterdam.com/app/uploads/2018/04/Frans-HalsH-KoosBreukelCombi_Zoom.jpg'),
 ('E-commerce of the Year ‘17', 'Translating the world of Mendo into an e-commerce platform that pushes the standard in online book shopping.', 'Mendo', 'Mendo is a candy store for book aficionados with a flagship store situated in one of the Amsterdam’s most inspirational neighbors, called The 9 Streets (De 9 Straatjes). The store is fully dedicated to sharing the love for beautiful books.', 'Awwward E-commerce Site of the Year 2017, FWA Award, CSS Design Award', 'E-commerce platform', 'www.mendo.nl', 'http://www.buildinamsterdam.com/app/uploads/2017/03/MENDO_Collage_v2.jpg'),
 ('Sustainable outerware', 'A brand identity translated into a matching e-commerce platform, build to communicate all the aspects of the brand and connects with its community.', 'Open Ware', 'Open Wear is a brand built by - and for - passionate powder riders. They’re out to set a  new transparent standard within the outerwear industry.', 'E-commerce site of the year nominee & Site of the Day on Awwwards, Mindsparkle, Maxi Best-of The Gallery, Siiimple', 'Branding, design & development', 'www.open-wear.com', 'http://www.buildinamsterdam.com/app/uploads/2018/06/123.jpg'),
-('Excellence through quality', "ETQ is not, it's design", 'ETQ', 'ETQ is all about minimalism. We conveyed this into every single touchpoint, both on and offline.', 'Awwwards, Cssdesign, Siteinspire', 'Branding, Design, Development', 'www.etq-amsterdam.com', 'http://www.buildinamsterdam.com/app/uploads/2018/04/ETQ_Header_Big-1.jpg' ),
+('Excellence through quality', 'ETQ is not, it`s design', 'ETQ', 'ETQ is all about minimalism. We conveyed this into every single touchpoint, both on and offline.', 'Awwwards, Cssdesign, Siteinspire', 'Branding, Design, Development', 'www.etq-amsterdam.com', 'http://www.buildinamsterdam.com/app/uploads/2018/04/ETQ_Header_Big-1.jpg' ),
 ('Bringing fragrances to life', 'An e-commerce platform that sparks all senses except smell. For now...', 'Abel vita odor', 'We created an e-commerce platform for Abel fragrances that sparks all senses, except smell.', 'Awwwards Site of the Day, CSSDSGN, thegallery.io', 'Design and technology', 'www.abelodor.com', 'Background image - http://www.buildinamsterdam.com/app/uploads/2016/08/abel_cover.jpg'),
 ('See Buy Fly rebranding', ' Rebranding the touchpoints of the Schiphol Airside Shopping Experience.', 'See Buy Fly', 'Amsterdam Schiphol Airport is one of the best airports in the world and needed an airside shopping experience in tune with this reputation. We rebranded the visual identity for See Buy Fly and translated this into a brand guide.', 'Coming soon...', 'Brand identity, print, photography, art direction, design and development', 'www.seebuyflyhappyhour.nl', 'http://www.buildinamsterdam.com/app/uploads/2016/08/SBF_cover_1.jpg'),
 ('Extrodinary world of A-dam', 'A playful e-commerce platform that mirrors the character of the brand.', 'A-dam Underwear', 'Dive into the extraordinary world of A-dam Underwear and discover how we translated their unique brand story into a playful combination of branding and e-commerce.', 'E-commerce site of the year nominee Awwwards, Mindsparkle, Maxi Best-of The Gallery, Siiimple', 'Branding, design & development', 'www.adamunderwear.com', 'http://www.buildinamsterdam.com/app/uploads/2017/07/8.jpg');
@@ -71,7 +76,7 @@ values
 (2, 'http://www.buildinamsterdam.com/app/uploads/2017/03/7-800x0-c-default.png', 'Book 6'),
 (2, 'http://www.buildinamsterdam.com/app/uploads/2017/03/download-2.jpg', 'Book'),
 (3, 'http://www.buildinamsterdam.com/app/uploads/2018/06/123-1.gif', 'Gif'),
-(3, 'http://www.buildinamsterdam.com/app/uploads/2018/06/Devices.jpg', 'Laptop img')
+(3, 'http://www.buildinamsterdam.com/app/uploads/2018/06/Devices.jpg', 'Laptop img'),
 (3, 'http://www.buildinamsterdam.com/app/uploads/2018/06/Open-Wear-Kickstarter17-7.jpg', 'Ski img'),
 (3, 'https://player.vimeo.com/video/274071268?api=1&player_id=vjs_video_4711_Vimeo_api', 'Main concept vid'),
 (3, 'http://www.buildinamsterdam.com/app/uploads/2018/06/Mock_01-2500x0-c-default.jpg', 'Cell'),
@@ -175,9 +180,9 @@ values
 (2, 'Translation', 'We translated the world of Mendo in an e-commerce experience where the visitor can see, read and almost feel the book without touching it.'),
 (2, 'Next level books shopping', 'We were able to focus on conversion without compromising the identity & design. For example, all animation effects are based on browsing though real books.'),
 (2, 'Optimizing the experience', 'Adding smart elements enhances the seamless process of the shopping experience.'),
-(2, 'The Fun stuff', "We've directed a photography style where Mendo can showcase their book catalog in a minimalistic way."),
-(2, 'Photography', "We've directed a photography style where Mendo can showcase their book catalog in a minimalistic way."),
-(2, 'Color', "Building their e-commerce platform required us to reshape their identity. Mendo's book catalog is varied, therefore the identity touches all colors of the color spectrum in an off-tone fashion."),
+(2, 'The Fun stuff', 'We`ve directed a photography style where Mendo can showcase their book catalog in a minimalistic way.'),
+(2, 'Photography', 'We`ve directed a photography style where Mendo can showcase their book catalog in a minimalistic way.'),
+(2, 'Color', 'Building their e-commerce platform required us to reshape their identity. Mendo`s book catalog is varied, therefore the identity touches all colors of the color spectrum in an off-tone fashion.'),
 (3, 'The Brand', 'Started as a kickstarter, Open Wear evolved into a real front runner. We devised a new brand voice — from an updated logo to a new online platform.'),
 (3, 'Main Concept', 'The goal was to create a shoppable online community. We did this by using a storytelling approach with products, stories and an Instagram cloud.'),
 (3, 'Product', 'No long product descriptions. In this product detail page we show everything in a visual way. Things like the jacket’s multi-functionality, why it is cheaper, and its ethical production.'),
@@ -185,7 +190,7 @@ values
 (3, 'By and got the Community', 'Return your product by filling in the unique product code and see the jacket’s entire history. Return it directly or answer more questions to earn discount points.'),
 (3, 'Identity', 'Every visual aspect of the website is built upon a strong brand identity that respects all the brand values. We’ve sharpened the logo to express the high quality standards of the brand even better.'),
 (3, 'Brand Colors', 'We carefully picked a wide rage of new brand colors to merge the website with the products. Every darker tone works together with a light grey to keep cohesion in the modern style.'),
-(3, 'Logo', "We've updated the logo to make it match the qualitative products."),
+(3, 'Logo', 'We`ve updated the logo to make it match the qualitative products.'),
 (4, 'Identity', 'We combined minimalism and unruliness to create an identity that complements the high-quality, refined products made by ETQ.'),
 (4, 'Branding', 'Every single piece of printed communication is crafted to convey the qualitative and paring-down ethos of ETQ.'),
 (4, 'Refinement in details', 'The visual language we created for ETQ is extended to all their physical touchpoints. From shoebox to shopping experience.'),
@@ -205,10 +210,11 @@ values
 (6, 'Campaign material', 'Along with the photography we deliver a complete set of guidelines to help create campaign material for See Buy Fly, Schiphol Parking and Plaza.'),
 (6, 'Schiphol Parking', 'The new style was progressively extended to Schiphol Parking communications.'),
 (6, 'Website', 'We developed an online platform that features and implements on interesting product deals and implemented smart functions like a Wishlist and a reservation service.'),
-(7, 'The Brand', 'We enriched their black and white brand identity with a colourful extra layer, fresh icons, and new typo, to create a new, richer identity for both online and offline.')
-(7, '', '')
-(7, '', '')
-(7, '', '')
-(7, '', '')
-(7, '', '')
-(7, '', '')
+(7, 'The Brand', 'We enriched their black and white brand identity with a colourful extra layer, fresh icons, and new typo, to create a new, richer identity for both online and offline.'),
+(7, 'Concept', 'The idea of the website was to combine storytelling with product imagery, in order to tell the brand story and present the collection in a playful way.'),
+(7, 'Color', 'We selected five bright shades that match perfectly, and reflect the colourful playfulness of A-dam.'),
+(7, 'Animation', 'Animation plays a huge roll in terms of functionality and story telling. It is used for smooth scrolling, seamless page transitions, funny hover states, and other applications.'),
+(7, 'Icons', 'We’ve created a set of icons for functional use and to add a playful touch to certain elements.'),
+(7, 'Loader and details', 'A few examples of a funny website loader and a functional product detail page.'),
+(7, 'More than online', 'We helped A-dam out with packaging and retail ideas.');
+
