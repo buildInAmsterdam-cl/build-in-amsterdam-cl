@@ -1,0 +1,1 @@
+update cases where case_id = $1
