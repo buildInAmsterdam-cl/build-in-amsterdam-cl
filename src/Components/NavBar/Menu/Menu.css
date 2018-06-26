@@ -1,0 +1,11 @@
+.hide {
+    height: 0px;
+}
+
+.menu {
+    background: black;
+    color: white;
+   
+    overflow: hidden;
+    transition: 1s all ease;
+}
