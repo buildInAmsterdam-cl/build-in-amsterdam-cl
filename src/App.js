@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import loadingPageHOC from './Components/LoadingPage/LoadingPage';
 import Routes from './Routes';
 
 class App extends Component {
@@ -13,4 +14,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default loadingPageHOC(App);
