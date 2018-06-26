@@ -16,5 +16,6 @@ class App extends Component {
   }
 }
 
+
 // export default loadingPageHOC(App);
 export default App;
