@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.contactMainBox {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.leftContactPicBox {
+width: 66.666vw;
+height: stretch;    
+overflow: hidden;
+background-image: url(http://www.buildinamsterdam.com/app/uploads/2015/10/c2.jpg);
+/* 
+Other Image URL in the Carasousel
+http://www.buildinamsterdam.com/app/uploads/2015/10/studio.jpg
+*/
+background-size: 75vw;
+background-repeat: no-repeat;
+}
+
+.rightContactInfo {
+    padding: 3.325rem;
+    width: 33.333vw;
+    height: stretch;
+    text-align: left;
+}
+
+.contactText {
+    margin-bottom: 3.125rem;
+    max-width: 100%;
+    font-size: 3.125rem;
+    line-height: 3.75rem;
+}
+
+.headerTitlesCont {
+    margin: 0;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.aTagStyle {
+    text-decoration-line: none;
+    color: black;
+    transition: 3s all ease;
+}
+.spacer {
+    line-height: 1.6
+}
+
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: #000;
+    height: 0.5px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .underline:hover:after,
+  .underline:focus:after,
+  .underline:active:after {
+    right: 0;
+  }
+
+@media (max-width: 1024px) {
+    .contactMainBox {
+        display: flex;
+        flex-direction: column;
+    }
+    .leftContactPicBox {
+        width: 100%;
+        height: 60vw;
+        background-size: 100%;
+    }
+    .rightContactInfo {
+        width: 100%;
+    }
+}
