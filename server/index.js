@@ -46,7 +46,7 @@ req, res => {
 }
 )
 
-app.post('/updatecase/',
+app.post('/updatecase',
 req, res => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
