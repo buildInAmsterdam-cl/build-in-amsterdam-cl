@@ -14,7 +14,19 @@ export default class case5 extends Component{
     
     }
     componentWillMount(){
-        //axios call for media and captions
+        Axios.get('/media/5').then((res) =>{
+            console.log(res)
+            this.setState({
+                media: res.data
+            })
+        })
+
+        Axios.get('/captions/5').then((res) =>{
+            console.log(res)
+            this.setState({
+                captions: res.data
+            })
+        })
     }
     render(){
         <div>

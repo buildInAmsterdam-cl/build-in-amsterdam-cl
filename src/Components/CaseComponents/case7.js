@@ -4,6 +4,7 @@ import Full from '../Sections/Full'
 import Half from '../Sections/Half'
 import OneThird from '../Sections/OneThird'
 import TwoThirds from '../Sections/TwoThirds'
+import Axios from 'axios';
 export default class case7 extends Component{
     constructor(){
         super()
@@ -14,7 +15,19 @@ export default class case7 extends Component{
     
     }
     componentWillMount(){
-        //axios call for media and captions
+        Axios.get('/media/7').then((res) =>{
+            console.log(res)
+            this.setState({
+                media: res.data
+            })
+        })
+
+        Axios.get('/captions/7').then((res) =>{
+            console.log(res)
+            this.setState({
+                captions: res.data
+            })
+        })
     }
     render(){
         <div>

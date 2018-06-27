@@ -10,9 +10,9 @@ app.use(bodyParser.json())
 app.use(express.static('/../public/build'))
 
 massive(process.env.CONNECTION_STRING).then((dbInstance) => {
-    // dbInstance.seedFile()
-    //     .then(res => console.log('that sucSEEDed...'))
-    //     .catch(err => console.log('aww shit..', err))
+    dbInstance.seedFile()
+        .then(res => console.log('that sucSEEDed...'))
+        .catch(err => console.log('aww shit..', err))
 
     app.set('db', dbInstance)
 }).catch(err => console.log(err))
@@ -26,7 +26,7 @@ app.get('/cases',
     })
 
 app.get('/media/:id',
-req, res => {
+(req, res, next) => {
     const dbInstance = req.app.get('db')
     dbInstance.getMedia([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -35,7 +35,7 @@ req, res => {
 )
 
 app.get('/captions/:id',
-req, res => {
+(req, res, next) => {
     const dbInstance = req.app.get('db')
     dbInstance.getCaptions([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -46,7 +46,7 @@ req, res => {
 //app.get('/cases', controller.allCases)
 
 app.delete('/deletecase/:id',
-req, res => {
+(req, res, next) => {
     const dbInstance = req.app.get('db')
     dbInstance.deleteCase([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -55,7 +55,7 @@ req, res => {
 )
 
 app.put('/updatecase/:id',
-req, res => {
+(req, res, next) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
     dbInstance.updateCase([req.params.id, title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
@@ -65,7 +65,7 @@ req, res => {
 )
 
 app.post('/newcase',
-req, res => {
+(req, res, next) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
     dbInstance.updateCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
@@ -75,5 +75,5 @@ req, res => {
 )
 
 
-const port = process.env.PORT
-app.listen(port, (() => { console.log('YAY') }))
+// const port = process.env.PORT
+app.listen(3003, (() => { console.log('YAY') }))
