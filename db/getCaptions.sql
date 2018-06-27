@@ -1,0 +1,1 @@
+select * from captions where case_id = ($1)
