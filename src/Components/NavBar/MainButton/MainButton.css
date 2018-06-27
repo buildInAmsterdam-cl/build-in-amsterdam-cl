@@ -4,8 +4,39 @@
   right: 0;
   margin: 40px 35px 0 0;
   padding: 17px 13px;
-  width: 45px;
-  height: 45px;
   cursor: pointer;  
 }
 
+.circle{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fbf9f6;
+}
+
+.hamburger{
+  height:12px;
+  width: 19px;
+  z-index: 3;
+}
+
+.bar{
+  height: 2px;
+  width: 19px;
+  background: #171719;
+  margin-bottom: 3px;
+}
+
+.button-slide {
+  color: transparent;
+}
+
+.button-slide:hover {
+  background: black;
+  color: white;
+  overflow: hidden;
+  transition: 1s all ease;
+}

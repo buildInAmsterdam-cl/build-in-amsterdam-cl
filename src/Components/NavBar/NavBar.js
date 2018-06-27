@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
+import React from 'react';
 import MainButton from './MainButton/MainButton';
 import BiALogo from './BiALogo/BiALogo';
 import './NavBar.css'

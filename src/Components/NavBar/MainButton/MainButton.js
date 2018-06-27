@@ -7,7 +7,7 @@ export default class MainButton extends Component {
         super();
 
         this.state = {
-            menuDrawerAppear: false,
+            // menuDrawerAppear: false,
             menuAppear: false
         }
 
@@ -15,19 +15,27 @@ export default class MainButton extends Component {
 
     }
 
-    toggleMenu(){
+    toggleMenu() {
         this.setState({ menuAppear: !this.state.menuAppear })
-      }
+    }
 
     render() {
         return (
             <div>
                 <div className="main-button" >
-                  <button onClick={this.toggleMenu}>Button</button>
-                  <div className={this.state.menuDrawerAppear? 'button-slide' : 'hide'}>Menu</div>
+                    <div className="circle" onClick={this.toggleMenu}>
+                        <div className="hamburger">
+                            <div className="bar"></div>
+                            <div className="bar"></div>
+                            <div className="bar"></div>
+                        </div>
+                    </div>
+                    {/* <div className="button-slide">Menu</div> */}
                 </div>
                 <div></div>
-                <Menu menuToggle = {this.state.menuAppear ? 'menu' : 'menu hide'}/>
+                <Menu
+                    menuStyles={this.state.menuAppear ? 'menu' : 'menu hide'}
+                    menuClose={this.toggleMenu} />
             </div>
         )
     }
