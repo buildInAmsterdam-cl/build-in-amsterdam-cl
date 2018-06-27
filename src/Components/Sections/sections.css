@@ -1,55 +1,74 @@
 .full{
     display: flex;
+    flex-direction: column; 
     height: 100vh;
+    width: 100%
+
 }
 
 .half{
     display: flex;
     height: 100vh;
+    width: 100%;
+    flex-direction: row; 
 }
 
-.oneThird{
+.onethird{
     display: flex;
     height: 100vh;
+    width: 100%;
+    flex-direction: row; 
 }
 
 .twoThirds{
     display: flex;
     height: 100vh;
+    width: 100%;
+    flex-direction: row; 
 }
 
 .full1{
     height: 100%;
-    width: 100%
+    width: 100%;
+    flex-direction: column; 
 }
 
 .half1{
     height: 100%;
-    width: 50%
+    width: 50%;
+    flex-direction: row
 }
 
 .half2{
     height: 100%;
-    width: 50%
+    width: 50%;
+    flex-direction: row
 }
 
-.oneThird1{
+.onethird1{
     height: 100%;
-    width: 33.33333333333%
+    width: 33.33333333333%;
+    flex-direction: row
 }
 
-.oneThird2{
+.onethird2{
     height: 100%;
-    width: 66.66666666666%
+    width: 66.66666666666%;
+    flex-direction: row
 }
 
 .twoThirds1{
     height: 100%;
-    width: 66.66666666666%
+    width: 66.66666666666%;
+    flex-direction: row
 }
 
 .twoThirds2{
     height: 100%;
-    width: 33.33333333333%
+    width: 33.33333333333%;
+    flex-direction: row
 }
 
+.border{
+    border: 1px solid black;
+}

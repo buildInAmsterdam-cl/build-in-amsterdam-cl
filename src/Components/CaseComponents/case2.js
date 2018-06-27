@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import topArea from '../Sections/topArea'
 import Full from '../Sections/Full'
 import Half from '../Sections/Half'
-import oneThird from '../Sections/oneThird'
-import twoThirds from '../Sections/twoThirds'
+import OneThird from '../Sections/OneThird'
+import TwoThirds from '../Sections/TwoThirds'
 export default class case2 extends Component{
     constructor(){
         super()
@@ -19,18 +19,18 @@ export default class case2 extends Component{
     render(){
         <div>
         <topArea/>
-        <oneThird/>
+        <OneThird/>
         <Full/>
-        <oneThird/>
+        <OneThird/>
         <Half/>
-        <twoThirds/>
+        <TwoThirds/>
         <Full/>
-        <oneThird/>
-        <oneThird/>
+        <OneThird/>
+        <OneThird/>
         <Full/>
         {/* 2x3 grid */}
-        <oneThird/>
-        <oneThird/>
+        <OneThird/>
+        <OneThird/>
         <Full/>
         </div>
     }

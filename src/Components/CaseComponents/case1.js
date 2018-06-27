@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import topArea from '../Sections/topArea'
-import full from '../Sections/full'
-import half from '../Sections/half'
-import oneThird from '../Sections/oneThird'
-import twoThirds from '../Sections/twoThirds'
+import Full from '../Sections/Full'
+import Half from '../Sections/Half'
+import OneThird from '../Sections/OneThird'
+import TwoThirds from '../Sections/TwoThirds'
 export default class case1 extends Component{
     constructor(){
         super()
         this.state = {
-            media = [],
-            captions = []
+            media: [],
+            captions: []
         }
     
     }
@@ -17,19 +17,21 @@ export default class case1 extends Component{
         //axios call for media and captions
     }
     render(){
+    return(
         <div>
         <topArea/>
-        <oneThird/>
-        <oneThird/>
-        <oneThird/>
-        <oneThird/>
+        <OneThird/>
+        <OneThird/>
+        <OneThird/>
+        <OneThird/>
         <Full/>
-        <oneThird/>
+        <OneThird/>
         <Half/>
         <Half/>
         <Full/>
-        <oneThird/>
+        <OneThird/>
         </div>
+    )
     }
 
 }

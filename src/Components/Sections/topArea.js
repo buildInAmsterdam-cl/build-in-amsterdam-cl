@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import sections from './sections'
+import sections from './sections.css'
 export default function topArea(props){
     return(
         <div className='twoThirds'>
