@@ -1,7 +1,7 @@
---drop table admin_user;
---drop table captions;
---drop table media;
---drop table cases;
+drop table if EXISTS admin_user;
+drop table if EXISTS captions;
+drop table if EXISTS media;
+drop table if EXISTS cases;
 
 create table if not exists admin_user(
     admin_id serial primary key,
@@ -31,9 +31,10 @@ values
 ('E-commerce of the Year ‘17', 'Translating the world of Mendo into an e-commerce platform that pushes the standard in online book shopping.', 'Mendo', 'Mendo is a candy store for book aficionados with a flagship store situated in one of the Amsterdam’s most inspirational neighbors, called The 9 Streets (De 9 Straatjes). The store is fully dedicated to sharing the love for beautiful books.', 'Awwward E-commerce Site of the Year 2017, FWA Award, CSS Design Award', 'E-commerce platform', 'www.mendo.nl', 'http://www.buildinamsterdam.com/app/uploads/2017/03/MENDO_Collage_v2.jpg'),
 ('Sustainable outerware', 'A brand identity translated into a matching e-commerce platform, build to communicate all the aspects of the brand and connects with its community.', 'Open Ware', 'Open Wear is a brand built by - and for - passionate powder riders. They’re out to set a  new transparent standard within the outerwear industry.', 'E-commerce site of the year nominee & Site of the Day on Awwwards, Mindsparkle, Maxi Best-of The Gallery, Siiimple', 'Branding, design & development', 'www.open-wear.com', 'http://www.buildinamsterdam.com/app/uploads/2018/06/123.jpg'),
 ('Excellence through quality', 'ETQ is not, it`s design', 'ETQ', 'ETQ is all about minimalism. We conveyed this into every single touchpoint, both on and offline.', 'Awwwards, Cssdesign, Siteinspire', 'Branding, Design, Development', 'www.etq-amsterdam.com', 'http://www.buildinamsterdam.com/app/uploads/2018/04/ETQ_Header_Big-1.jpg' ),
-('Bringing fragrances to life', 'An e-commerce platform that sparks all senses except smell. For now...', 'Abel vita odor', 'We created an e-commerce platform for Abel fragrances that sparks all senses, except smell.', 'Awwwards Site of the Day, CSSDSGN, thegallery.io', 'Design and technology', 'www.abelodor.com', 'Background image - http://www.buildinamsterdam.com/app/uploads/2016/08/abel_cover.jpg'),
+('Bringing fragrances to life', 'An e-commerce platform that sparks all senses except smell. For now...', 'Abel vita odor', 'We created an e-commerce platform for Abel fragrances that sparks all senses, except smell.', 'Awwwards Site of the Day, CSSDSGN, thegallery.io', 'Design and technology', 'www.abelodor.com', 'http://www.buildinamsterdam.com/app/uploads/2016/08/abel_cover.jpg'),
 ('See Buy Fly rebranding', ' Rebranding the touchpoints of the Schiphol Airside Shopping Experience.', 'See Buy Fly', 'Amsterdam Schiphol Airport is one of the best airports in the world and needed an airside shopping experience in tune with this reputation. We rebranded the visual identity for See Buy Fly and translated this into a brand guide.', 'Coming soon...', 'Brand identity, print, photography, art direction, design and development', 'www.seebuyflyhappyhour.nl', 'http://www.buildinamsterdam.com/app/uploads/2016/08/SBF_cover_1.jpg'),
-('Extrodinary world of A-dam', 'A playful e-commerce platform that mirrors the character of the brand.', 'A-dam Underwear', 'Dive into the extraordinary world of A-dam Underwear and discover how we translated their unique brand story into a playful combination of branding and e-commerce.', 'E-commerce site of the year nominee Awwwards, Mindsparkle, Maxi Best-of The Gallery, Siiimple', 'Branding, design & development', 'www.adamunderwear.com', 'http://www.buildinamsterdam.com/app/uploads/2017/07/8.jpg');
+('Extrodinary world of A-dam', 'A playful e-commerce platform that mirrors the character of the brand.', 'A-dam Underwear', 'Dive into the extraordinary world of A-dam Underwear and discover how we translated their unique brand story into a playful combination of branding and e-commerce.', 'E-commerce site of the year nominee Awwwards, Mindsparkle, Maxi Best-of The Gallery, Siiimple', 'Branding, design & development', 'www.adamunderwear.com', 'http://www.buildinamsterdam.com/app/uploads/2017/07/8.jpg')
+;
 
 create table if not exists media(
     media_id serial primary key,
@@ -169,6 +170,7 @@ create table if not exists captions(
     caption_title varchar(100),
     caption_content varchar(1000)
 );
+insert into captions (case_id, caption_title, caption_content)
 values
 (1, 'One museum two locations', 'On 29 March 2018, the Frans Hals Museum, with its outstanding collection of Old Masters, ‘marries’ De Hallen Haarlem, the museum for contemporary and modern art in Haarlem.'),
 (1, 'Main concept', 'KesselsKramer main concept was to combine the old with the new in a mirror. This concept is the main theme that we used throughout the website.'),
