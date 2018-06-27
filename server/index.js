@@ -27,5 +27,35 @@ app.get('/cases',
 
 //app.get('/cases', controller.allCases)
 
+app.delete('/deletecase/:id',
+req, res => {
+    const dbInstance = req.app.get('db')
+    dbInstance.deleteCase([req.params.id]).then((cases) => {
+        res.status(200).send(cases)
+    })
+}
+)
+
+app.put('/updatecase/:id',
+req, res => {
+    const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
+    const dbInstance = req.app.get('db')
+    dbInstance.updateCase([req.params.id, title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+        res.status(200).send(cases)
+    })
+}
+)
+
+app.post('/updatecase',
+req, res => {
+    const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
+    const dbInstance = req.app.get('db')
+    dbInstance.updateCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+        res.status(200).send(cases)
+    })
+}
+)
+
+
 const port = process.env.PORT
 app.listen(port, (() => { console.log('YAY') }))
