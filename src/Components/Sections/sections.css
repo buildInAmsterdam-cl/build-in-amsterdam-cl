@@ -1,0 +1,55 @@
+.full{
+    display: flex;
+    height: 100vh;
+}
+
+.half{
+    display: flex;
+    height: 100vh;
+}
+
+.oneThird{
+    display: flex;
+    height: 100vh;
+}
+
+.twoThirds{
+    display: flex;
+    height: 100vh;
+}
+
+.full1{
+    height: 100%;
+    width: 100%
+}
+
+.half1{
+    height: 100%;
+    width: 50%
+}
+
+.half2{
+    height: 100%;
+    width: 50%
+}
+
+.oneThird1{
+    height: 100%;
+    width: 33.33333333333%
+}
+
+.oneThird2{
+    height: 100%;
+    width: 66.66666666666%
+}
+
+.twoThirds1{
+    height: 100%;
+    width: 66.66666666666%
+}
+
+.twoThirds2{
+    height: 100%;
+    width: 33.33333333333%
+}
+
