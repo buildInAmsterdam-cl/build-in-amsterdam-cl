@@ -1,11 +1,98 @@
-.hide {
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
+
+.hide{
     height: 0px;
 }
 
-.menu {
-    background: black;
-    color: white;
-   
+.menu{
+    font-family: 'Circular', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: .03rem;
     overflow: hidden;
     transition: 1s all ease;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fbf9f6;
+    z-index: 2;
+   
 }
+
+.menu h1{
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+
+.menu-bar{
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    min-width: 33%;
+
+}
+
+.menu-text{
+    height: 200px;
+    max-width: 300px;
+}
+
+
+
+.cases{
+    background-color:#1F1F21;
+    height: 100vh;
+    width: 33.333333vw;
+   
+}
+.about{
+    background-color:#171718;
+    height: 100vh;
+    width: 33.333333vw;
+}
+.contact{
+    background-color:#000000;
+    height: 100vh;
+    width: 33.3333333vw;
+}
+
+.main-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px 35px 0 0;
+    padding: 17px 13px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;  
+}
+
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    
+}
+
+.underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: #fbf9f6;
+    height: 1.65px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+

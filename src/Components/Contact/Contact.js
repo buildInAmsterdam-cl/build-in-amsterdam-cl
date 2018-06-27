@@ -9,7 +9,8 @@ class Contact extends Component {
             <div className='contactMainBox'>
                 <div className='leftContactPicBox'></div>
                 <div className='rightContactInfo'>
-                    <h1 className='contactText'>Contact</h1>
+                <div className = 'infoBox'>
+                <h1 className='contactText'>Contact</h1>
                     <h3 className='headerTitlesCont'>Email</h3>
                     <div className=''>
                         <a className='aTagStyle underline'
@@ -60,6 +61,8 @@ class Contact extends Component {
                         target="_blank"
                         rel="noopener noreferrer">Twitter</a>
                     <br /><br />
+                </div>
+                  
                 </div>
 
             </div>

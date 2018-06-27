@@ -16,9 +16,9 @@ export default class BiALogo extends Component {
 
     render() {
         return (
-            <div className="logo-outer">
+            <div className="logo-outer" >
                 <div> 
-                <Link to="/">Build in Amsterdam</Link>
+                <Link to="/" style={{ textDecoration: "none", color: "#171719" }}>Build <br/>in Amsterdam</Link>
                 </div>
             </div>
         )
