@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.mainBoxAbout {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.leftSideTopSlideAbout {
+    width: 33.333vw;
+    height: 90vw;
+    
+}
+
+.rightSideTextTopAbout {
+    padding: 3.325rem;
+    width: 66.666vw;
+    /* height: auto; */
+    height: 90vw;
+}
+
+.borderBuild {
+    border: 1px solid black;
+}
+
+.titleHeadAbout {
+    margin-bottom: 3.125rem;
+    max-width: 100%;
+    font-size: 2.813rem;
+    line-height: 3.75rem;
+}

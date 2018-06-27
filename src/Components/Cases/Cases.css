@@ -1,0 +1,28 @@
+.case_parent {
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    min-height: 500px;
+    background: #171719;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    z-index: 2;
+}
+
+.content {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer!important;
+    margin: 0px;
+    padding: 0px;
+} 
+
+.images {
+    height: 80px;
+    width: 30%;
+}
+
+
