@@ -3,8 +3,8 @@ import sections from './sections'
 export default function twoThirds(props){
     return(
         <div className='twoThirds'>
-            <div></div>
-            <div></div>
+            <div className='twoThirds1'></div>
+            <div className='twoThirds2'></div>
         </div>
     )
 }
