@@ -1,0 +1,1 @@
+select * from media where cases_id = ($1)

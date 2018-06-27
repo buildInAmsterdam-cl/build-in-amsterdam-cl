@@ -25,6 +25,24 @@ app.get('/cases',
         })
     })
 
+app.get('/media/:id',
+req, res => {
+    const dbInstance = req.app.get('db')
+    dbInstance.getMedia([req.params.id]).then((cases) => {
+        res.status(200).send(cases)
+    })
+}
+)
+
+app.get('/captions/:id',
+req, res => {
+    const dbInstance = req.app.get('db')
+    dbInstance.getCaptions([req.params.id]).then((cases) => {
+        res.status(200).send(cases)
+    })
+}
+)
+
 //app.get('/cases', controller.allCases)
 
 app.delete('/deletecase/:id',
