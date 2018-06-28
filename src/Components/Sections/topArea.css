@@ -11,12 +11,12 @@
     /* background: pink; */
 }
 
-.topBgPicTitleArea{
+/* .topBgPicTitleArea{ */
     /* background: lightblue; */
 
-}
+/* } */
 
-.parallaxTopArea {
+/* .parallaxTopArea { */
     /* background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,7 +29,7 @@
     /* height: 100%; */
     /* background-position: center; */
     /* display: inline-block; */
-}
+/* } */
 
 .topTitleText {
     color: white;
