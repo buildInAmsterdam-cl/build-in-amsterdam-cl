@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import './About.css'
 
 class About extends Component {
