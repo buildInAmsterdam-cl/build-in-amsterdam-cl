@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import sections from './sections.css'
+import './sections.css'
 export default function OneThird(props){
     return(
         <div className='onethird'>
