@@ -4,9 +4,9 @@ import {
     Parallax,
     // Background 
 } from 'react-parallax'
-import './topArea.css'
-// import { zIndex } from 'material-ui/styles';
-function topArea(props) {
+import './topArea.css';
+
+export default function TopArea(props) {
 
     // console.log(props)
     // console.log(props.indCase)
@@ -36,6 +36,7 @@ function topArea(props) {
                         // zIndex: '-1'
                     }} />
                 </Parallax>
+                </div>
                 <div className='secondTopAreaMain' >
                     {/* <img src={bgImageUrl} alt=''  style={{width: '100%'}}/> */}
                     <div className='secondLeftTop' style={{ background: (props.secDivLeftColor) }} ><blockquote className='topQuoteBlockStyle' >{props.indCase.blurb}</blockquote></div>
@@ -56,9 +57,7 @@ function topArea(props) {
                 </div>
 
 
-            </div>
-        </div>
-    )
-}
+            </div>)
 
-export default topArea
+}
+{/* export default TopArea; */}

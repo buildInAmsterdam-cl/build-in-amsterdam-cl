@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import sections from './sections.css'
+import './sections.css'
 export default function Half(props){
     return(
         <div className='half border'>

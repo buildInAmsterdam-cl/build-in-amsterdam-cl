@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import topArea from '../Sections/topArea'
+import topArea from '../Sections/TopArea'
 import Full from '../Sections/Full'
 import Half from '../Sections/Half'
 import OneThird from '../Sections/OneThird'
@@ -30,7 +30,7 @@ export default class case2 extends Component{
     }
     render(){
         <div>
-        <topArea/>
+        <TopArea/>
         <OneThird/>
         <Full/>
         <OneThird/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Toparea from '../Sections/topArea';
+import Toparea from '../Sections/TopArea';
 
 class casedummy1 extends Component {
 constructor(props){
@@ -12,15 +12,7 @@ constructor(props){
     }
 }
     componentDidMount() {
-        axios.get('/cases').then(res => {
-            
-            this.setState({
-                caseArr: res.data
-            })
-            this.setState({
-                indCase: res.data[0]
-            })
-        }).catch(err => console.log('NOOOOOO!!!!', err))
+       
 
         axios.get(`/media/1`).then(res => {
             this.setState({
