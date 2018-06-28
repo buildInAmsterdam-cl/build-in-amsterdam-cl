@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TopArea from '../Sections/TopArea'
 import Full from '../Sections/Full'
-import Half from '../Sections/half'
-import OneThird from '../Sections/oneThird';
-import TwoThirds from '../Sections/twoThirds'
+import Half from '../Sections/Half'
+import OneThird from '../Sections/OneThird';
+import TwoThirds from '../Sections/TwoThirds'
 import Axios from 'axios';
 
 
