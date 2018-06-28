@@ -21,18 +21,18 @@ export default function TopArea(props) {
                     blur={0}
                     // bgImage={String(bgImageUrl)}
                     // bgWidth='100%'
+                    // bgImage={String(bgImageUrl)}
                     bgImage={"http://www.buildinamsterdam.com/app/uploads/2018/04/Frans-HalsH-KoosBreukelCombi_Zoom.jpg"}
-                    // bgImage={"http://www.buildinamsterdam.com/app/uploads/2018/04/Frans-HalsH-KoosBreukelCombi_Zoom.jpg"}
                     // bgImageSizes={{sizes: 0}}
                     bgImageAlt="Background Image"
                     // strength={140}
                     // strength={100}
-                    strength={400}
+                    strength={380}
                 >
                     <div className='topTitleText'>{String(props.indCase.title)}</div>
                     {/* <div className='topTitleText'>Two locations<br /> one museum</div> */}
                     <div style={{
-                        height: '88vh',
+                        height: '78vh',
                         // zIndex: '-1'
                     }} />
                 </Parallax>

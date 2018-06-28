@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Toparea from '../Sections/TopArea';
+import TopArea from '../Sections/TopArea';
 
 class casedummy2 extends Component {
 constructor(props){
@@ -44,7 +44,7 @@ constructor(props){
         // console.log(this.state.caseArr)
         return(
             <div>
-            <Toparea 
+            <TopArea 
             indCase={this.state.indCase}
             secDivLeftColor={''}
             secDivRightColor={'rgb(252, 228, 115)'}

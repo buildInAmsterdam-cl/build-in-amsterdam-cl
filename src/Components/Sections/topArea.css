@@ -36,11 +36,12 @@
     font-size: 150px;
     font-weight: 550;
     /* margin-bottom: 90vh; */
-    margin-top: 76vh;
+    margin-top: 50vh;
     /* padding-bottom: 20vh; */
     text-align: left;
-    margin-left: 5vw;
-    margin-right: 20vw;
+    margin-left: 2vw;
+    margin-right: 30vw;
+    /* line-height: 2px; */
 
     /* padding-bottom: 500; */
 }
@@ -66,9 +67,14 @@
 }
 
 .topQuoteBlockStyle {
-    font-size: 24px;
+    font-size: 40px;
     font-stretch: 100%;
+    font-weight: lighter;
     box-sizing: border-box;
+    margin-left: 2vw;
+    margin-right: 10vw;
+    
+    
 }
 
 .secondRightTop {
