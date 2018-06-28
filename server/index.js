@@ -13,7 +13,6 @@ massive(process.env.CONNECTION_STRING).then((dbInstance) => {
     // dbInstance.seedFile()
     //     .then(res => console.log('that sucSEEDed...'))
     //     .catch(err => console.log('aww shit..', err))
-
     app.set('db', dbInstance)
 }).catch(err => console.log(err))
 
@@ -22,11 +21,11 @@ app.get('/cases',
         const dbInstance = req.app.get('db')
         dbInstance.getCases().then((cases) => {
             res.status(200).send(cases)
-        })
+        }).catch( err => console.log('Shiz Monkeys what happened?', err))
     })
 
 app.get('/media/:id',
-(req, res, next) => {
+(req, res) => {
     const dbInstance = req.app.get('db')
     dbInstance.getMedia([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -35,7 +34,7 @@ app.get('/media/:id',
 )
 
 app.get('/captions/:id',
-(req, res, next) => {
+(req, res) => {
     const dbInstance = req.app.get('db')
     dbInstance.getCaptions([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -46,7 +45,7 @@ app.get('/captions/:id',
 //app.get('/cases', controller.allCases)
 
 app.delete('/deletecase/:id',
-(req, res, next) => {
+(req, res) => {
     const dbInstance = req.app.get('db')
     dbInstance.deleteCase([req.params.id]).then((cases) => {
         res.status(200).send(cases)
@@ -55,7 +54,7 @@ app.delete('/deletecase/:id',
 )
 
 app.put('/updatecase/:id',
-(req, res, next) => {
+(req, res) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
     dbInstance.updateCase([req.params.id, title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
@@ -65,7 +64,7 @@ app.put('/updatecase/:id',
 )
 
 app.post('/newcase',
-(req, res, next) => {
+(req, res) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
     dbInstance.updateCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
@@ -75,5 +74,5 @@ app.post('/newcase',
 )
 
 
-const port = process.env.PORT
-app.listen(port, (() => { console.log('YAY') }))
+// const port = process.env.port
+app.listen(3003, (() => { console.log('YAY') }))
