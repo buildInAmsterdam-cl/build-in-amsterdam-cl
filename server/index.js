@@ -74,5 +74,5 @@ app.post('/newcase',
 )
 
 
-const port = process.env.SERVER_PORT
-app.listen(port, (() => { console.log('YAY') }))
+// const port = process.env.port
+app.listen(3003, (() => { console.log('YAY') }))
