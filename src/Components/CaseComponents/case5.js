@@ -30,7 +30,7 @@ export default class case5 extends Component{
     }
     render(){
         <div>
-        <topArea/>
+        <TopArea/>
         <OneThird/>
         <Full/>
         <OneThird/>

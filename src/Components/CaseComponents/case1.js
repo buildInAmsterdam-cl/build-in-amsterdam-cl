@@ -34,7 +34,7 @@ export default class case1 extends Component{
     render(){
     return(
         <div>
-        <topArea/>
+        <TopArea/>
         <OneThird/>
         <OneThird/>
         <OneThird/>
