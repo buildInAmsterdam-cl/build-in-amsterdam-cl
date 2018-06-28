@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 .contactMainBox {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Circular', sans-serif;
     display: flex;
     flex-direction: row;
-
+    letter-spacing: .03rem;
+    font-weight: 100;
+    line-height: 26px;
 }
+
 
 .leftContactPicBox {
 width: 66.666vw;
@@ -20,11 +21,18 @@ background-size: 75vw;
 background-repeat: no-repeat;
 }
 
+.infoBox{
+    height: 100%;
+    width: 100%;
+}
+
 .rightContactInfo {
-    padding: 3.325rem;
+    padding: 6.25rem;
     width: 33.333vw;
     height: stretch;
     text-align: left;
+    display: flex;
+    align-items: flex-end;
 }
 
 .contactText {
@@ -32,12 +40,14 @@ background-repeat: no-repeat;
     max-width: 100%;
     font-size: 3.125rem;
     line-height: 3.75rem;
+    letter-spacing: .04rem;
+    font-weight: 600;
 }
 
 .headerTitlesCont {
     margin: 0;
     max-width: 100%;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.125rem;
 }
 

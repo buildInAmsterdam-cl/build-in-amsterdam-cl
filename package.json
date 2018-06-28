@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "massive": "^5.0.0",
+    "material-ui": "^0.20.1",
+    "material-ui-image": "^3.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-parallax": "^1.8.0",
