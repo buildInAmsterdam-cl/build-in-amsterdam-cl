@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 .mainBoxAbout {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Circular', sans-serif;
     display: flex;
     flex-direction: row;
     text-align: left;

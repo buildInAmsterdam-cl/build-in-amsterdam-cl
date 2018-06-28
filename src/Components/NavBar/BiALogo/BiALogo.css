@@ -1,13 +1,11 @@
 .logo-outer{
    position: absolute;
-   top: 0;
-   left: 0;
-   margin: 2.5rem 0 0 3.125rem;
    width: 174px;
    height: 71px;
    font-family: 'Circular', sans-serif;
    text-align: left;
    font-size: 1.2rem;
-   font-weight: 500;
+   font-weight: 600;
    letter-spacing: .03rem;
+   margin: 40px 0 0 50px;
 }

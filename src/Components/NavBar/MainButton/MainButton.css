@@ -1,10 +1,6 @@
 .main-button{
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 40px 35px 0 0;
-  padding: 17px 13px;
   cursor: pointer;  
+  position: fixed;
 }
 
 .circle{
@@ -15,6 +11,7 @@
   justify-content: center;
   align-items: center;
   background: #fbf9f6;
+  
 }
 
 .hamburger{
