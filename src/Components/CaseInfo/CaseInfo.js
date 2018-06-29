@@ -21,8 +21,16 @@ export const componentTypesList = [
     'FullGrid6PicsInIcons'
 ]
 
+
+
+
 // For future builds if we want to do more. If I feel ambitious I may build the other arrays to correspond with IDs if things go well with the constructors.
+
 // export const caseId1 = ['two-third', 'one-third']
+
+
+
+
 
 export const caseId7Information = [
     {
