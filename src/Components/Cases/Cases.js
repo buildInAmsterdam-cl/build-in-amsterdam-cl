@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Cases.css';
 import axios from 'axios';
+import CaseFooter from '../CaseFooter/CaseFooter';
 
 export default class Cases extends Component {
     constructor(props) {
@@ -33,6 +34,7 @@ export default class Cases extends Component {
                             <p>{cases.brand}</p>
                         </div>
                     </div>
+                <CaseFooter/>
 
                 </div>
             )

@@ -1,14 +1,16 @@
 import React from 'react';
-import BiALogo from './BiALogo/BiALogo';
+import LeftArrow from './Arrows/LeftArrow';
+import RightArrow from './Arrows/RightArrow';
+
 
 export default function CaseFooter() {
     return (
         <div className="footer">
-            <div className="footer-left">
-                <BiALogo />
+            <div className='left_arrow'>
+                <LeftArrow/>
             </div>
-            <div className="footer-right">
-
+            <div className='right_arrow'>
+                <RightArrow/>
             </div>
         </div>
     )
