@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import TopArea from '../Sections/TopArea'
-import Full from '../Sections/Full'
-import Half from '../Sections/Half'
-import OneThird from '../Sections/OneThird'
-import TwoThirds from '../Sections/TwoThirds'
+import TopArea from '../Sections/topArea'
 export default class case5 extends Component{
     constructor(){
         super()
@@ -31,15 +27,6 @@ export default class case5 extends Component{
     render(){
         <div>
         <TopArea/>
-        <OneThird/>
-        <Full/>
-        <OneThird/>
-        <Half/>
-        <Full/>
-        <OneThird/>
-        <OneThird/>
-        {/* 1x3 grid */}
-        <Full/>
         </div>
     }
 
