@@ -50,7 +50,10 @@ export default class case1 extends Component {
                     secDivLeftColor={''}
                     secDivRightColor={'rgb(252, 228, 115)'}
                 />
-                <OneThird />
+                <div >
+                    <div className='onethird1 border'>adsf</div>
+                    <div className='onethird2 border'>asdf</div>
+                </div>
                 <OneThird />
                 <OneThird />
                 <OneThird />
