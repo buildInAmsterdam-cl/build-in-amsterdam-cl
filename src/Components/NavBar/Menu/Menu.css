@@ -43,7 +43,9 @@
 .menu-text{
     height: 200px;
     max-width: 300px;
+    line-height: 1.5rem;
 }
+
 
 
 
@@ -75,11 +77,10 @@
 }
 
 .underline {
-    display: inline;
+    /* display: inline; */
     position: relative;
     overflow: hidden;
     z-index: 3;
-    
 }
 
 .underline:after {

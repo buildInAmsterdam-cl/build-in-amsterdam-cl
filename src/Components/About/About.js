@@ -16,21 +16,21 @@ class About extends Component {
                         bgImageAlt="the cat"
                         strength={200}
                     >
-                        <div style={{ height: '1200px' }} />
+                        <div style={{ height: '1200px'}} />
                     </Parallax>
                 </div>
-                <div className='rightSideTextTopAbout borderBuild' >
-                    <h1 className='titleHeadAbout' >We are a branding agency specialised in e-commerce</h1>
-                    <div>
+                <div className='rightSideTextTopAbout' >
+                    <h1 className='titleHeadAbout' >We are a branding agency specialised in <br/>e-commerce.</h1>
+                    <div className="strategy-contain">
                     
-                    <div>
-                    <p>We combine strategy, branding and e-commerce to bridge the gap betwen digital and physical touch points.</p>
-
+                    <div className="strategy">
+                    <p>We combine strategy, branding and <br/> e-commerce to bridge the gap betwen digital and physical touch points.</p>
+                    <br/>
                     <p>We see e-commerce platforms as digital flagship stores. So we intentionally develop platforms as brand experiences that inspire, engage, and convert in an infinite loop.</p>
                         
                     </div>
 
-                    <div>
+                    <div className="strategy">
                     <h2>Winner E-commerce Site of the Year Award 2016 & 2017</h2>
 
                     <a >See all awards</a>
