@@ -22,16 +22,17 @@ export default class Cases extends Component {
         //console.log(this.state.casesData, 'cases much?')
 
         let casesSlideshow = this.state.casesData ? this.state.casesData.map((cases, i) => {
+            console.log(i)
             return (
                 <div key={i} className='content'>
                     <div className='case_item'>
-                        <div className='images'>
-                            <img className='pic' src={cases.background_url}  alt='caseimg'/>
+                        <div className={`images images${[i]}`}>
+                            <img className='pic' src={cases.background_url} alt='caseimg' />
                         </div>
                         <div className='case_header'>
-                            <h1 >{cases.title}</h1>
-                            <p>{cases.brand}</p>
-                        </div>
+                                <h1 >{cases.title}</h1>
+                                <p>{cases.brand}</p>
+                         </div>
                     </div>
 
                 </div>
@@ -39,7 +40,7 @@ export default class Cases extends Component {
         }) : ''
         return (
             <div className='case_parent'>
-                    {casesSlideshow}
+                {casesSlideshow}
             </div>
         )
     }

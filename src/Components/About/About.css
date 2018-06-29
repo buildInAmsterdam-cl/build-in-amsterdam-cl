@@ -1,32 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 .mainBoxAbout {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Circular', sans-serif;
     display: flex;
     flex-direction: row;
     text-align: left;
 }
 
 .leftSideTopSlideAbout {
-    width: 33.333vw;
-    height: 90vw;
-    
+    height: 100vh;
+    width: 630px;
 }
 
 .rightSideTextTopAbout {
-    padding: 3.325rem;
-    width: 66.666vw;
+    padding-right: 2.988rem;
+    padding-top: 40vh;
+    /* width: 40vw; */
     /* height: auto; */
-    height: 90vw;
-}
+    height: 90vh;
+    padding-bottom: 6.25rem;
+    padding-left: 6.25rem;
 
-.borderBuild {
-    border: 1px solid black;
 }
 
 .titleHeadAbout {
-    margin-bottom: 3.125rem;
-    max-width: 100%;
-    font-size: 2.813rem;
+    height: 120px;
+    width: 1132px;
+    margin-bottom: 150px;
+    /* max-width: 100%; */
+    font-size: 3.125rem;
     line-height: 3.75rem;
+    letter-spacing: .07rem;
+   
+}
+.strategy-contain{
+    display: flex;
+    align-items: flex-start;
+}
+.strategy{
+    height: 189px;
+    width: 546px;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    line-height: 1.688rem;
+    padding-right: 20px;
+}
+.strategy h2{
+    font-size: 1.875rem;
+    line-height: 2.625rem;
+    
 }
