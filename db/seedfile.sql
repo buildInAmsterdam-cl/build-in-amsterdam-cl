@@ -159,7 +159,7 @@ values
 (7, 'http://www.buildinamsterdam.com/app/uploads/2017/07/123-1500x0-c-default.jpg', 'iPhone Photo 2'),
 (7, 'http://www.buildinamsterdam.com/app/uploads/2017/07/Adam-Underwear_2016-10-27_Movember_Tomek-Dersu-Aaron_013-2500x0-c-default.jpg', 'Man with bird pic'),
 (7, 'http://www.buildinamsterdam.com/app/uploads/2017/07/icons-2000x0-c-default.jpg', 'Icons'),
-(7, 'Loader and Details Video3 ', 'Loader and Details Video3'),
+(7, 'https://player.vimeo.com/video/225432808?api=1&player_id=vjs_video_677_Vimeo_api', 'Loader and Details Video3'),
 (7, 'http://www.buildinamsterdam.com/app/uploads/2017/07/GIF_3.gif', 'Box Gif'),
 (7, 'http://www.buildinamsterdam.com/app/uploads/2017/07/2016-07-03_Box-of-Boxers_Tomek-Dersu-Aaron_001-2000x0-c-default.jpg', 'Lobster Pic');
 
@@ -213,8 +213,11 @@ values
 (6, 'Schiphol Parking', 'The new style was progressively extended to Schiphol Parking communications.'),
 (6, 'Website', 'We developed an online platform that features and implements on interesting product deals and implemented smart functions like a Wishlist and a reservation service.'),
 (7, 'The Brand', 'We enriched their black and white brand identity with a colourful extra layer, fresh icons, and new typo, to create a new, richer identity for both online and offline.'),
-(7, 'Concept', 'The idea of the website was to combine storytelling with product imagery, in order to tell the brand story and present the collection in a playful way.'),
+(7, 'Heading', 'GT Walsheim Bold'),
+(7, 'Sub-heading', 'GT Walsheim Bold'),
+(7, 'Body', 'GT Walsheim Regular'),
 (7, 'Color', 'We selected five bright shades that match perfectly, and reflect the colourful playfulness of A-dam.'),
+(7, 'Concept', 'The idea of the website was to combine storytelling with product imagery, in order to tell the brand story and present the collection in a playful way.'),
 (7, 'Animation', 'Animation plays a huge roll in terms of functionality and story telling. It is used for smooth scrolling, seamless page transitions, funny hover states, and other applications.'),
 (7, 'Icons', 'We’ve created a set of icons for functional use and to add a playful touch to certain elements.'),
 (7, 'Loader and details', 'A few examples of a funny website loader and a functional product detail page.'),
