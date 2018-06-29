@@ -1,3 +1,27 @@
+.undy {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .undy:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: #000;
+    height: 0.5px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .undy:hover:after,
+  .undy:focus:after,
+  .undy:active:after {
+    right: 0;
+  }
+
 .border {
     border: 1px solid black;
 }
@@ -63,34 +87,12 @@
 }
 
 .aTagStyle {
-    text-decoration-line: none;
+    /* text-decoration-line: none; */
     color: black;
     transition: 3s all ease;
 }
 
-.underlineC {
-    display: inline;
-    position: relative;
-    overflow: hidden;
-  }
-  .underlineC:after {
-    content: "";
-    position: absolute;
-    z-index: -2;
-    left: 0;
-    right: 100%;
-    bottom: -5px;
-    background: #000;
-    height: 0.5px;
-    transition-property: left right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-  }
-  .underlineC:hover:after,
-  .underlineC:focus:after,
-  .underlineC:active:after {
-    right: 0;
-  }
+
 /* @media screen and (max-width: 560px){
 .topTitleText {
     font-size: 20px;

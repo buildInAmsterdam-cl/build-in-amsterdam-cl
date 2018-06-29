@@ -1,4 +1,8 @@
 .fullImageMain {
     width: 100%;
-    height: 1280.25px;
+    /* height: 1280.25px; */
+    overflow: hidden;
+}
+.fullImageResize {
+    width: 100%;
 }

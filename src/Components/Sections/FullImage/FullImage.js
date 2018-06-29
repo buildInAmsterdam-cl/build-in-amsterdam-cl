@@ -6,7 +6,7 @@ export default function FullImage(props){
 
     return (
         <div className='fullImageMain'>
-            <img src={props.imageProp} alt='' />
+            <img className='fullImageResize' src={props.imageProp} alt='' />
         </div>
     )
 }

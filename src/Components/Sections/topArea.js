@@ -1,8 +1,8 @@
 import React from 'react';
 import {Parallax} from 'react-parallax'
-import './topArea.css';
+import './TopArea.css';
 
-export default function TopArea(props) {
+export default function topArea(props) {
     let bgImageUrl = props.indCase.background_url
     return (
         <div className='topAreaMain'>
@@ -31,8 +31,8 @@ export default function TopArea(props) {
                             <br />
                             <h3>Visit site</h3>
                             {/* FIXME: Fix the underline property that is similar to contact page. */}
-                            <a className='aTagStyle underlineC' 
-                            href={`http://${props.indCase.link_url}`}
+                            <a className='undy aTagStyle' 
+                            href={`https://${props.indCase.link_url}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             >{props.indCase.link_url}</a>
