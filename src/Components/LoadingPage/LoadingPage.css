@@ -6,20 +6,90 @@
     from { opacity: 1; }
     to { opacity: 0; }
 }
-.fadeForNow {  
+
+@keyframes slideOut {
+    from { background: black}
+    to { background: transparent }
+}
+.main {
+    width: stretch;
+    height: stretch;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: center;
+    z-index: -10;
+    /* background: black; */
+    /* animation-name: opac; */
+    /* animation-duration: 2s; */
+    /* background-color: black; */
+    color: white;
+}
+.fadeForNow {
+
+    width: stretch;
+    height: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
     animation-name: opac;
     animation-duration: 2s;
     background-color: black;
     color: white;
 }
-
+.blinds {
+    height: stretch;
+    width: 33.333vw;
+    background: black;
+    border: white 1px solid;
+    z-index: 5;
+}
 .fadeOut {
+    width: stretch;
+    height: stretch;
     animation-name: opacOut;
     animation-duration: 2s;
     background-color: black;
     color: white;
 }
 
+.slideOut {
+    width: stretch;
+    height: stretch;
+    animation-name: slideOut;
+    width: 0;
+    transition: 2s ease all;
+    animation-duration: 2s;
+    background-color: black;
+    display: none;
+    color: white;
+}
+
+.indexed {
+    /* z-index: -1; */
+    /* visibility: hidden; */
+    display: none;
+}
+.indexShow {
+    display: initial;
+}
+/* .textSpaceLoad {
+    text-align: left; */
+/* } */
+
 .loadingText {
-    text-align: center;
+    position: fixed;
+    /* margin-left: 10vw; */
+    text-align: left;
+    /* margin-top: 0; */
+    bottom: 6vh;
+}
+
+.loadingTextLine2 {
+    position: fixed;
+    /* margin-left: 10vw; */
+    text-align: left;
+    /* margin-top: 0; */
+    bottom: 2vh;
 }
