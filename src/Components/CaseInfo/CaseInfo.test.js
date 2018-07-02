@@ -84,6 +84,7 @@ test('caseSampleStuff number of two-thirds image components is 3', () => {
 test('caseSampleStuff number of color picker components is 1', () => {
     let filteredToPicker = caseSampStuff.filter( (el) => el.componentType === 'ColorPicker')
     expect(filteredToPicker.length).toBe(0);
+})
 //Karli unit tests
 
 test('case7Stuff one equals right value', () => {
