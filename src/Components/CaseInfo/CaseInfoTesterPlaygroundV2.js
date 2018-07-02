@@ -1,41 +1,5 @@
-// I used similar naming from earlier, but did it to match the what the components will probably we named as well using component naming conventions. If they are not descriptive enough or could improve we can decide to update it.
 
-//To import to a file, imoprt it like you would a redux function by destructuring from the file.
-//      Ex: import { caseId7Information, componentTypesList } from './{...filePath}/getCaptions'
-
-//After building this I found that the info could possibly be measured and extracted without using the numberOfMedia or numberOfCaptions, but you could definitely use them, since the logic for extraction could, be greater than 0, then get the mediaId or caseId number for extraction from the database.
-
-//If we need to edit any of these lists meaning inserting information into the database, then I will need to update the Id numbers in the arrays for callbacks. That's okay just let me know.
-
-
-//NOTE: This is an optional array I made for helping in mapping through this during callback. If it is not used, I will live, just there as reference to the naming conventions being used right now.
-
-module.exports = {
-
-componentTypesList: [
-    'OneThirdCaptPic', 
-    'OneThirdCapt',
-    'FullImage',
-    'OneHalfImage',
-    'TwoThirdsImage',
-    'ColorPicker',
-    'OneFullFontGrid',
-    'TwoThirdsIPad',
-    'FullGrid6PicsInIcons'
-],
-
-
-
-
-// For future builds if we want to do more. If I feel ambitious I may build the other arrays to correspond with IDs if things go well with the constructors.
-
-// export const caseId1 = ['two-third', 'one-third']
-
-
-
-
-
-caseId7Information: [
+export default ({data: [
     {
         componentType: 'OneThirdCaptPic',
         numberOfMedia: 1,
@@ -170,6 +134,4 @@ caseId7Information: [
         mediaId: [116],
         captionsId: []
     }
-],
-
-}
+]})
