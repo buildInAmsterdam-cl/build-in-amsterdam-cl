@@ -1,8 +1,4 @@
-// import React from 'react';
-const caseInfo = require('./CaseInfoTesterPlayground');
-// import { caseId7Information, componentTypesList } from './CaseInfo';
-// const cases = require('./CaseInfo');
-
+const caseInfo = require('./CaseInfo');
 const case7Stuff = caseInfo.caseId7Information;
 
 
