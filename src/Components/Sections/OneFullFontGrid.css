@@ -1,7 +1,8 @@
 .oneFullFontGridMain{
     padding: 10rem 6.25rem 200px 6.25rem;
     background: rgb(233, 246, 249);
-    height: 55vh;
+    height: 54.25vh;
+   
 }
 
 .oneFullFontGridDiv{
@@ -12,7 +13,7 @@
 }
 
 .oneFullFontGridImg{
-    width: 64%;
+    width: 59.5%;
     
 }
 .oneFullFontGridImg img{
