@@ -5,5 +5,7 @@
     background: #ED5965
 }
 .twoThirdsImageResize {
-    width: 100%;
+    top: 50;
+    bottom: 50;
+    max-width: 1279px;
 }
