@@ -9,8 +9,11 @@
 
 
 //NOTE: This is an optional array I made for helping in mapping through this during callback. If it is not used, I will live, just there as reference to the naming conventions being used right now.
-export const componentTypesList = [
-    'OneThirdCaptPic', 
+
+module.exports = {
+
+componentTypesList: [
+    'OneThirdCaptPic',
     'OneThirdCapt',
     'FullImage',
     'OneHalfImage',
@@ -19,12 +22,20 @@ export const componentTypesList = [
     'OneFullFontGrid',
     'TwoThirdsIPad',
     'FullGrid6PicsInIcons'
-]
+],
+
+
+
 
 // For future builds if we want to do more. If I feel ambitious I may build the other arrays to correspond with IDs if things go well with the constructors.
+
 // export const caseId1 = ['two-third', 'one-third']
 
-export const caseId7Information = [
+
+
+
+
+caseId7Information: [
     {
         componentType: 'OneThirdCaptPic',
         numberOfMedia: 1,
@@ -137,7 +148,7 @@ export const caseId7Information = [
         mediaId: [],
         captionsId: [49]
     },
-    {   
+    {
         componentType: 'TwoThirdsIPad',
         numberOfMedia: 1,
         numberOfCaptions: 0,
@@ -159,4 +170,22 @@ export const caseId7Information = [
         mediaId: [116],
         captionsId: []
     }
+],
+
+caseIdSampleInfo: [
+    {
+        componentType: 'OneHalfImage',
+        numberOfMedia: 1,
+        numberOfCaptions: 0,
+        mediaId: [111],
+        captionsId: []
+    },
+    {
+        componentType: 'FullImage',
+        numberOfMedia: 1,
+        numberOfCaptions: 0,
+        mediaId: [112],
+        captionsId: []
+    }
 ]
+}

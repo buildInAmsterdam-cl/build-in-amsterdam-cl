@@ -10,24 +10,26 @@
 
 .leftContactPicBox {
 width: 66.666vw;
-height: stretch;    
+/* height: 100%;     */
 overflow: hidden;
 background-image: url(http://www.buildinamsterdam.com/app/uploads/2015/10/c2.jpg);
 /* 
 Other Image URL in the Carasousel
 http://www.buildinamsterdam.com/app/uploads/2015/10/studio.jpg
 */
-background-size: 75vw;
+background-size: cover;
 background-repeat: no-repeat;
+background-position: center center;
 }
 
 .infoBox{
     height: 100%;
     width: 100%;
+    padding: 6.25rem;
 }
 
 .rightContactInfo {
-    padding: 6.25rem;
+   
     width: 33.333vw;
     height: stretch;
     text-align: left;
@@ -35,12 +37,17 @@ background-repeat: no-repeat;
     align-items: flex-end;
 }
 
+.contactBox {
+    height: 100%;
+    margin-bottom: 30px;
+}
+
 .contactText {
     margin-bottom: 3.125rem;
     max-width: 100%;
     font-size: 3.125rem;
     line-height: 3.75rem;
-    letter-spacing: .04rem;
+    letter-spacing: .05rem;
     font-weight: 600;
 }
 

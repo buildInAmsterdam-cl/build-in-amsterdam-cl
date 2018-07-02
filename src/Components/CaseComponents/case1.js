@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import TopArea from '../Sections/TopArea'
-import Full from '../Sections/Full'
-import Half from '../Sections/Half'
-import OneThird from '../Sections/OneThird';
-import TwoThirds from '../Sections/TwoThirds'
+import TopArea from '../Sections/topArea'
 import Axios from 'axios';
 
 
@@ -50,19 +46,6 @@ export default class case1 extends Component {
                     secDivLeftColor={''}
                     secDivRightColor={'rgb(252, 228, 115)'}
                 />
-                <div >
-                    <div className='onethird1 border'>adsf</div>
-                    <div className='onethird2 border'>asdf</div>
-                </div>
-                <OneThird />
-                <OneThird />
-                <OneThird />
-                <Full />
-                <OneThird />
-                <Half />
-                <Half />
-                <Full />
-                <OneThird />
             </div>
         )
     }
