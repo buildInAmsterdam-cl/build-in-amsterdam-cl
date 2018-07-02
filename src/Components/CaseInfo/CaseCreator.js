@@ -78,7 +78,8 @@ export default class CaseCreator extends Component {
                 console.log(this.state.captions)
                 console.log(captionsIndex1, captionsIndex2, captionsIndex3)
                 return (
-                    <div><OneFullFontGrid media1={this.state.media[mediaIndex1]}
+                    <div><OneFullFontGrid 
+                        media1={this.state.media[mediaIndex1]}
                         media2={this.state.media[mediaIndex2]}
                         media3={this.state.media[mediaIndex3]}
                         caption1={this.state.captions[captionsIndex1]}
