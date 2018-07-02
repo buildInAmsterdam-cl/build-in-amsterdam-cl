@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Cases.css';
 import axios from 'axios';
-import CaseFooter from '../CaseFooter/CaseFooter';
+import LeftArrow from '../Arrows/LeftArrow';
 
 export default class Cases extends Component {
     constructor(props) {
@@ -31,18 +31,21 @@ export default class Cases extends Component {
                             <img className='pic' src={cases.background_url} alt='caseimg' />
                         </div>
                         <div className='case_header'>
-                                <h1 >{cases.title}</h1>
-                                <p>{cases.brand}</p>
-                         </div>
+                            <h1 >{cases.title}</h1>
+                            <p>{cases.brand}</p>
+                        </div>
                     </div>
-                <CaseFooter/>
-
                 </div>
+
+
             )
         }) : ''
         return (
             <div className='case_parent'>
                 {casesSlideshow}
+                <div className='arrows'>
+                    <LeftArrow/>
+                </div>
             </div>
         )
     }

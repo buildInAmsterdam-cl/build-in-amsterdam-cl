@@ -9,7 +9,7 @@
 
 
 //NOTE: This is an optional array I made for helping in mapping through this during callback. If it is not used, I will live, just there as reference to the naming conventions being used right now.
-export const componentTypesList = [
+const componentTypesList = [
     'OneThirdCaptPic', 
     'OneThirdCapt',
     'FullImage',
@@ -32,7 +32,7 @@ export const componentTypesList = [
 
 
 
-export const caseId7Information = [
+const caseId7Information = [
     {
         componentType: 'OneThirdCaptPic',
         numberOfMedia: 1,

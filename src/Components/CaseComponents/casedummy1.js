@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Toparea from '../Sections/TopArea';
+import Toparea from '../Sections/topArea';
 
 class casedummy1 extends Component {
 constructor(props){

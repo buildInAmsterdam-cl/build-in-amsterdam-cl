@@ -1,0 +1,20 @@
+.FullGrid6PicsInIconsMain {
+    background-color: rgb(243,247,248);
+    display: block;
+    position: fixed;
+    padding: 20px 20px 20px 20px; 
+}
+
+.blocks {
+    float: none;
+    display: inline-block;
+    width: 33.33333333%;  
+}
+
+.gridImg {
+    height: auto;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: 0;
+}
