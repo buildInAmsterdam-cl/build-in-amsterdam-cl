@@ -2,8 +2,11 @@ import React from 'react';
 import {Parallax} from 'react-parallax'
 import './topArea.css';
 
-export default function topArea(props) {
+export default function topArea(props) { 
+    console.log(props.indCase)
     let bgImageUrl = props.indCase.background_url
+    let leftColor = ['','','','','','','']
+    let rightColor = ['rgb(252, 228, 115)', '', '', '', '', '', 'rgb(245, 234, 175)']
     return (
         <div className='topAreaMain'>
             <div className='topBgPicTitleArea' >
@@ -19,8 +22,8 @@ export default function topArea(props) {
                 </Parallax>
             </div>
             <div className='secondTopAreaMain' >
-                <div className='secondLeftTop' style={{ background: (props.secDivLeftColor) }} ><blockquote className='topQuoteBlockStyle' >{props.indCase.blurb}</blockquote></div>
-                <div className='secondRightTop' style={{ background: (props.secDivRightColor) }}>
+                <div className='secondLeftTop' style={{ background: (leftColor[props.indCase.case_id - 1]) }} ><blockquote className='topQuoteBlockStyle' >{props.indCase.blurb}</blockquote></div>
+                <div className='secondRightTop' style={{ background: (rightColor[props.indCase.case_id - 1]) }}>
                     <div className='secondRightInnerTop' >
                         <div className='innerInnerTop' >
                             <h3>Awards & Recognition</h3>
