@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { caseId7Information, caseIdSampleInfo } from './CaseInfo';
+import './CaseCreator.css'
 
 import Axios from 'axios';
 import TopArea from '../Sections/topArea';
@@ -141,7 +142,7 @@ export default class CaseCreator extends Component {
 
 
         return (
-            <div>
+            <div className = "caseCreator">
                 <TopArea indCase={this.state.case}/>
                 <div> {componentStructure}</div>
             </div>
