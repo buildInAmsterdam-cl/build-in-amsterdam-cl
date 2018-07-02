@@ -1,0 +1,173 @@
+
+{
+	"info": {
+		"_postman_id": "3933fc5b-c2b3-4179-9e65-156d2f7144d8",
+		"name": "BUILDINAMSTERDAM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get media 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "gets media for case 1"
+			},
+			"response": []
+		},
+		{
+			"name": "get media 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "gets media for case 2"
+			},
+			"response": []
+		},
+		{
+			"name": "get media 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "gets media for case 3"
+			},
+			"response": []
+		},
+		{
+			"name": "get media 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "gets media for case 4"
+			},
+			"response": []
+		},
+		{
+			"name": "get media 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b4c7eed-30b8-4b10-9740-6cc1dab664e0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3003//media/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"",
+						"media",
+						"5"
+					]
+				},
+				"description": "gets media for case 5"
+			},
+			"response": []
+		},
+		{
+			"name": "get caption 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b4c7eed-30b8-4b10-9740-6cc1dab664e0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3003//media/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"",
+						"media",
+						"5"
+					]
+				},
+				"description": "gets media for case 5"
+			},
+			"response": []
+		},
+		{
+			"name": "get cases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b4c7eed-30b8-4b10-9740-6cc1dab664e0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3003//media/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"",
+						"media",
+						"5"
+					]
+				},
+				"description": "gets media for case 5"
+			},
+			"response": []
+		}
+	]
+}
