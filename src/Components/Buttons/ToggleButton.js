@@ -3,12 +3,12 @@ import Axios from 'axios';
 
 
 export default function ToggleButton(props){
+    console.log(props)
     return(
     <div>
-        <button onClick={() => {
-            console.log('clicked')
-            return props.toggleFuntion()
-            }}>Toggle</button>
+        <button onClick={() => props.toggleFuntion()}>
+        Toggle
+        </button>
     </div>
     )
 }

@@ -48,7 +48,7 @@ app.get('/captions/:id',
 app.delete('/deletecase/:id',
 (req, res) => {
     const dbInstance = req.app.get('db')
-    dbInstance.deleteCase([req.params.id]).then((cases) => {
+    dbInstance.deleteCase([Number(req.params.id)]).then((cases) => {
         res.status(200).send(cases)
     })
 }
@@ -56,9 +56,10 @@ app.delete('/deletecase/:id',
 
 app.put('/updatecase/:id',
 (req, res) => {
+    console.log(req.body, 'reqqqqq')
     const {title, subtitle, brand} = req.body
     const dbInstance = req.app.get('db')
-    dbInstance.updateCase([req.params.id, title, subtitle, brand]).then((cases) => {
+    dbInstance.updateCase([Number(req.params.id), title, subtitle, brand]).then((cases) => {
         res.status(200).send(cases)
     })
 } 

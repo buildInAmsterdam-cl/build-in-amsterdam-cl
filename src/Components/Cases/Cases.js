@@ -14,11 +14,12 @@ export default class Cases extends Component {
         super(props)
         this.state = {
             casesData: [],
-            admin: true,
-            title: '',
-            subtitle: '',
-            brand: ''
+            admin: false,
+            title: 'default',
+            subtitle: 'default',
+            brand: 'default'
         }
+    this.toggleAdmin = this.toggleAdmin.bind(this)
     }
 
     componentDidMount() {
@@ -40,8 +41,10 @@ export default class Cases extends Component {
             console.log(i)
             return (
                 <div key={i} className='content'>
-                    <div className='case_item'>
                     <EditButton id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} brand={this.state.brand}/>
+                    <DeleteButton id={cases.case_id}/>
+                <Link to={`/case/${cases.case_id}`} >
+                    <div className='case_item'>
                         <div className={`images images${[i]}`}>
                             <img className='pic' src={cases.background_url} alt='caseimg' />
                         </div>
@@ -52,19 +55,18 @@ export default class Cases extends Component {
                             <input onChange={(ele) => {this.setState({subtitle: ele.target.value})}}/>
                             <input onChange={(ele) => {this.setState({brand: ele.target.value})}}/>
                         </div>
-                        <DeleteButton id={cases.case_id}/>
                         
                     </div>
-                    
+                     </Link>
+                        
                 </div>
 
 
             )
         }) 
         : 
-        this.state.casesData.map((cases, i) => {
-            console.log(i)
-        let casesSlideshow = this.state.casesData ? this.state.casesData.map((cases, i) => {
+        
+         this.state.casesData.map((cases, i) => {
             // console.log(i)
             return (
                 <div className='content' key={i} >
@@ -87,7 +89,7 @@ export default class Cases extends Component {
         let postButton = this.state.admin ? <PostButton/> : <span/>
         return (
             <div className='case_parent'>
-            <ToggleButton toggleFunction={this.toggleAdmin}/>
+            <button onClick={() => this.toggleAdmin()}>Toggle</button>
             {postButton}
                 {casesSlideshow}
                 <div className='left_arrows'>
@@ -103,5 +105,8 @@ export default class Cases extends Component {
             </div>
         )
     }
+
+
 }
+
 

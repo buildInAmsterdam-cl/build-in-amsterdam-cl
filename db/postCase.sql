@@ -10,4 +10,4 @@ insert into cases (
 values
 ('New Title', 'New Subtitle', 'New Brand', 'default', 'default', 'default', 'default', 'https://static.pokebattler.com/pokemon/snorlax.svg')
 
-returns cases
+returning cases

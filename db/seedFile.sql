@@ -38,7 +38,7 @@ values
 
 create table if not exists media(
     media_id serial primary key,
-    cases_id integer references cases(case_id),
+    cases_id integer references cases(case_id) ON DELETE CASCADE,
     media_url varchar (300),
     content varchar (300)
 );
@@ -166,7 +166,7 @@ values
 
 create table if not exists captions(
     caption_id serial primary key,
-    case_id integer references cases(case_id),
+    case_id integer references cases(case_id) ON DELETE CASCADE,
     caption_title varchar(100),
     caption_content varchar(1000)
 );

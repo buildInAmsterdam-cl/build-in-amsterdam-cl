@@ -6,4 +6,4 @@ update cases SET (
 ($2, $3, $4)
 where case_id = $1
 
-returns cases
+returning cases
