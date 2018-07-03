@@ -1,0 +1,185 @@
+.sliderMain {
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    /* background: gray; */
+    font-family: 'Circular', sans-serif;
+    /* background: black; */
+    z-index: 10;
+    /* background: transparent; */
+}
+
+.slider3rd {
+    width: 33.333vw;
+    height: 100vh;
+    float: right;
+    /* border: solid 1px burlywood; */
+    background: black;
+    overflow: hidden;
+    z-index: 10;
+}
+.hMain {
+    /* border: solid 1px white; */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-left: 200px;
+    font-size: 120px;
+    bottom: 28vh;
+    z-index: 10;
+    /* background: transparent; */
+}
+.hMain2 {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    margin-left: 200px;
+    flex-direction: row;
+    font-size: 120px;
+    bottom: 15vh;
+    z-index: 10;
+    /* background: transparent; */
+}
+.slideLetterUp {
+    /* border: solid 1px white; */
+    float: right;
+    width: 10vw;
+    color: white;
+    overflow: hidden;
+    z-index: 10;
+    /* background: transparent; */
+}
+
+.slideUp {
+    /* animation-name: slide-up; */
+    animation-name: slideUpAndRight;
+    animation-duration: 3s;
+    animation-fill-mode: ease-out;
+    animation-iteration-count: initial;
+    /* background: black; */
+    z-index: 10;
+    overflow: hidden;
+    /* background: transparent; */
+}
+.slideUp2 {
+    animation-name: slide-up2;
+    animation-duration: 1s;
+    animation-fill-mode: ease-in linear;
+    animation-iteration-count: initial;
+    /* background: black; */
+    /* background: transparent; */
+}
+.slideUp3 {
+    animation-name: slide-up3;
+    animation-duration: 1s;
+    animation-fill-mode: ease-in;
+    animation-iteration-count: initial;
+    /* background: black; */
+    /* background: transparent; */
+}
+.hide {
+    overflow: hidden;
+    width: 0;
+}
+@keyframes slide-up {
+    0% {
+        line-height: 0px;
+    }
+    /* 25% {
+        line-height: 30px;
+    }
+    50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    } */
+    100% {
+        line-height: 115px;
+    }
+}
+@keyframes slide-up2 {
+    0% {
+        line-height: 0px;
+    }
+    25% {
+        line-height: 0px;
+    }
+    /* 50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    } */
+    100% {
+        line-height: 115px;
+    }
+}
+@keyframes slide-up3 {
+    /* 0% {
+        line-height: 0px;
+    }
+    25% {
+        line-height: 30px;
+    } */
+    50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    }
+    100% {
+        line-height: 115px;
+    }
+}
+
+@keyframes slideUpAndRight {
+    0% {
+        line-height: 0px;
+        width: 100%;
+    }
+    10% {
+        line-height: 50px;
+        width: 100%;
+    }
+    20% {
+        line-height: 140px;
+        width: 100%;
+    }
+    30% {
+        line-height: 140px;
+        width: 100%;
+    }
+    40% {
+        line-height: 140px;
+        width: 100%;
+    }
+    50% {
+        line-height: 140px;
+        width: 100%;
+    }
+    60% {
+        line-height: 140px;
+        width: 100%;
+    } 
+    /* 70% {
+        line-height: 140px;
+        width: 100%;
+    }
+    80% {
+        line-height: 140px;
+        width: 100%; 
+    }
+    90% {
+        line-height: 140px;
+        width: 100%;
+    } */
+    100% {
+        line-height: 140px;
+        width: 0;
+        overflow: hidden;
+    }
+}

@@ -8,6 +8,6 @@ insert into cases (
     link_url,
     background_url
 values
-($1, $2, $3, $4, $5, $6, $7, $8)
+('New Title', 'New Subtitle', 'New Brand', 'default', 'default', 'default', 'default', 'https://static.pokebattler.com/pokemon/snorlax.svg')
 
 returns cases

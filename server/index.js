@@ -13,12 +13,13 @@ massive(process.env.CONNECTION_STRING).then((dbInstance) => {
     // dbInstance.seedFile()
     //     .then(res => console.log('that sucSEEDed...'))
     //     .catch(err => console.log('aww shit..', err))
-    app.set('db', dbInstance)
+ app.set('db', dbInstance)
 }).catch(err => console.log(err))
 
 app.get('/cases', 
     (req, res, next) => {
         const dbInstance = req.app.get('db')
+        //console.log(dbInstance, 'dbinstance')
         dbInstance.getCases().then((cases) => {
             res.status(200).send(cases)
         }).catch( err => console.log('Shiz Monkeys what happened?', err))
@@ -55,9 +56,9 @@ app.delete('/deletecase/:id',
 
 app.put('/updatecase/:id',
 (req, res) => {
-    const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
+    const {title, subtitle, brand} = req.body
     const dbInstance = req.app.get('db')
-    dbInstance.updateCase([req.params.id, title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+    dbInstance.updateCase([req.params.id, title, subtitle, brand]).then((cases) => {
         res.status(200).send(cases)
     })
 } 
@@ -67,7 +68,7 @@ app.post('/newcase',
 (req, res) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
-    dbInstance.updateCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+    dbInstance.postCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
         res.status(200).send(cases)
     })
 }
