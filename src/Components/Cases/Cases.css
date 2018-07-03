@@ -112,6 +112,7 @@
     height: 45px;
     border-radius: 50%;
     margin-bottom: 60px;
+    opacity: .3;
 } 
 
 .right_arrows {
@@ -120,7 +121,7 @@
     height: 100vh;
     display: flex;
     align-items: flex-end;
-    margin-left:1800px;
+    margin-left:1830px;
     fill: #fff;
 }
 
@@ -132,5 +133,6 @@
     height: 45px;
     border-radius: 50%;
     margin-bottom: 60px;
+    opacity: .3
 } 
 
