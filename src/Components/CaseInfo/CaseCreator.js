@@ -3,7 +3,7 @@ import { caseId7Information, caseIdSampleInfo } from './CaseInfo';
 import './CaseCreator.css'
 
 import Axios from 'axios';
-import TopArea from '../Sections/topArea';
+import TopArea from '../Sections/TopArea';
 import FullImage from '../Sections/FullImage';
 import OneHalfImage from '../Sections/OneHalfImage';
 import TwoThirdsImage from '../Sections/TwoThirdsImage';
