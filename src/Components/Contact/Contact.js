@@ -15,7 +15,7 @@ class Contact extends Component {
                         </div>
                         <h3 className='headerTitlesCont'>Email</h3>
                         <div className=''>
-                            <a className='aTagStyle underline'
+                            <a className='aTagStyle underlineContact'
                                 href='mailto:hello@buildinamsterdam.com'
                                 target="_blank"
                                 rel="noopener noreferrer">hello@buildinamsterdam.com</a>
@@ -23,7 +23,7 @@ class Contact extends Component {
                         <br />
                         <h3 className='headerTitlesCont'>Jobs</h3>
 
-                        <a className='aTagStyle underline'
+                        <a className='aTagStyle underlineContact'
                             href='mailto:jobs@buildinamsterdam.com'
                             target="_blank"
                             rel="noopener noreferrer">jobs@buildinamsterdam.com</a>
@@ -31,7 +31,7 @@ class Contact extends Component {
                         <br /><br />
                         <h3 className='headerTitlesCont'>Telephone</h3>
 
-                        <a className='aTagStyle underline'
+                        <a className='aTagStyle underlineContact'
                             href='tel:+31202230066'
                             target="_blank"
                             rel="noopener noreferrer">+31 (0)20 223 00 66</a>
@@ -48,17 +48,17 @@ class Contact extends Component {
                         <br /><br />
                         <h3 className='headerTitlesCont'>Social</h3>
 
-                        <a className='aTagStyle underline spacer'
+                        <a className='aTagStyle underlineContact spacer'
                             href='https://www.facebook.com/buildinamsterdam'
                             target="_blank"
                             rel="noopener noreferrer">Facebook</a><br />
 
-                        <a className='aTagStyle underline spacer'
+                        <a className='aTagStyle underlineContact spacer'
                             href='https://www.instagram.com/buildinamsterdam/'
                             target="_blank"
                             rel="noopener noreferrer">Instagram</a><br />
 
-                        <a className='aTagStyle underline'
+                        <a className='aTagStyle underlineContact'
                             href='https://twitter.com/buildinams'
                             target="_blank"
                             rel="noopener noreferrer">Twitter</a>
