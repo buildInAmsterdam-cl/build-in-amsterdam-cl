@@ -1,3 +1,9 @@
+.aTagStyle {
+    /* text-decoration-line: none; */
+    color: black;
+    /* transition: 3s all ease; */
+}
+
 .undy {
     display: inline;
     position: relative;
@@ -86,11 +92,7 @@
     margin-top: 0;
 }
 
-.aTagStyle {
-    /* text-decoration-line: none; */
-    color: black;
-    transition: 3s all ease;
-}
+
 
 
 /* @media screen and (max-width: 560px){
