@@ -6,15 +6,26 @@ import './NavBar.css'
 
 
 
-export default function NavBar() {
-   return(
-       <div className = "navbar">
+export default class NavBar extends React.Component {
+   constructor(){
+       super()
+       this.state = {
+          menuOn: false,
+       }
+   }
+   handleToggle = () => {
+       this.setState({ menuOn: !this.state.menuOn})
+   }
+   render(){
+    return(
+       <div className ={this.state.menuOn ? 'navbar menuOn' : 'navbar'}>
            <div className = "nav-left">
                <BiALogo/>
            </div>
-           <div className = "nav-right">
+           <div className = "nav-right" onClick={()=> this.handleToggle()}>
                <MainButton/>
            </div>
        </div>
    )
+}
 }
