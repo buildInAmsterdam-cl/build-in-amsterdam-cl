@@ -88,13 +88,26 @@
     letter-spacing: .09rem;
 }
 
-.arrows {
+.left_arrows {
     position: fixed;
     min-width: auto;
     min-height: 100vh;
     display: flex;
     align-items: flex-end;
-    margin-left: 40px;
-    
+    margin-left: 45px;
+    padding-top: 60px;
+    fill: #fff;
 }
+
+.circle_left {
+    border: black solid;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+   
+    /* position: absolute;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;  */
+} 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './TwoThirdsIPad.css';
 import Vimeo from 'react-vimeo';
 
+
 export default function TwoThirdsIPad(props) {
 
     console.log(props, 'ipad props')

@@ -1,23 +1,20 @@
-.left_footer {
-    position: absolute;
-    display: flex;
-    align-content: flex-end;
-    padding-top: 20px;
-}
+/* .left_footer {
+    
+} */
 
- .circle_left {
+ /* .circle_left {
     position: absolute;
-    /* display: flex;
-    flex-direction: column; */
+    fill: #fff;
+    display: flex;
+    flex-direction: column;
     margin: 100px;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     z-index: 4;
     overflow: hidden;
-    bottom: 2.5rem;
     transition: .4s 
-}  
+}   */
 
 /* .circle_left:before {
     position: absolute;
@@ -31,8 +28,9 @@
     transition: .4s;
 } */
 
- .circle_left svg {
-    position: absolute;
+ /* .circle_left svg {
+    position: relative;
+   
     top: 0;
     right: 0;
     bottom: 0;
@@ -42,7 +40,7 @@
     height: 18px;
     fill: #fff;
     z-index: 1;
-} 
+}  */
 
 /* #left_arrow {
     position: relative;

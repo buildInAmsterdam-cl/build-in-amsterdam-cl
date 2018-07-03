@@ -43,8 +43,10 @@ export default class Cases extends Component {
         return (
             <div className='case_parent'>
                 {casesSlideshow}
-                <div className='arrows'>
-                    <LeftArrow/>
+                <div className='left_arrows'>
+                    <div className='circle_left'>
+                        <LeftArrow />
+                    </div>
                 </div>
             </div>
         )
