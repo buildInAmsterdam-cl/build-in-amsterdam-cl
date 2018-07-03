@@ -6,7 +6,7 @@ insert into cases (
     award_blurb,
     deliverables,
     link_url,
-    background_url
+    background_url )
 values
 ('New Title', 'New Subtitle', 'New Brand', 'default', 'default', 'default', 'default', 'https://static.pokebattler.com/pokemon/snorlax.svg')
 

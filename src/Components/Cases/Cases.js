@@ -90,8 +90,8 @@ export default class Cases extends Component {
         return (
             <div className='case_parent'>
             <button onClick={() => this.toggleAdmin()}>Toggle</button>
-            {postButton}
                 {casesSlideshow}
+            {postButton}
                 <div className='left_arrows'>
                     <div className='circle_left'>
                         <LeftArrow />
