@@ -1,0 +1,108 @@
+/* .sliderMain {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: gray;
+    font-family: 'Circular', sans-serif;
+} */
+
+/* .slider3rd {
+    width: 33.333vw;
+    height: stretch;
+    float: right;
+    border: solid 1px burlywood;
+    background: black;
+    overflow: hidden;
+} */
+/* .hMain {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-size: 100px;
+    bottom: 10vh;
+}
+.hMain2 {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    font-size: 100px;
+    bottom: 0vh;
+} */
+.slideLetter {
+    float: right;
+    width: 10vw;
+    border: solid 1px white;
+    color: white;
+    overflow: hidden;
+}
+.slideScreen {
+    animation-name: slideRight;
+    animation-duration: 5s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+.slideScreen2 {
+    animation-name: slideRight2;
+    animation-duration: 3s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+
+
+
+
+@keyframes slideRight {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        width: 100%;
+    }
+    25% {
+        width: 100%;
+        
+    }
+    /* 50% {
+        width: 50%;
+        
+    } */
+    /* 75% {
+        width: 25%;
+        
+    } */
+    100% {
+        width: 0%;
+        
+    }
+}
+@keyframes slideRight2 {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        width: 100%;
+    }
+    /* 25% {
+        width: 75%;
+        
+    }
+    50% {
+        width: 50%;
+        
+    }
+    75% {
+        width: 25%;
+        
+    } */
+    100% {
+        width: 0%;
+        
+    }
+}
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    50%  {top: 100px;}
+    75%  {top: 200px;}
+    100% {top: 0px;}
+}

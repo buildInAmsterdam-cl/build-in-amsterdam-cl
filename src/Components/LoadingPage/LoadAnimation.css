@@ -1,0 +1,160 @@
+.sliderMain {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background: gray; */
+    font-family: 'Circular', sans-serif;
+}
+
+.slider3rd {
+    width: 33.333vw;
+    height: stretch;
+    float: right;
+    /* border: solid 1px burlywood; */
+    background: black;
+    overflow: hidden;
+}
+.hMain {
+    /* border: solid 1px white; */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-left: 200px;
+    font-size: 120px;
+    bottom: 25vh;
+}
+.hMain2 {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    margin-left: 200px;
+    flex-direction: row;
+    font-size: 120px;
+    bottom: 15vh;
+}
+.slideLetterUp {
+    /* border: solid 1px white; */
+    float: right;
+    width: 10vw;
+    color: white;
+    overflow: hidden;
+}
+
+.slideUp {
+    /* animation-name: slide-up; */
+    animation-name: slideUpAndRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease-in linear;
+    animation-iteration-count: initial;
+}
+.slideUp2 {
+    animation-name: slide-up2;
+    animation-duration: 1s;
+    animation-fill-mode: ease-in linear;
+    animation-iteration-count: initial;
+}
+.slideUp3 {
+    animation-name: slide-up3;
+    animation-duration: 1s;
+    animation-fill-mode: ease-in;
+    animation-iteration-count: initial;
+}
+@keyframes slide-up {
+    0% {
+        line-height: 0px;
+    }
+    /* 25% {
+        line-height: 30px;
+    }
+    50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    } */
+    100% {
+        line-height: 115px;
+    }
+}
+@keyframes slide-up2 {
+    0% {
+        line-height: 0px;
+    }
+    25% {
+        line-height: 0px;
+    }
+    /* 50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    } */
+    100% {
+        line-height: 115px;
+    }
+}
+@keyframes slide-up3 {
+    /* 0% {
+        line-height: 0px;
+    }
+    25% {
+        line-height: 30px;
+    } */
+    50% {
+        line-height: 60px;
+    }
+    75% {
+        line-height: 90px;
+    }
+    100% {
+        line-height: 115px;
+    }
+}
+
+@keyframes slideUpAndRight {
+    0% {
+        line-height: 0px;
+        width: 100%;
+    }
+    10% {
+        line-height: 50px;
+        width: 100%;
+    }
+    20% {
+        line-height: 115px;
+        width: 100%;
+    }
+    30% {
+        line-height: 115px;
+        width: 100%;
+    }
+    40% {
+        line-height: 115px;
+        width: 100%;
+    }
+    50% {
+        line-height: 115px;
+        width: 100%;
+    }
+    /* 60% {
+        line-height: 115px;
+        width: 100%;
+    }
+    70% {
+        line-height: 115px;
+        width: 100%;
+    }
+    80% {
+        line-height: 115px;
+        width: 100%; 
+    }
+    90% {
+        line-height: 115px;
+        width: 100%;
+    } */
+    100% {
+        line-height: 115px;
+        width: 0;
+    }
+}
