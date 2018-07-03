@@ -114,7 +114,7 @@ export default class CaseCreator extends Component {
             } else if (ele.componentType === 'ColorPicker' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
                 return (
-                    <div><ColorPicker caption1={this.state.captions[captionsIndex1]} /></div>//needs a hardcoded colorpicker image
+                    <div><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg'/></div>//needs a hardcoded colorpicker image
                 )
                 //  } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 //     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
