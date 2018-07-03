@@ -7,18 +7,31 @@
     to { opacity: 0; }
 }
 
-@keyframes slideOut {
-    from { background: black}
-    to { background: transparent }
+/* @keyframes slideOut {
+    from { 
+        background: black;
+        transform: translate()
+    }
+    to { 
+        background: transparent;
+    
+    }
+} */
+@keyframes mymove {
+    0%   {top: 0px; left: 0px; background: red;}
+    25%  {top: 0px; left: 100px; background: blue;}
+    50%  {top: 100px; left: 100px; background: yellow;}
+    75%  {top: 100px; left: 0px; background: green;}
+    100% {top: 0px; left: 0px; background: red;}
 }
 .main {
     width: stretch;
     height: stretch;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     flex-direction: row;
     justify-content: center;
-    z-index: -10;
+    /* z-index: -10; */
     /* background: black; */
     /* animation-name: opac; */
     /* animation-duration: 2s; */
@@ -38,13 +51,6 @@
     background-color: black;
     color: white;
 }
-.blinds {
-    height: stretch;
-    width: 33.333vw;
-    background: black;
-    border: white 1px solid;
-    z-index: 5;
-}
 .fadeOut {
     width: stretch;
     height: stretch;
@@ -53,14 +59,22 @@
     background-color: black;
     color: white;
 }
-
+.blinds {
+    height: stretch;
+    width: 33.333vw;
+    background: black;
+    border: white 1px solid;
+    z-index: 1;
+}
 .slideOut {
     width: stretch;
     height: stretch;
-    animation-name: slideOut;
-    width: 0;
-    transition: 2s ease all;
+    /* animation-name: slideOut; */
+    animation-name: mymove;
     animation-duration: 2s;
+    animation-iteration-count: infinite;
+    width: 0;
+    /* transition: 2s ease all; */
     background-color: black;
     display: none;
     color: white;
@@ -84,6 +98,7 @@
     text-align: left;
     /* margin-top: 0; */
     bottom: 6vh;
+    z-index: 2;
 }
 
 .loadingTextLine2 {
@@ -92,4 +107,5 @@
     text-align: left;
     /* margin-top: 0; */
     bottom: 2vh;
+    z-index: 2;
 }

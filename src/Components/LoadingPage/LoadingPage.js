@@ -1,4 +1,5 @@
 import React from 'react';
+import LoadAnimation from './LoadAnimation';
 import './LoadingPage.css';
 export default function LoadingPage(WrappedComponent) {
     return class extends React.Component {
@@ -28,71 +29,13 @@ export default function LoadingPage(WrappedComponent) {
         }
 
         render() {
-            // console.log(this.state.countdown)
-
-            let currentMess = (
-                <div className='main'>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    {/* <div className={this.state.countdown !== 3 ? 'fadeForNow' : 'fadeOut'}> */}
-                        <h1 className='loadingText' >Strategy, branding &</h1>
-                        <h1 className='loadingTextLine2' >e-commerce</h1>
-                </div>)
-
-
             return (
                 <div>
                     {this.timer()}
-                    {
-                        this.state.show ? 
-                    
-                    <div className='main'>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-                    {/* <div className={this.state.countdown !== 3 ? 'fadeForNow' : 'fadeOut'}> */}
-                        <h1 className='loadingText' >Strategy, branding &</h1>
-                        <h1 className='loadingTextLine2' >e-commerce</h1>
-                        <div className='indexed' >
-                        <WrappedComponent className={this.state.countdown? 'indexed': 'indexShow'} {...this.props} />
-                        </div>
-                </div>
-                        : 
-                        <div className='indexShow' >
-                        <WrappedComponent {...this.props} />
-                        </div>
-                        }
-                    {/* {this.state.show ? currentMess : currentMess} */}
+                    {this.state.show ? <LoadAnimation /> : <WrappedComponent {...this.props} />}
+                    {/* {this.state.show ? <LoadAnimation /> : <LoadAnimation />} */}
                 </div >
             )
         }
     }
 }
-
-
-// return (
-//     <div>
-//         {this.timer()}
-//         {
-//             this.state.show ? 
-        
-//         <div className='main'>
-//         <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-//         <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-//         <div className={this.state.countdown !== 3 ? 'blinds' : 'blinds slideOut'} ></div>
-//         {/* <div className={this.state.countdown !== 3 ? 'fadeForNow' : 'fadeOut'}> */}
-//             <h1 className='loadingText' >Strategy, branding &</h1>
-//             <h1 className='loadingTextLine2' >e-commerce</h1>
-//             <div className='indexed' >
-//             <WrappedComponent className={this.state.countdown? 'indexed': 'indexShow'} {...this.props} />
-//             </div>
-//     </div>
-//             : 
-//             <div className='indexShow' >
-//             <WrappedComponent {...this.props} />
-//             </div>
-//             }
-//         {/* {this.state.show ? currentMess : currentMess} */}
-//     </div >
-// )
