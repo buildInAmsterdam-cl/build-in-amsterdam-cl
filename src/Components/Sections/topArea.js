@@ -1,6 +1,6 @@
 import React from 'react';
 import {Parallax} from 'react-parallax'
-import './topArea.css';
+import './TopArea.css';
 
 export default function topArea(props) { 
     console.log(props.indCase)

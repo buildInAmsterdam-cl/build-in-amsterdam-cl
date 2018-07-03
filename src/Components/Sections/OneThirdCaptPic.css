@@ -7,17 +7,17 @@
 .oneThirdCaptPicResize{
     height: 50vh;
     overflow: hidden;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    display: block;
+    align-items: center;
+    /* display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 .oneThirdCaptPicResize img{
-  
-  max-width: 650px;
-  /* width: 100%; */
+  /* height: 50vh; */
+  /* max-width: 650px; */
+  width: 100%;
 }
 
 .captionContain{
@@ -29,7 +29,14 @@
 
 .oneThirdCapt {
     padding: 100px;
+    max-width: 49%;
     text-align: left;
-    
+    font-family: 'Circular',sans-serif;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+}
+
+.oneThirdCapt p{
+    line-height: 1.563rem;
 }
 
