@@ -14,8 +14,10 @@
     height: 74vh;
     box-sizing: border-box;
     fill: rgb(33, 33, 33);
+    overflow: hidden;
 }
 
 .twoThirdsipadResize {
     overflow: hidden;
+    margin-right: 20px;
 }   
