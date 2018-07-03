@@ -3,9 +3,12 @@
     height: 100vh;
     overflow: hidden;
     background: #ED5965;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .twoThirdsImageResize {
     top: 50;
     bottom: 50;
-    max-width: 1279px;
+    max-width: 1280px;
 }

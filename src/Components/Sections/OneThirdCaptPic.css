@@ -1,0 +1,35 @@
+.oneThirdCaptPicMain{
+    width: 33.3333vw;
+    height: 100vh;
+  
+    display: inline-block;
+}
+.oneThirdCaptPicResize{
+    height: 50vh;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.oneThirdCaptPicResize img{
+  
+  max-width: 650px;
+  /* width: 100%; */
+}
+
+.captionContain{
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.oneThirdCapt {
+    padding: 100px;
+    text-align: left;
+    
+}
+

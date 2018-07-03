@@ -1,0 +1,23 @@
+.colorPickerMain {
+    padding: 9.375rem 6.25rem;
+    height: 66.6666vh;
+}
+
+.colorCaptionContainer{
+    width: 33.3333vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.colorCaption{
+    text-align: left;
+    max-width: 75%;
+    margin-top: 1.563rem;
+    font-family: 'Circular', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.563rem;
+    letter-spacing: .03rem;
+}
