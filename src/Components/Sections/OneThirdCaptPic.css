@@ -1,0 +1,42 @@
+.oneThirdCaptPicMain{
+    width: 33.3333vw;
+    height: 100vh;
+  
+    display: inline-block;
+}
+.oneThirdCaptPicResize{
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+.oneThirdCaptPicResize img{
+  /* height: 50vh; */
+  /* max-width: 650px; */
+  width: 100%;
+}
+
+.captionContain{
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.oneThirdCapt {
+    padding: 100px;
+    max-width: 49%;
+    text-align: left;
+    font-family: 'Circular',sans-serif;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+}
+
+.oneThirdCapt p{
+    line-height: 1.563rem;
+}
+
