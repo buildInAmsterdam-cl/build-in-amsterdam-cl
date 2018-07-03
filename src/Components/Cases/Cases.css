@@ -88,13 +88,43 @@
     letter-spacing: .09rem;
 }
 
-.arrows {
+.left_arrows {
     position: fixed;
     min-width: auto;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     margin-left: 40px;
-    
+    fill: #fff;
 }
+
+.circle_left {
+    display: flex;
+    align-items: center;
+    background: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 60px;
+} 
+
+.right_arrows {
+    position: fixed;
+    min-width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    margin-left:1800px;
+    fill: #fff;
+}
+
+.circle_right {
+    display: flex;
+    align-items: center;
+    background: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 60px;
+} 
 

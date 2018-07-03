@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Cases.css';
 import axios from 'axios';
 import LeftArrow from '../Arrows/LeftArrow';
+import RightArrow from '../Arrows/RightArrow';
 
 export default class Cases extends Component {
     constructor(props) {
@@ -43,8 +44,15 @@ export default class Cases extends Component {
         return (
             <div className='case_parent'>
                 {casesSlideshow}
-                <div className='arrows'>
-                    <LeftArrow/>
+                <div className='left_arrows'>
+                    <div className='circle_left'>
+                        <LeftArrow />
+                    </div>
+                </div>
+                <div className='right_arrows'>
+                    <div className='circle_right'>
+                        <RightArrow/>
+                    </div>
                 </div>
             </div>
         )
