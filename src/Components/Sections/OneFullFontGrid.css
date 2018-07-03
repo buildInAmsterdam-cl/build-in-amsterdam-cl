@@ -1,0 +1,26 @@
+.oneFullFontGridMain{
+    padding: 10rem 6.25rem 200px 6.25rem;
+    background: rgb(233, 246, 249);
+    height: 54.25vh;
+   
+}
+
+.oneFullFontGridDiv{
+    margin-bottom: 9.375rem;
+    
+    display: flex;
+    align-content: flex-start;
+}
+
+.oneFullFontGridImg{
+    width: 59.5%;
+    
+}
+.oneFullFontGridImg img{
+    width: 100%;
+}
+
+.oneFullFonttxt{
+    text-align: left;
+    width: 31%;
+}
