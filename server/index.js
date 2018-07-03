@@ -55,9 +55,9 @@ app.delete('/deletecase/:id',
 
 app.put('/updatecase/:id',
 (req, res) => {
-    const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
+    const {title, subtitle, brand} = req.body
     const dbInstance = req.app.get('db')
-    dbInstance.updateCase([req.params.id, title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+    dbInstance.updateCase([req.params.id, title, subtitle, brand]).then((cases) => {
         res.status(200).send(cases)
     })
 } 
@@ -67,7 +67,7 @@ app.post('/newcase',
 (req, res) => {
     const {title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url} = req.body
     const dbInstance = req.app.get('db')
-    dbInstance.updateCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
+    dbInstance.postCase([title, subtitle, brand, blurb, award_blurb, deliverables, link_url, background_url]).then((cases) => {
         res.status(200).send(cases)
     })
 }
