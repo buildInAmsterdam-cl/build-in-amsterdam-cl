@@ -1,0 +1,49 @@
+.left_footer {
+    position: absolute;
+    display: flex;
+    align-content: flex-end;
+    padding-top: 20px;
+}
+
+ .circle_left {
+    position: absolute;
+    /* display: flex;
+    flex-direction: column; */
+    margin: 100px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    z-index: 4;
+    overflow: hidden;
+    bottom: 2.5rem;
+    transition: .4s 
+}  
+
+/* .circle_left:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
+    background: black;
+    opacity: 22;
+    transition: .4s;
+} */
+
+ .circle_left svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    z-index: 1;
+} 
+
+/* #left_arrow {
+    position: relative;
+} */

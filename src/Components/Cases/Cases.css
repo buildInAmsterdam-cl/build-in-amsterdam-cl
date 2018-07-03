@@ -88,3 +88,13 @@
     letter-spacing: .09rem;
 }
 
+.arrows {
+    position: fixed;
+    min-width: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 40px;
+    
+}
+

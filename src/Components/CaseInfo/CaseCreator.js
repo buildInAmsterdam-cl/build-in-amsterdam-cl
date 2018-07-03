@@ -11,6 +11,8 @@ import OneThirdCapt from '../Sections/OneThirdCapt';
 import OneThirdCaptPic from '../Sections/OneThirdCaptPic';
 import ColorPicker from '../Sections/ColorPicker';
 import OneFullFontGrid from '../Sections/OneFullFontGrid';
+import TwoThirdsIPad from '../Sections/TwoThirdsiPad/TwoThirdsIPad';
+import FullGrid6PicsInIcons from '../Sections/FullGrid6PicsInIcons/FullGrid6PicsInIcons';
 
 export default class CaseCreator extends Component {
     constructor() {
@@ -116,26 +118,26 @@ export default class CaseCreator extends Component {
                 return (
                     <div><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg'/></div>//needs a hardcoded colorpicker image
                 )
-                //  } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
-                //     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
-                //      return (
-                //          <div><TwoThirdsIPad media1={this.state.media[mediaIndex1]}/></div>
-                //      )
-                //  } else if (ele.componentType === 'FullGrid6PicsInIcons' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
-                //     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
-                //     let mediaIndex2 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[1]})
-                //     let mediaIndex3 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[2]})
-                //     let mediaIndex4 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[3]})
-                //     let mediaIndex5 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[4]})
-                //     let mediaIndex6 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[5]})
-                //  return (
-                //      <div><FullGrid6PicsInIcons media1={this.state.media[ele.mediaId[0]]} 
-                //                                 media2={this.state.media[ele.mediaId[1]]} 
-                //                                 media3={this.state.media[ele.mediaId[2]]} 
-                //                                 media4={this.state.media[ele.mediaId[3]]} 
-                //                                 media5={this.state.media[ele.mediaId[4]]} 
-                //                                 media6={this.state.media[ele.mediaId[5]]}/></div>
-                //  )
+                 } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
+                     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
+                     return (
+                         <div><TwoThirdsIPad media1={this.state.media[mediaIndex1]}/></div>
+                     )
+                 } else if (ele.componentType === 'FullGrid6PicsInIcons' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
+                    let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
+                    let mediaIndex2 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[1]})
+                    let mediaIndex3 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[2]})
+                    let mediaIndex4 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[3]})
+                    let mediaIndex5 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[4]})
+                    let mediaIndex6 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[5]})
+                 return (
+                     <div><FullGrid6PicsInIcons media1={this.state.media[ele.mediaId[0]]} 
+                                                media2={this.state.media[ele.mediaId[1]]} 
+                                                media3={this.state.media[ele.mediaId[2]]} 
+                                                media4={this.state.media[ele.mediaId[3]]} 
+                                                media5={this.state.media[ele.mediaId[4]]} 
+                                                media6={this.state.media[ele.mediaId[5]]}/></div>
+                 )
             }
 
         })
