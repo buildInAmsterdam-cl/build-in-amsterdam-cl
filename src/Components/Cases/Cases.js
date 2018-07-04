@@ -9,6 +9,7 @@ import EditButton from '../Buttons/EditButton'
 import PostButton from '../Buttons/PostButton'
 
 
+
 export default class Cases extends Component {
     constructor(props) {
         super(props)
@@ -17,9 +18,11 @@ export default class Cases extends Component {
             admin: false,
             title: 'default',
             subtitle: 'default',
-            brand: 'default'
+            brand: 'default',
+            editable: [false, false, false, false, false, false, false]
         }
     this.toggleAdmin = this.toggleAdmin.bind(this)
+    this.addFalse = this.addFalse.bind(this)
     }
 
     componentDidMount() {
@@ -48,37 +51,84 @@ export default class Cases extends Component {
             admin: !this.state.admin
         })
     }
+
+    toggleEditable(num){
+        let newEditable = this.state.editable.map((ele, i) => {
+            if (i === num){
+                return !ele[num]
+            }
+            else {return ele} 
+        })
+        this.setState({
+            editable: newEditable
+        })
+    }
+
+    addFalse(){
+        this.setState({
+            editable: this.state.editable.push(false)
+            // editable: [...this.state.editable, false]
+        })
+        console.log(this.state)
+    }
     render() {
         //console.log(this.state.casesData, 'cases much?')
 
         let casesSlideshow = this.state.casesData ? this.state.admin ? this.state.casesData.map((cases, i) => {
-            console.log(i)
-            return (
-                <div key={i} className='content'>
-                {/* <Link to={`/case/${cases.case_id}`} > */}
-                    <div className='case_item'>
-                        <div className={`images images${[i]}`}>
-                            <img className='pic' src={cases.background_url} alt='caseimg' />
+            console.log(this.state.editable[i])
+            // this.addFalse()
+            console.log(this.state)
+                if (!this.state.editable[i]){
+                    
+                 return(   <div key={i} className='content'>
+                    {/* <Link to={`/case/${cases.case_id}`} > */}
+                        <div className='case_item'>
+                        <div className='button_group'>
+                        <DeleteButton className='button' id={cases.case_id}/>
+                        {/* <EditButton className='button' id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/> */}
+                        <button onClick={()=>this.toggleEditable(i)}>Edit</button>
                         </div>
-                        <div className='case_header'>
-                            <h1 > <input placeholder={cases.title} onChange={(ele) => {this.setState({title: ele.target.value})}}/></h1>
-                            <p>{cases.brand}</p>
-                            <input value={cases.title} placeholder={cases.title} onChange={(ele) => {this.setState({title: ele.target.value})}}/>
-                            <input onChange={(ele) => {this.setState({subtitle: ele.target.value})}}/>
-                            <input onChange={(ele) => {this.setState({brand: ele.target.value})}}/>
-                    <DeleteButton id={cases.case_id}/>
-                    <EditButton id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/>
+                            <div className={`images images${[i]}`}>
+                                <img className='pic' src={cases.background_url} alt='caseimg' />
+                            </div>
+                            <div className='case_header'>
+                            <h1 >{cases.title}</h1>
+                                <div className='blurb'><h5>{cases.blurb}</h5></div>
+                                <p>{cases.brand}</p>
+                            </div>
                         </div>
-                        
+                         {/* </Link> */}     
+                    </div>)
+                }
+                else{
+                return (
+                    <div key={i} className='content'>
+                    {/* <Link to={`/case/${cases.case_id}`} > */}
+                        <div className='case_item'>
+                        <div className='button_group'>
+                        <DeleteButton className='button' id={cases.case_id}/>
+                        {/* <EditButton className='button' id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/> */}
+                        <button onClick={()=>this.toggleEditable(i)}>Edit</button>
+                        <EditButton className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id}/>
+                        </div>
+                            <div className={`images images${[i]}`}>
+                                <img className='pic' src={cases.background_url} alt='caseimg' />
+                            </div>
+                            <div className='case_header'>
+                                <textarea style={{color : 'white'}} className='edit_input e_brand' placeholder={cases.title} onChange={(ele) => {this.setState({title: ele.target.value})}}/><br/>
+                                {/* <input className='edit_input' placeholder={cases.subtitle} onChange={(ele) => {this.setState({subtitle: ele.target.value})}}/><br/> */}
+                                <input className='edit_input' placeholder={cases.brand} onChange={(ele) => {this.setState({brand: ele.target.value})}}/>
+                            </div>
+                        </div>
+                         {/* </Link> */}     
                     </div>
-                     {/* </Link> */}
-                        
-                </div>
-
-
-            )
+                
+    
+                )
+            }
+            
         }) 
-        : 
+        :
         
          this.state.casesData.map((cases, i) => {
             // console.log(i)
@@ -100,7 +150,7 @@ export default class Cases extends Component {
             )
         }) : ''
 
-        let postButton = this.state.admin ? <PostButton/> : <span/>
+        let postButton = this.state.admin ? <PostButton addFalse={this.addFalse}/> : <span/>
         return (
             <div className='case_parent'>
             <button onClick={() => this.toggleAdmin()}>Toggle</button>
