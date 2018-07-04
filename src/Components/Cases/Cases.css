@@ -159,3 +159,39 @@
     opacity: .3
 } 
 
+.edit_input{
+font-family: 'Circular', sans-serif;
+color: white;
+padding: .25rem;
+background: transparent;
+text-decoration : none;
+border: none;
+width: 400px;
+}
+
+.e_brand{
+    font-size: 3.125rem;
+}
+
+.input_group{
+    
+}
+
+.button_group{
+/* width: 200px; */
+display: flex; 
+ /* flex-wrap: wrap; */
+justify-content: flex-end; 
+position: absolute;
+z-index: 3;
+width: 33vw;
+}
+
+::placeholder{
+    color: white
+}
+
+.button{
+    
+    margin: 3rem;
+}
