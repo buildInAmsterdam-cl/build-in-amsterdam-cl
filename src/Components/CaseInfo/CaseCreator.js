@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { caseId7Information, caseIdSampleInfo } from './CaseInfo';
-// import { caseId7Information, caseIdSampleInfo } from './CaseInfoOtherFormatDontUse';
+import { caseId7Information } from './CaseInfo';
 import './CaseCreator.css'
 
 import Axios from 'axios';
@@ -35,14 +34,14 @@ export default class CaseCreator extends Component {
         })
 
         Axios.get('/media/7').then((res) => {///replace w variables passed in through props
-            console.log(res)
+            // console.log(res)
             this.setState({
                 media: res.data
             })
         })
 
         Axios.get('/captions/7').then((res) => {
-            console.log(res)
+            // console.log(res)
             this.setState({
                 captions: res.data
             })
@@ -57,20 +56,20 @@ export default class CaseCreator extends Component {
     //otherwise you should increment by a (variable) number, that increments as it loops
 
     render() {
-        console.log(this.state.captions, "this is state")
+        // console.log(this.state.captions, "this is state")
         let componentStructure = caseId7Information.map((ele, i) => {//creates an array of the component types
             if (ele.componentType === 'OneThirdCaptPic' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
-                console.log(this.state.captions)
+                // console.log(this.state.captions)
                 let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
-                console.log(captionsIndex1)
+                // console.log(captionsIndex1)
                 return (
-                    <div><OneThirdCaptPic media1={this.state.media[mediaIndex1]} caption1={this.state.captions[captionsIndex1]} /></div>
+                    <div key={i}><OneThirdCaptPic media1={this.state.media[mediaIndex1]} caption1={this.state.captions[captionsIndex1]} /></div>
                 )
             } else if (ele.componentType === 'OneThirdCapt' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
                 return (
-                    <div><OneThirdCapt caption1={this.state.captions[captionsIndex1]} /></div>
+                    <div key={i}><OneThirdCapt caption1={this.state.captions[captionsIndex1]} /></div>
                 )
             } else if (ele.componentType === 'OneFullFontGrid' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
@@ -79,10 +78,10 @@ export default class CaseCreator extends Component {
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
                 let captionsIndex2 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[1] })
                 let captionsIndex3 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[2] })
-                console.log(this.state.captions)
-                console.log(captionsIndex1, captionsIndex2, captionsIndex3)
+                // console.log(this.state.captions)
+                // console.log(captionsIndex1, captionsIndex2, captionsIndex3)
                 return (
-                    <div><OneFullFontGrid 
+                    <div key={i}><OneFullFontGrid 
                         media1={this.state.media[mediaIndex1]}
                         media2={this.state.media[mediaIndex2]}
                         media3={this.state.media[mediaIndex3]}
@@ -101,40 +100,40 @@ export default class CaseCreator extends Component {
                 // console.log(mediaIndex1)
                 // console.log(this.state.media[mediaIndex1])
                 return (
-                    <div><FullImage media1={this.state.media[mediaIndex1]} /></div>
+                    <div key={i}><FullImage media1={this.state.media[mediaIndex1]} /></div>
                 )
             } else if (ele.componentType === 'OneHalfImage' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
                 return (
-                    <div><OneHalfImage media1={this.state.media[mediaIndex1]} /></div>
+                    <div key={i}><OneHalfImage media1={this.state.media[mediaIndex1]} /></div>
                 )
             }
             else if (ele.componentType === 'TwoThirdsImage' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
                 return (
-                    <div><TwoThirdsImage media1={this.state.media[mediaIndex1]} /></div>
+                    <div key={i}><TwoThirdsImage media1={this.state.media[mediaIndex1]} /></div>
                 )
             } else if (ele.componentType === 'ColorPicker' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
                 return (
-                    <div><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg'/></div>//needs a hardcoded colorpicker image
+                    <div key={i}><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg'/></div>//needs a hardcoded colorpicker image
                 )
 
                  } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                      let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
                      return (
-                         <div><TwoThirdsIPad media1={this.state.media[mediaIndex1]}/></div>
+                         <div key={i}><TwoThirdsIPad media1={this.state.media[mediaIndex1]}/></div>
                      )
                  } else if (ele.componentType === 'FullGrid6PicsInIcons' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
-                    console.log(mediaIndex1)
+                    // console.log(mediaIndex1)
                     let mediaIndex2 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[1]})
                     let mediaIndex3 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[2]})
                     let mediaIndex4 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[3]})
                     let mediaIndex5 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[4]})
                     let mediaIndex6 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[5]})
                  return (
-                     <div><FullGrid6PicsInIcons media1={this.state.media[mediaIndex1]} 
+                     <div key={i}><FullGrid6PicsInIcons media1={this.state.media[mediaIndex1]} 
                                                 media2={this.state.media[mediaIndex2]} 
                                                 media3={this.state.media[mediaIndex3]} 
                                                 media4={this.state.media[mediaIndex4]} 

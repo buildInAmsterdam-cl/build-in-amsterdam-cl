@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TopArea from '../Sections/topArea'
 import Axios from 'axios';
-
+import { caseId1Information } from '../CaseInfo/CaseInfo';
+import OneThirdCaptPic from '../Sections/OneThirdCaptPic';
+import TwoThirdsImage from '../Sections/TwoThirdsImage';
 
 export default class case1 extends Component {
     constructor() {
@@ -10,7 +12,7 @@ export default class case1 extends Component {
             media: [],
             captions: [],
             caseArr: [],
-            indCase: {},
+            indCase: ['case'],
         }
 
     }
@@ -39,13 +41,20 @@ export default class case1 extends Component {
         })
     }
     render() {
+        // console.log('object', caseId1Information)
+        // console.log('captions', this.state.captions)
+        // console.log('media', this.state.media)
+        let m1 = this.state.media.length !== 0 ? this.state.media[0] : '';
+        let c1 = this.state.captions.length !== 0 ? this.state.captions[0] : '';
+        let m2 = this.state.media.length !== 0 ? this.state.media[1] : '';
+        // console.log(m1)
         return (
             <div>
-                <TopArea
-                    indCase={this.state.indCase}
-                    secDivLeftColor={''}
-                    secDivRightColor={'rgb(252, 228, 115)'}
-                />
+                <TopArea indCase={this.state.indCase}/>
+                <div style={{display: 'flex'}} >
+                <OneThirdCaptPic media1={m1} caption1={c1} />
+                <TwoThirdsImage media1={m2} />
+                </div>
             </div>
         )
     }
