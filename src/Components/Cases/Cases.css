@@ -57,6 +57,9 @@
 
 .case_item {
     z-index: 3;
+    /* display: inline; */
+    /* position: relative; */
+    /* overflow: hidden; */
    
 }
  
@@ -86,10 +89,30 @@
     height: 0px;
 }
 
+  /* .case_item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: #000;
+    height: 1.65px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .case_item:hover:after,
+  .case_item:focus:after,
+  .case_item:active:after {
+    right: 0;
+  } */
+
 /* .case_item>.case_header:hover{
     color: green;
 } */
-
+/* .case_item>div>h1:hover{
+    color: green;
+} */
 /* .case_header>h1:hover {
     color: purple;
 } */

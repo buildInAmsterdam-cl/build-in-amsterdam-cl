@@ -10,9 +10,9 @@ app.use(bodyParser.json())
 app.use(express.static('/../public/build'))
 
 massive(process.env.CONNECTION_STRING).then((dbInstance) => {
-    // dbInstance.seedFile()
-    //     .then(res => console.log('that sucSEEDed...'))
-    //     .catch(err => console.log('aww shit..', err))
+    dbInstance.seedFile()
+        .then(res => console.log('that sucSEEDed...'))
+        .catch(err => console.log('aww shit..', err))
  app.set('db', dbInstance)
 }).catch(err => console.log(err))
 

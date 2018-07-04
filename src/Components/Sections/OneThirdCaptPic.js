@@ -1,14 +1,20 @@
 import React from 'react';
 
-// import './OneThirdCaptPic.css'
+import './OneThirdCaptPic.css'
 
-export default function OneThirdCaptPic(props){
+export default function OneThirdCaptPic(props) {
     console.log(props)
     return (
         <div className='oneThirdCaptPicMain'>
-            <img className='oneThirdCaptPicResize' src={props.media1.media_url} alt='' />
-            <h3>{props.caption1.caption_title}</h3>
-            <p>{props.caption1.caption_content}</p>
+            <div className='oneThirdCaptPicResize'><img src={props.media1.media_url} alt='' />
+            </div>
+            <div className='captionContain'>
+            <div className='oneThirdCapt'>
+                    <h3>{props.caption1.caption_title}</h3><br />
+                    <p>{props.caption1.caption_content}</p>
+                </div>
+            </div>
+               
         </div>
     )
 }
