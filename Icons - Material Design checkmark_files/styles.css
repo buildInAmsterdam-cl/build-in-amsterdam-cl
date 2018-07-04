@@ -1,0 +1,28 @@
+* {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  color: #5f6368;
+}
+
+html {
+  height: 100%;
+}
+
+.icon-image-preview {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
