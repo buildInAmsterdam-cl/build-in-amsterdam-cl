@@ -88,7 +88,7 @@
     position: absolute;
     left: 0;
     right: 100%;
-    bottom: -5px;
+    bottom: -2px;
     background: #fbf9f6;
     height: 1.65px;
     transition-property: left right;

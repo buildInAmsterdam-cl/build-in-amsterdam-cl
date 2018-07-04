@@ -3,7 +3,7 @@ import React from 'react';
 import './OneThirdCaptPic.css'
 
 export default function OneThirdCaptPic(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <div className='oneThirdCaptPicMain'>
             <div className='oneThirdCaptPicResize'><img src={props.media1.media_url} alt='' />

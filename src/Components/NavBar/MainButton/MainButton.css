@@ -20,6 +20,21 @@
   z-index: 3;
 }
 
+.circle:hover {
+  animation: turnThatJazz;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  /* animation */
+}
+@keyframes turnThatJazz {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(90deg)
+  }
+}
+
 .bar{
   height: 2px;
   width: 19px;
