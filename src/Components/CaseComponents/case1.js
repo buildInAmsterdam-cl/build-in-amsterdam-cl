@@ -25,14 +25,14 @@ export default class case1 extends Component {
             })
         }).catch(err => console.log('NOOOOOO!!!!', err))
         Axios.get('/media/1').then((res) => {
-            console.log(res)
+            // console.log(res)
             this.setState({
                 media: res.data
             })
         })
 
         Axios.get('/captions/1').then((res) => {
-            console.log(res)
+            // console.log(res)
             this.setState({
                 captions: res.data
             })

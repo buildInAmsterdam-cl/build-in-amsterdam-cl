@@ -5,7 +5,7 @@ import Vimeo from 'react-vimeo';
 
 export default function TwoThirdsIPad(props) {
 
-    console.log(props, 'ipad props')
+    // console.log(props, 'ipad props')
     return (
         <div className='twoThirdsiPadMain'>
             <div className='videoFrame'>
