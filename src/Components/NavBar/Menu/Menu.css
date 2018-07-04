@@ -77,7 +77,7 @@
 }
 
 .underline {
-    /* display: inline; */
+    display: inline;
     position: relative;
     overflow: hidden;
     z-index: 3;
@@ -94,5 +94,10 @@
     transition-property: left right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
 }
 
