@@ -1,12 +1,19 @@
 import React from 'react';
-import {Parallax} from 'react-parallax'
+import { Parallax } from 'react-parallax'
 import './TopAreaNewFixed.css';
 
-export default function topArea(props) { 
-    console.log(props.indCase)
+export default function topArea(props) {
     let bgImageUrl = props.indCase.background_url
-    let leftColor = ['','','','','','','']
+    let leftColor = ['', '', '', '', '', '', '']
     let rightColor = ['rgb(252, 228, 115)', '', '', '', '', '', 'rgb(245, 234, 175)']
+    let breakUp = '';
+    let firstPart = '';
+    let secondPart = '';
+    if (props.indCase[0] !== 'case') {
+        breakUp = props.indCase.title.split(' ');
+        firstPart = breakUp.splice(0, breakUp.length - 1).join(' ');
+        secondPart = breakUp.splice(breakUp.length - 1, 1).join(' ');
+    }
     return (
         <div className='topAreaMain'>
             <div className='topBgPicTitleArea' >
@@ -17,8 +24,17 @@ export default function topArea(props) {
                     bgImageAlt="Background Image"
                     strength={380}
                 >
-                    <div className='topTitleText'>{String(props.indCase.title)}</div>
-                    <div style={{ height: '78vh'}} />
+                    <span className='span1' >
+                        <div className='topTitleText slideUpTopArea'>
+                            {String(firstPart)}
+                        </div>
+                    </span>
+                    <span className='span2' >
+                        <div className='topTitleText2 slideUpTopArea2'>
+                            {String(secondPart)}
+                        </div>
+                    </span>
+                    <div style={{ height: '78vh', width: '100vw' }} />
                 </Parallax>
             </div>
             <div className='secondTopAreaMain' >
@@ -33,18 +49,14 @@ export default function topArea(props) {
                             <p>{props.indCase.deliverables}</p>
                             <br />
                             <h3>Visit site</h3>
-                            {/* FIXME: Fix the underline property that is similar to contact page. */}
-                            <a className='aTagStyle undy' 
-                            href={`https://${props.indCase.link_url}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            <a className='aTagStyle undy'
+                                href={`https://${props.indCase.link_url}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >{props.indCase.link_url}</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>)
-
 }

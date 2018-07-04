@@ -11,14 +11,14 @@ export default class case3 extends Component{
     }
     componentWillMount(){
         Axios.get('/media/3').then((res) =>{
-            console.log(res)
+            // console.log(res)
             this.setState({
                 media: res.data
             })
         })
 
         Axios.get('/captions/3').then((res) =>{
-            console.log(res)
+            // console.log(res)
             this.setState({
                 captions: res.data
             })
