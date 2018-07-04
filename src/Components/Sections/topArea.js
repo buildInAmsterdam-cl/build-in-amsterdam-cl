@@ -34,7 +34,7 @@ export default function topArea(props) {
                             <br />
                             <h3>Visit site</h3>
                             {/* FIXME: Fix the underline property that is similar to contact page. */}
-                            <a className='undy aTagStyle' 
+                            <a className='aTagStyle undy' 
                             href={`https://${props.indCase.link_url}`}
                             target="_blank"
                             rel="noopener noreferrer"
