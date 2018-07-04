@@ -141,6 +141,8 @@ export default class CaseCreator extends Component {
                                                 media6={this.state.media[mediaIndex6]}
                                                 /></div>
                  )
+            } else {
+                return '';
             }
 
         })

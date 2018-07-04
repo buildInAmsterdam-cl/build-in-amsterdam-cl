@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TopArea from '../Sections/topArea'
 import Axios from 'axios';
-import { caseId1Information } from '../CaseInfo/CaseInfo';
+// import { caseId1Information } from '../CaseInfo/CaseInfo';
 import OneThirdCaptPic from '../Sections/OneThirdCaptPic';
 import TwoThirdsImage from '../Sections/TwoThirdsImage';
 
