@@ -1,0 +1,75 @@
+.colorPickerMain {
+    padding: 9.375rem 6.25rem;
+    /* height: 100%; */
+    display: flex;
+    padding-right:0rem;
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+.colorCaptionContainer{
+    /* width: 33.3333vw; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.colorCaption{
+    text-align: left;
+    max-width: 68%;
+    /* margin-top: 1.563rem; */
+    font-family: 'Circular', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.563rem;
+    letter-spacing: .04rem;
+}
+
+.colorPickerBar{
+    width: 66vw;
+    margin-bottom: 1.875rem;
+    display: flex;
+    height: 425px;
+}
+
+.indivColor{
+    width: 250px;
+    height: 425px;
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.indivColor img{
+    width:100%;
+}
+
+.pantone{
+    height: 70px;
+    padding: 3.125rem 1.875rem;
+    color: #fff;
+    font-family: 'Circular', sans-serif;
+    font-weight: 100;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    line-height: 1.563rem;
+}
+
+.blue{
+    background: #88c6f2; 
+}
+.red{
+    background: #ef5862;
+}
+.green{
+    background: #8bd592;
+}
+.yellow{
+    background: #f6dd86;
+}
+.orange{
+    background: #ff9e74;
+}

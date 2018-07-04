@@ -6,7 +6,7 @@ export default function FullGrid6PicsInIcons(props) {
     return (
         <div className='FullGrid6PicsInIconsMain'>
             <div className='blocks'>
-                <img className='gridImg' src='' alt='' />
+                <img className='gridImg' src={props.media1} alt='' />
             </div>
             <div className='blocks'>
                 <img className='gridImg' src='' alt='' />

@@ -1,13 +1,19 @@
 .mainBoxAbout {
     font-family: 'Circular', sans-serif;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     text-align: left;
+    flex-wrap: wrap;
+    align-items: flex-end;
+   
 }
 
 .leftSideTopSlideAbout {
+    overflow: hidden;
     height: 100vh;
     width: 630px;
+    
 }
 
 .rightSideTextTopAbout {
@@ -21,6 +27,11 @@
 
 }
 
+.about-text{
+   
+    
+}
+
 .titleHeadAbout {
     height: 120px;
     width: 1132px;
@@ -29,12 +40,14 @@
     font-size: 3.125rem;
     line-height: 3.75rem;
     letter-spacing: .07rem;
-   
+    
 }
+
 .strategy-contain{
     display: flex;
     align-items: flex-start;
 }
+
 .strategy{
     height: 189px;
     width: 546px;
@@ -44,8 +57,67 @@
     line-height: 1.688rem;
     padding-right: 20px;
 }
+
 .strategy h2{
     font-size: 1.875rem;
     line-height: 2.625rem;
+    
+}
+.size-about{
+    height: 100vh;
+    background-color:#171719;
+   
+}
+
+.about{
+    color: #fbf9f6;
+    /* height: 100%; */
+    width: 1140px;
+    padding:200px 50px 100px 100px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   background-color:#171719;
+}
+.brands{
+    text-align: center;
+    width: 100vw;
+    display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.about p{
+    width: 550px;
+    margin-bottom: 1em;
+    text-align: justify;
+    line-height: 1.688rem;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: .04rem;
+}
+
+.about h1{
+    font-weight: 500;
+    /* line-height: 3.75rem; */
+    font-size: 3.125rem!important;
+    margin-bottom: 50px;
+    margin-top: 0;
+    letter-spacing: .07rem;
+}
+
+.about h2{
+    letter-spacing: .06rem;
+    font-size: 1.875rem!important;
+    margin-bottom: 30px;
+}
+
+.about-content{
+    margin-top: 50px;
+}
+.brands{
+    justify-content: center;
+}
+.builders{
     
 }
