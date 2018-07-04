@@ -1,6 +1,10 @@
-.right_footer {
-    width: 50px;
-    height: 40px;
-    margin-left:12px;
-    margin-top: 18px;
-}
+/* .right_footer {
+    width: 150px;
+    margin-left: 104px;
+    margin-top:12px;
+    transition: .4s background-color ease;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+} */
