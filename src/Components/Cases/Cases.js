@@ -7,7 +7,7 @@ import RightArrow from '../Arrows/RightArrow';
 import DeleteButton from '../Buttons/DeleteButton'
 import EditButton from '../Buttons/EditButton'
 import PostButton from '../Buttons/PostButton'
-import ToggleButton from '../Buttons/ToggleButton'
+
 
 export default class Cases extends Component {
     constructor(props) {
@@ -25,10 +25,24 @@ export default class Cases extends Component {
     componentDidMount() {
         axios.get('/cases').then(res => {
             this.setState({
-                casesData: res.data
+                casesData: res.data,
             })
         })
+        // this.setInitialState()
     }
+    
+    // setInitialState(){
+    //     if (this.state.casesData.length !== 0){
+    //         this.setState({
+    //             title: this.casesData[0].title
+    //         })
+    //         return ''
+    //     }
+    //     else {
+    //         this.setInitialState()
+    //     }
+    // }
+
     toggleAdmin(){
         this.setState({
             admin: !this.state.admin
@@ -41,23 +55,23 @@ export default class Cases extends Component {
             console.log(i)
             return (
                 <div key={i} className='content'>
-                    <EditButton id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} brand={this.state.brand}/>
-                    <DeleteButton id={cases.case_id}/>
-                <Link to={`/case/${cases.case_id}`} >
+                {/* <Link to={`/case/${cases.case_id}`} > */}
                     <div className='case_item'>
                         <div className={`images images${[i]}`}>
                             <img className='pic' src={cases.background_url} alt='caseimg' />
                         </div>
                         <div className='case_header'>
-                            <h1 >{cases.title}</h1>
+                            <h1 > <input placeholder={cases.title} onChange={(ele) => {this.setState({title: ele.target.value})}}/></h1>
                             <p>{cases.brand}</p>
-                            <input onChange={(ele) => {this.setState({title: ele.target.value})}}/>
+                            <input value={cases.title} placeholder={cases.title} onChange={(ele) => {this.setState({title: ele.target.value})}}/>
                             <input onChange={(ele) => {this.setState({subtitle: ele.target.value})}}/>
                             <input onChange={(ele) => {this.setState({brand: ele.target.value})}}/>
+                    <DeleteButton id={cases.case_id}/>
+                    <EditButton id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/>
                         </div>
                         
                     </div>
-                     </Link>
+                     {/* </Link> */}
                         
                 </div>
 
