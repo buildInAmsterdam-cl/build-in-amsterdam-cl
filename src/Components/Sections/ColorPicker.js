@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ColorPicker.css'
+import './colorPicker.css'
 
 export default function ColorPicker(props) {
 
