@@ -10,7 +10,7 @@ export default function TwoThirdsIPad(props) {
         <div className='twoThirdsiPadMain'>
             <div className='videoFrame'>
                 <div>
-                    <iframe className='twoThirdsipadResize' width="1050" height="689" muted='1' autoplay='0' frameborder="1" allowfullscreen src={props.media1.media_url} alt=''></iframe>
+                    <iframe className='twoThirdsipadResize' width="1050" height="689" muted='1' autoPlay='0' frameBorder="1" allowFullScreen src={props.media1.media_url} alt=''></iframe>
                 </div>
             </div>
         </div>
