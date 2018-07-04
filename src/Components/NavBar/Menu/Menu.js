@@ -34,7 +34,7 @@ export default class Menu extends Component {
                     </div>
                 </Link>
                 <Link to="/about" style={{ textDecoration: "none", color: "#fbf9f6" }}>
-                    <div className="about">
+                    <div className="menu-about">
                         <div className="menu-bar">
                             <div className="menu-text">
                                 <h1 className="underline">About</h1>

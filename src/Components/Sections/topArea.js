@@ -2,7 +2,7 @@ import React from 'react';
 import {Parallax} from 'react-parallax'
 import './TopAreaNewFixed.css';
 
-export default function topArea(props) { 
+export default function TopArea(props) { 
     console.log(props.indCase)
     let bgImageUrl = props.indCase.background_url
     let leftColor = ['','','','','','','']
