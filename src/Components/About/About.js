@@ -64,6 +64,7 @@ class About extends Component {
                 </div>
                 <div className='about brands'>
                     <div><h1>We work with brands <br />we believe in</h1></div>
+                    <div className='brandIcons'></div>
                 </div>
             </div>
         )

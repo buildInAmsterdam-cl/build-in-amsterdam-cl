@@ -67,27 +67,28 @@ background-position: center center;
     line-height: 1.6
 }
 
-.underline {
+.underlineContact {
     display: inline;
     position: relative;
     overflow: hidden;
   }
-  .underline:after {
+  .underlineContact:after {
     content: "";
     position: absolute;
-    z-index: -1;
+    /* z-index: -1; */
     left: 0;
     right: 100%;
     bottom: -5px;
     background: #000;
-    height: 0.5px;
+    /* height: 0.5px; */
+    height: 1.65px;
     transition-property: left right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
-  .underline:hover:after,
-  .underline:focus:after,
-  .underline:active:after {
+  .underlineContact:hover:after,
+  .underlineContact:focus:after,
+  .underlineContact:active:after {
     right: 0;
   }
 

@@ -9,23 +9,9 @@ export default function TwoThirdsIPad(props) {
     return (
         <div className='twoThirdsiPadMain'>
             <div className='videoFrame'>
-                <iframe className='twoThirdsipadResize' src={props.media1.media_url} alt=''></iframe>
-
-                {/* <Vimeo 
-            
-                videoId={225432736}
-                autoplay={true}
-                $mountNode
-               /> */}
-
-
-
-                <oembed>
-                   <html/> <iframe src="https://player.vimeo.com/video/225432736?muted=0&autoplay=1" width="840" height="628" frameborder="10" allowfullscreen></iframe>
-
-
-                </oembed>
-
+                <div>
+                    <iframe className='twoThirdsipadResize' width="1050" height="689" muted='1' autoPlay='0' frameBorder="1" allowFullScreen src={props.media1.media_url} alt=''></iframe>
+                </div>
             </div>
         </div>
     )
