@@ -1,6 +1,6 @@
 .colorPickerMain {
     padding: 9.375rem 6.25rem;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     padding-right:0rem;
     position: relative;
@@ -28,7 +28,7 @@
 
 .colorPickerBar{
     width: 66vw;
-   
+    margin-bottom: 1.875rem;
     display: flex;
     height: 425px;
 }
@@ -37,6 +37,9 @@
     width: 250px;
     height: 425px;
     
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .indivColor img{
@@ -44,9 +47,15 @@
 }
 
 .pantone{
+    height: 70px;
+    padding: 3.125rem 1.875rem;
     color: #fff;
     font-family: 'Circular', sans-serif;
     font-weight: 100;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    line-height: 1.563rem;
 }
 
 .blue{
