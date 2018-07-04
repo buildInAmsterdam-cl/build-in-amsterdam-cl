@@ -1,3 +1,9 @@
+.aTagStyle {
+    /* text-decoration-line: none; */
+    color: black;
+    /* transition: 3s all ease; */
+}
+
 .undy {
     display: inline;
     position: relative;
@@ -6,12 +12,12 @@
   .undy:after {
     content: "";
     position: absolute;
-    z-index: -1;
+    /* z-index: -1; */
     left: 0;
     right: 100%;
     bottom: -5px;
     background: #000;
-    height: 0.5px;
+    height: 1.65px;
     transition-property: left right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
@@ -86,11 +92,7 @@
     margin-top: 0;
 }
 
-.aTagStyle {
-    /* text-decoration-line: none; */
-    color: black;
-    transition: 3s all ease;
-}
+
 
 
 /* @media screen and (max-width: 560px){
