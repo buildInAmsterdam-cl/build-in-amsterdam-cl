@@ -3,7 +3,7 @@ import React from 'react';
 import './OneThirdCapt.css'
 
 export default function OneThirdCapt(props){
-    console.log(props.caption1.caption_title)
+    // console.log(props.caption1.caption_title)
     return (
         <div className='oneThirdCaptMain'>
              <div className='captionContainer'>

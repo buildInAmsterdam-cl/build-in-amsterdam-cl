@@ -3,7 +3,7 @@ import React from 'react';
 import './OneFullFontGrid.css'
 
 export default function OneFullFontGrid(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <div className='oneFullFontGridMain'>
             <div className='oneFullFontGridDiv'>
