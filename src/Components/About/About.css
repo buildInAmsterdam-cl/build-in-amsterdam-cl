@@ -27,11 +27,6 @@
 
 }
 
-.about-text{
-   
-    
-}
-
 .titleHeadAbout {
     height: 120px;
     width: 1132px;
@@ -85,6 +80,7 @@
     display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   background-color: #171719;
 }
 
 .about p{
@@ -115,9 +111,36 @@
 .about-content{
     margin-top: 50px;
 }
-.brands{
+.brand-title{
+    width: 100%;
     justify-content: center;
-}
-.builders{
+    margin: 100px 0;
     
 }
+
+.brand-title h1{
+    font-weight: 200;
+    font-size: 3.125rem;
+    line-height: 4.063rem;
+    color: #fbf9f6;
+    font-family: 'Circular', sans-serif;
+    margin:0;
+}
+
+.brands{
+    padding: 15vh 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    /* text-align: left; */
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+}
+.brandIcons{
+    width: 33.3333%!important;
+    padding: 100px 0;
+}
+.brandIcons img{
+    max-width: 200px!important;
+}
+

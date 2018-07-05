@@ -60,11 +60,28 @@ class About extends Component {
                 <div className='about builders'>
                     <div><h1>The <br /> Builders</h1></div>
                 </div>
-                <div className=''>
-                </div>
-                <div className='about brands'>
-                    <div><h1>We work with brands <br />we believe in</h1></div>
-                    <div className='brandIcons'></div>
+                <div className='brands'>
+                    <div className='brand-title'><h1>We work with brands <br />we believe in</h1>
+                    </div>
+                    <div></div>
+                      <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/adidas.jpg" alt="Adidas" /></div>  
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/openwear.jpg" alt="Openwear" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/sleeper.jpg" alt="Sleeper" /></div> 
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/franshals.jpg" alt="Frans Hals Museum" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/novis.jpg" alt="Novis" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/mendo.jpg" alt="Mendo" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/logo-02-1.jpg" alt="ETQ." /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/logo-04.jpg" alt="I amsterdam." /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/Schiphol_v21.jpg" alt="Shiphol Amsterdam Airport" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/logo-01.jpg" alt="Nike" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/Protest_v4.jpg" alt="Protest" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/thecoldpressedjuicery.jpg" alt="The Cold Pressed Juicery" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/eginstill_v31.jpg" alt="Eginstill" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/logo-03.jpg" alt="A-dam" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/canorfineart_v3.jpg" alt="Cantor Fine Art" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/abel_v2.jpg" alt="Abel" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/Trefecta_v2.jpg" alt="Trefecta" /></div>
+             <div className='brandIcons'><img src="http://www.buildinamsterdam.com/app/uploads/2015/10/high45_V2.jpg" alt="High 45" /></div>
                 </div>
             </div>
         )
