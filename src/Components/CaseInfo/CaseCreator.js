@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { caseId7Information } from './CaseInfo';
+import { CaseChooser } from './CaseChooser';
 import './CaseCreator.css'
 import MetaTags from 'react-meta-tags'
 
@@ -58,7 +58,12 @@ export default class CaseCreator extends Component {
 
     render() {
         // console.log(this.state.captions, "this is state")
-        let componentStructure = caseId7Information.map((ele, i) => {//creates an array of the component types
+        let caseArray = []
+        if(Number(this.props.match.params.id) <= 7){
+        caseArray = CaseChooser(Number(this.props.match.params.id))
+        }
+        // let componentStructure = caseId7Information.map((ele, i) => {//creates an array of the component types
+        let componentStructure = caseArray.map((ele, i) => {//creates an array of the component types
             if (ele.componentType === 'OneThirdCaptPic' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 // console.log(this.state.captions)
                 let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
@@ -152,7 +157,7 @@ export default class CaseCreator extends Component {
         if (this.state.case[0] !== ['case']) {
             br = this.state.case.brand
         }
-        let componentToggle = this.props.match.params.id === '7' ? componentStructure : '';
+        let componentToggle = Number(this.props.match.params.id) <= 7 ? componentStructure : '';
         return (
             <div className="caseCreator">
                 <MetaTags>
