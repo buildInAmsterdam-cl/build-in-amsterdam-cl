@@ -20,10 +20,19 @@ export default class MainButton extends Component {
     }
 
     render() {
+        console.log('this is state menuAppear', this.state.menuAppear)
         return (
             <div>
-                <div className="main-button" >
-                    <div className="circle" onClick={this.toggleMenu}>
+                <div className={!this.state.menuAppear ? "main-buttonPage" : "main-buttonPage hideButton"} >
+                    {/* <div className='popOutBox' >
+                        <div className='popOutBox_inner' >
+                            <span>Menu</span>
+                        </div>
+                    </div> */}
+                    <div
+                        // className="circle circleAnime" 
+                        className="circle"
+                        onClick={this.toggleMenu}>
                         <div className="hamburger">
                             <div className="bar"></div>
                             <div className="bar"></div>
@@ -35,7 +44,9 @@ export default class MainButton extends Component {
                 <div></div>
                 <Menu
                     menuStyles={this.state.menuAppear ? 'menu' : 'menu hide'}
-                    menuClose={this.toggleMenu} />
+                    menuClose={this.toggleMenu}
+                    menuAppear={this.state.menuAppear}
+                />
             </div>
         )
     }

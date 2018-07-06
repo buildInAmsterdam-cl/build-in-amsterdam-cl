@@ -1,8 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
 
 .hide{
-    height: 0px;
+    animation-name: slowerHeightHide;
+    animation-duration: 2.01s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+    /* height: 0px; */
 }
+
+@keyframes slowerHeightHide {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        height: 100vh;
+    }
+    25% {
+        height: 100vh;
+    }
+    50% {
+        height: 100vh;
+        
+    }
+    75% {
+        height: 100vh;
+        
+    }
+    99% {
+        height: 100vh;
+    }
+    100% {
+        height: 0vh;
+        
+    }
+}
+
 
 .menu{
     font-family: 'Circular', sans-serif;
@@ -47,23 +78,100 @@
 }
 
 
-
-
+.outerMenuThirdBox {
+    width: 33.333333vw; 
+    height: 100vh; 
+    background: transparent;
+}
 .cases{
     background-color:#1F1F21;
     height: 100vh;
     width: 33.333333vw;
-   
+    overflow: hidden;
 }
+
+.enter {
+    float: left;
+}
+.leave {
+    float: right;
+}
+
+.slideInMenu {
+    animation-name: slideInToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+    /* background: black; */
+}
+.slideOutMenu {
+    animation-name: slideOutToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+    /* background: black; */
+}
+
+@keyframes slideInToRight {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        /* width: 100%; */
+        width: 0%;
+    }
+    /* 25% {
+        width: 100%;
+    } */
+    /* 50% {
+        width: 50%;
+        
+    } */
+    /* 75% {
+        width: 25%;
+        
+    } */
+    100% {
+        width: 100%;
+        /* width: 0%; */
+        
+    }
+}
+@keyframes slideOutToRight {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        width: 100%;
+    }
+    /* 25% {
+        width: 100%;
+    } */
+    /* 50% {
+        width: 50%;
+        
+    } */
+    /* 75% {
+        width: 25%;
+        
+    } */
+    100% {
+        width: 0%;
+        
+    }
+}
+
 .menu-about{
     background-color:#171718;
     height: 100vh;
     width: 33.333333vw;
+    /* float: right; */
+    overflow: hidden;
 }
 .contact{
     background-color:#000000;
     height: 100vh;
     width: 33.3333333vw;
+    /* float: right; */
+    overflow: hidden;
 }
 
 .main-button{
