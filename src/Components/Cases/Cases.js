@@ -152,12 +152,11 @@ export default class Cases extends Component {
 
 
                 )
-            }
-            
+            }            
         }) 
         :
         
-         this.state.casesData.map((cases, i) => {
+        this.state.casesData.map((cases, i) => {
             // console.log(i)
             return (
                 <div className='content' key={i} >
@@ -171,11 +170,11 @@ export default class Cases extends Component {
                                 <div className='blurb'><h5>{cases.subtitle}</h5></div>
                                 <p>{cases.brand}</p>
                             </div>
-                    </div>
-                        </Link>
-                    </div>
-                )
-            }) : ''
+                        </div>
+                    </Link>
+                </div>
+            )
+        }) : ''
 
         let postButton = this.state.admin ? <PostButton addFalse={this.addFalse} /> : <span />
 
