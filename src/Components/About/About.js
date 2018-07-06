@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import './About.css'
+import MetaTags from 'react-meta-tags'
 
 class About extends Component {
 
     render() {
         return (
             <div className='mainBoxAbout' >
+                <MetaTags>
+                    <title>BiA - About</title>
+                    <meta id="meta-description" name="description" content="Some description." />
+                    <meta id="og-title" property="og:title" content="MyApp" />
+                </MetaTags>
                 <div className='leftSideTopSlideAbout borderBuild' >
                     <Parallax
                         blur={0}

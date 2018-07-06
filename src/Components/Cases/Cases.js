@@ -7,7 +7,8 @@ import RightArrow from '../Arrows/RightArrow';
 import DeleteButton from '../Buttons/DeleteButton'
 import EditButton from '../Buttons/EditButton'
 import PostButton from '../Buttons/PostButton';
-import { Transform } from 'stream';
+import MetaTags from 'react-meta-tags'
+// import { Transform } from 'stream';
 
 export default class Cases extends Component {
     constructor(props) {
@@ -180,6 +181,11 @@ export default class Cases extends Component {
 
         return (
             <div className='case_parent'>
+            <MetaTags>
+            <title>BiA - Cases</title>
+            <meta id="meta-description" name="description" content="Some description." />
+            <meta id="og-title" property="og:title" content="MyApp" />
+          </MetaTags>
                 <button onClick={() => this.toggleAdmin()}>Toggle</button>
                     {casesSlideshow}
                 {postButton}
