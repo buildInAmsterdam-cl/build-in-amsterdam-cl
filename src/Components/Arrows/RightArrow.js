@@ -11,7 +11,8 @@ export default class RightArrow extends Component {
     }
     render() {
         return (
-            <div className='right_footer'>
+            <div className='right_footer'> 
+            {/* onClick in this div will use props to change the starting index of cases in state */}
                 <div className=''>
                     <svg viewBox='0 0 0'>
                         <use href='#right_arrow' >
