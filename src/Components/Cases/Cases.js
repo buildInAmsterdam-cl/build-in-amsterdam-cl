@@ -75,12 +75,12 @@ export default class Cases extends Component {
         //console.log(this.state.casesData, 'cases much?')
 
         let casesSlideshow = this.state.casesData ? this.state.admin ? this.state.casesData.map((cases, i) => {
-            console.log(this.state.editable[i])
+            // console.log(this.state.editable[i])
             // this.addFalse()
-            console.log(this.state)
+            // console.log(this.state)
                 if (!this.state.editable[i]){
                     
-                 return(   <div key={i} className='content'>
+                 return(   <div key={i} className='contentEditor'>
                     {/* <Link to={`/case/${cases.case_id}`} > */}
                         <div className='case_item'>
                         <div className='button_group'>
@@ -93,7 +93,7 @@ export default class Cases extends Component {
                             </div>
                             <div className='case_header'>
                             <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.blurb}</h5></div>
+                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
                                 <p>{cases.brand}</p>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ export default class Cases extends Component {
                 }
                 else{
                 return (
-                    <div key={i} className='content'>
+                    <div key={i} className='contentEditor'>
                     {/* <Link to={`/case/${cases.case_id}`} > */}
                         <div className='case_item'>
                         <div className='button_group'>
@@ -141,7 +141,7 @@ export default class Cases extends Component {
                             </div>
                             <div className='case_header'>
                                 <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.blurb}</h5></div>
+                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
                                 <p>{cases.brand}</p>
                             </div>
                         </div>

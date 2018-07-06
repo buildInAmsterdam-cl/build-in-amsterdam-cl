@@ -60,8 +60,7 @@ export default class Menu extends Component {
     // }
 
     render() {
-        // console.log(this.props.menuAppear)
-        console.log('this is menuAppear props', this.props.menuAppear)
+        // console.log('this is menuAppear props', this.props.menuAppear)
         let { menuStyles } = this.props
         return (
 
@@ -92,10 +91,13 @@ export default class Menu extends Component {
                         >
                             <div className="menu-bar">
                                 <div className="menu-text">
-                                    <h1 className="underline">Cases</h1>
+                                    <div className='h1ContainerMenu' >
+                                    <h1 className="h1Con underline">Cases</h1>
+                                    </div>
+                                    <br/><br/>
                                     <div className="text-expand">
-                                        <p>We like to let our work do the talking</p>
-                                        <p>Go to Cases</p></div>
+                                        <p>We like to let our work do the talking</p><br/>
+                                        <p className='boldPTag'>Go to Cases</p></div>
                                 </div>
                             </div>
                         </div>
@@ -112,10 +114,12 @@ export default class Menu extends Component {
                         >
                             <div className="menu-bar">
                                 <div className="menu-text">
-                                    <h1 className="underline">About</h1>
+                                <div className='h1ContainerMenu' >
+                                    <h1 className="h1Con underline">About</h1>
+                                    </div><br/><br/>
                                     <div className="text-expand">
-                                        <p>We are a branding agency specialized in e-commerce</p>
-                                        <p>Go to About</p>
+                                        <p>We are a branding agency specialized in e-commerce</p><br/>
+                                        <p className='boldPTag'>Go to About</p>
                                     </div>
 
                                 </div>
@@ -135,10 +139,12 @@ export default class Menu extends Component {
                         >
                             <div className="menu-bar">
                                 <div className="menu-text">
-                                    <h1 className="underline">Contact</h1>
+                                <div className='h1ContainerMenu' >
+                                    <h1 className="h1Con underline">Contact</h1>
+                                    </div><br/><br/>
                                     <div className="text-expand">
-                                        <p>Rombout Hogerbeetsstraat 109-1 1052 VW Amsterdam The Netherlands</p>
-                                        <p>Go to Contact</p>
+                                        <p>Rombout Hogerbeetsstraat 109-1 <br/>1052 VW Amsterdam<br/>The Netherlands</p><br/>
+                                        <p className='boldPTag'>Go to Contact</p>
                                     </div>
 
                                 </div>

@@ -17,6 +17,7 @@
 .env.production.local
 .env
 .env.prod
+/db/seedFileV2.sql
 
 npm-debug.log*
 yarn-debug.log*

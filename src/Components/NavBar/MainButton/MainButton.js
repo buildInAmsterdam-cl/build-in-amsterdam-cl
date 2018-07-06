@@ -20,7 +20,7 @@ export default class MainButton extends Component {
     }
 
     render() {
-        console.log('this is state menuAppear', this.state.menuAppear)
+        // console.log('this is state menuAppear', this.state.menuAppear)
         return (
             <div>
                 <div className={!this.state.menuAppear ? "main-buttonPage" : "main-buttonPage hideButton"} >
