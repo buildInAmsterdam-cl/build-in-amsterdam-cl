@@ -4,8 +4,20 @@ import './TopAreaNewFixed.css';
 
 export default function topArea(props) {
     let bgImageUrl = props.indCase.background_url
-    let leftColor = ['', '', '', '', '', '', '']
-    let rightColor = ['rgb(252, 228, 115)', '', '', '', '', '', 'rgb(245, 234, 175)']
+    let leftColor = ['', '', '', '', '', '', '', '', '', '', '', '', '']
+    let rightColor = ['rgb(252, 228, 115)', 
+    'rgb(202, 190, 159)', 
+    'rgb(237, 237, 237)', 
+    'rgb(234, 234, 236)', 
+    'rgb(234, 234, 236)', 
+    'rgb(255, 204, 0)', 
+    'rgb(245, 234, 175)', 
+    'rgb(219, 217, 222)', 
+    'rgb(216, 216, 216)', 
+    'rgb(233, 246, 249)', 
+    'rgb(202, 199, 186)', 
+    'rgb(217, 224, 226)', 
+    'rgb(217, 224, 226)']
     let breakUp = '';
     let firstPart = '';
     let secondPart = '';

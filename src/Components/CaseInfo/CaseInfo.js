@@ -395,7 +395,8 @@ module.exports = {
             captionsId: []
         },
         {
-            componentType: 'TwoThirdsIPadWithImage',
+            // componentType: 'TwoThirdsIPadWithImage',
+            componentType: 'TwoThirdsImage',
             numberOfMedia: 1,
             numberOfCaptions: 0,
             mediaId: [48],

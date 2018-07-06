@@ -4,61 +4,6 @@ import './Menu.css';
 import '../MainButton/MainButton.css';
 
 export default class Menu extends Component {
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         countdown: 0,
-    //         show: true,
-    //     }
-    // }
-    // incrementTimer = () => {
-    //     this.setState({ countdown: this.state.countdown + 1 })
-    // }
-    // toggleShow = () => {
-    //     this.setState({ show: false })
-    // }
-    // timer = () => {
-    //     if (this.state.show) {
-    //         setTimeout(() => {
-    //             this.incrementTimer();
-    //             if (this.state.countdown > 4) {
-    //                 this.toggleShow();
-    //             }
-    //         }, 1000)
-    //     }
-    // }
-
-    // constructor() {
-    //     //the different values that the animation will decide if the state is changed on the menu click:
-    //     // none - default, no animation, menu closed.
-    //     // start - slide in animation
-    //     // leave - slide out animation
-    //     super()
-    //     this.state = {
-    //         currentAnimation: 'none',
-    //     }
-
-    // }
-    // handleSwitchToStart = () => { this.setState({ currentAnimation: 'start' }) }
-    // handleSwitchToLeave = () => { this.setState({ currentAnimation: 'leave' }) }
-    // handleSwitchToNoAnimation = () => { this.setState({ currentAnimation: 'none' }) }
-
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //     console.log(prevProps)
-    //     if (prevProps.menuAppear !== this.props.menuAppear) {
-    //         // if(prevState.currentAnimation !== 'start'){
-    //         if (prevProps.menuAppear) { //If was false, previously so now true
-    //             this.handleSwitchToStart();
-    //         } else {
-    //             this.handleSwitchToLeave();
-    //         }
-    //         console.log('this is previous props', prevProps)
-    //         console.log('this is previous state', prevState)
-    //         console.log('this is snapshot', snapshot)
-    //         // this.handleSwitchToStart();
-    //     }
-    // }
-
     render() {
         // console.log('this is menuAppear props', this.props.menuAppear)
         let { menuStyles } = this.props
