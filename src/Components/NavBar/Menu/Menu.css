@@ -1,8 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
 
 .hide{
-    height: 0px;
+    animation-name: slowerHeightHide;
+    animation-duration: 2.01s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+    /* height: 0px; */
 }
+
+@keyframes slowerHeightHide {
+    /* from {left: 0px;} */
+    /* to {left: 200px;} */
+    0% {
+        height: 100vh;
+    }
+    25% {
+        height: 100vh;
+    }
+    50% {
+        height: 100vh;
+        
+    }
+    75% {
+        height: 100vh;
+        
+    }
+    99% {
+        height: 100vh;
+    }
+    100% {
+        height: 0vh;
+        
+    }
+}
+
+
 
 .menu{
     font-family: 'Circular', sans-serif;
@@ -23,12 +55,37 @@
     z-index: 2;
     
 }
-
 .menu h1{
-    font-size: 2.75rem;
-    font-weight: 600;
-}
+    font-size: 3.75rem;
+    font-weight: 550;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 14px;
+} 
 
+/* .h1Con {
+    display: flex;
+    flex-direction: row;
+    font-size: 3.75rem;
+    font-weight: 550;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 14px;
+} */
+/* 
+.h1ContainerMenu {
+    display: flex;
+    flex-direction: row;
+} */
+
+.flexRMen {
+    display: flex;
+    flex-direction: row;
+}
 
 .menu-bar{
     height: 100vh;
@@ -41,29 +98,70 @@
 }
 
 .menu-text{
-    height: 200px;
+    height: 80px;
     max-width: 300px;
     line-height: 1.5rem;
+    /* overflow: hidden; */
 }
-
-
-
-
+.outerMenuThirdBox {
+    width: 33.333333vw; 
+    height: 100vh; 
+    background: transparent;
+}
 .cases{
     background-color:#1F1F21;
     height: 100vh;
     width: 33.333333vw;
-   
+    overflow: hidden;
 }
+.enter {
+    float: left;
+}
+.leave {
+    float: right;
+}
+.slideInMenu {
+    animation-name: slideInToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+.slideOutMenu {
+    animation-name: slideOutToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+
+@keyframes slideInToRight {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+        
+    }
+}
+@keyframes slideOutToRight {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
 .menu-about{
     background-color:#171718;
     height: 100vh;
     width: 33.333333vw;
+    overflow: hidden;
 }
 .contact{
     background-color:#000000;
     height: 100vh;
     width: 33.3333333vw;
+    overflow: hidden;
 }
 
 .main-button{
@@ -83,6 +181,7 @@
     z-index: 3;
 }
 
+/* .menu-bar:hover:after,  */
 .underline:after {
     content: "";
     position: absolute;
@@ -90,7 +189,7 @@
     right: 100%;
     bottom: -2px;
     background: #fbf9f6;
-    height: 1.65px;
+    height: 1.45px;
     transition-property: left right;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
@@ -101,3 +200,118 @@
   right: 0;
 }
 
+.h1ContainerMenu {
+    /* border: 1px solid white; */
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.text-expand {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+.menu-bar:hover .h1Con  {
+    /* transition: 1s all ease; */
+    
+    animation: peekaSlide;
+    animation-duration: 0.4s;
+    animation-play-state: inherit;
+    /* animation-timing-function: 1s all; */
+    /* animation-iteration-count: initial; */
+}
+
+/* Still Need to fix this one to animate out. */
+
+
+
+
+
+.menu-bar:hover:focus:after .h1Con:hover:focus:after  {
+    /* transition: 1s all ease; */
+    
+    animation: peekaSlideReverse;
+    animation-duration: 0.4s;
+    animation-play-state: initial;
+    /* animation-timing-function: 1s all; */
+    /* animation-iteration-count: initial; */
+}
+
+@keyframes peekaSlide {
+ 0% {
+    top: 14px;
+}
+25% {
+    top: 100px;
+    left: 0px;
+}
+30% {
+    top: 100px;
+    left: 300px;
+}
+40% {
+    top: -100px;
+    left: 300px;
+}
+60% {
+    top: -100px;
+    left: 0px;
+}
+100% {
+    top: 14px;
+    left: 0px;
+ }
+}
+@keyframes peekaSlideReverse {
+    0% {
+        top: 14px;
+        left: 0px;
+     }
+     25%{
+         top: 100px;
+         left: 300px;
+     }
+     30% {
+         top: -100px;
+         left: 300px;
+     }
+     40% {
+         top: -100px;
+         left: 0px;
+     }
+     60% {
+         top: 100px;
+         left: 0px;
+        }
+                 100% {
+                    top: 14px;
+                }
+}
+
+.menu-bar:hover,
+.menu-bar:focus .h1ContainMenu .h1Con {
+    transform: translateY(-120px);
+
+}
+
+.menu-bar:hover .text-expand {
+    height: 120px;
+    transform: translateY(-20px);
+    /* line-height: 20px; */
+    transition: 1s all ease;
+    opacity: 1;
+}
+.menu-bar:hover:after .h1ContainMenu .h1Con {
+    transition: 1s ease all;
+    transform: translateY(0px);
+
+}
+.boldPTag {
+    font-weight: bold;
+}

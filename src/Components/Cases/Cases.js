@@ -111,17 +111,11 @@ export default class Cases extends Component {
         // }
 
         let casesSlideshow = this.state.casesData ? this.state.admin ? this.state.casesData.map((cases, i) => {
-            console.log(this.state.editable[i])
-            // this.addFalse()
-            console.log(this.state)
-            if (!this.state.editable[i]) {
-
-                return (<div key={i} className='content'>
-                    {/* <Link to={`/case/${cases.case_id}`} > */}
+                if (!this.state.editable[i]){
+                 return(   <div key={i} className='contentEditor'>
                     <div className='case_item'>
                         <div className='button_group'>
                             <DeleteButton className='button' id={cases.case_id} />
-                            {/* <EditButton className='button' id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/> */}
                             <button onClick={() => this.toggleEditable(i)}>Edit</button>
                         </div>
                         <div className={`images images${[i]}`}>
@@ -129,21 +123,18 @@ export default class Cases extends Component {
                         </div>
                         <div className='case_header'>
                             <h1 >{cases.title}</h1>
-                            <div className='blurb'><h5>{cases.blurb}</h5></div>
-                            <p>{cases.brand}</p>
+                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                                <p>{cases.brand}</p>
+                            </div>
                         </div>
-                    </div>
-                    {/* </Link> */}
-                </div>)
+                    </div>)
             }
             else {
                 return (
-                    <div key={i} className='content'>
-                        {/* <Link to={`/case/${cases.case_id}`} > */}
+                    <div key={i} className='contentEditor'>
                         <div className='case_item'>
                             <div className='button_group'>
                                 <DeleteButton className='button' id={cases.case_id} />
-                                {/* <EditButton className='button' id={cases.case_id} newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand}/> */}
                                 <button onClick={() => this.toggleEditable(i)}>Edit</button>
                                 <EditButton className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
                             </div>
@@ -161,30 +152,29 @@ export default class Cases extends Component {
 
 
                 )
-            }
-
-        })
-            :
-
-            this.state.casesData.map((cases, i) => {
-                // console.log(i)
-                return (
-                    <div className='content' key={i} >
-                        <Link to={`/case/${cases.case_id}`} >
-                            <div className='case_item'>
-                                <div className={`images images${[i]}`}>
-                                    <img className='pic' src={cases.background_url} alt='caseimg' />
-                                </div>
-                                <div className='case_header'>
-                                    <h1 >{cases.title}</h1>
-                                    <div className='blurb'><h5>{cases.blurb}</h5></div>
-                                    <p>{cases.brand}</p>
-                                </div>
+            }            
+        }) 
+        :
+        
+        this.state.casesData.map((cases, i) => {
+            // console.log(i)
+            return (
+                <div className='content' key={i} >
+                    <Link to={`/case/${cases.case_id}`} >
+                        <div className='case_item'>
+                            <div className={`images images${[i]}`}>
+                                <img className='pic' src={cases.background_url} alt='caseimg' />
                             </div>
-                        </Link>
-                    </div>
-                )
-            }) : ''
+                            <div className='case_header'>
+                                <h1 >{cases.title}</h1>
+                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                                <p>{cases.brand}</p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            )
+        }) : ''
 
         let postButton = this.state.admin ? <PostButton addFalse={this.addFalse} /> : <span />
 
