@@ -54,7 +54,7 @@
   font-weight: 400;
   font-size: 1rem;
   transition: .4s transform cubic-bezier(.19,1,.22,1),.4s background-color ease;
-  transition-property: transform, background-color;
+  /* transition-property: transform, background-color; */
   transition-duration: 0.4s, 0.4s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), ease;
   transition-delay: initial, initial;
@@ -70,7 +70,7 @@
     margin-bottom: 45px;
     z-index: 4;
     transition: .4s transform cubic-bezier(.19,1,.22,1),.6s opacity cubic-bezier(.19,1,.22,1);
-    transition-property: transform, opacity;
+    /* transition-property: transform, opacity; */
     transition-duration: 0.4s, 0.6s;
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);

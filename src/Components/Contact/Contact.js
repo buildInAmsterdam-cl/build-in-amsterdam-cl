@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import MetaTags from 'react-meta-tags'
 import './Contact.css'
 
 class Contact extends Component {
@@ -7,6 +7,11 @@ class Contact extends Component {
     render() {
         return (
             <div className='contactMainBox'>
+                <MetaTags>
+                    <title>BiA - Contact</title>
+                    <meta id="meta-description" name="description" content="Some description." />
+                    <meta id="og-title" property="og:title" content="MyApp" />
+                </MetaTags>
                 <div className='leftContactPicBox'></div>
                 <div className='rightContactInfo'>
                     <div className='infoBox'>

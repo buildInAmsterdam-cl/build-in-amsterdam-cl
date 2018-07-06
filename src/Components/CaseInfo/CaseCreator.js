@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { caseId7Information } from './CaseInfo';
 import './CaseCreator.css'
+import MetaTags from 'react-meta-tags'
 
 import Axios from 'axios';
 import TopArea from '../Sections/topArea';
@@ -29,18 +30,18 @@ export default class CaseCreator extends Component {
     componentDidMount() { //WHY component Will mount (about to be deprecated)? Why not component did mount OR Drew said something about putting it in the constructor.....have to ask more about that later
         Axios.get('/cases').then(res => {
             this.setState({
-                case: res.data[6]
+                case: res.data[Number(this.props.match.params.id) - 1]
             })
         })
 
-        Axios.get('/media/7').then((res) => {///replace w variables passed in through props
+        Axios.get(`/media/${Number(this.props.match.params.id)}`).then((res) => {///replace w variables passed in through props
             // console.log(res)
             this.setState({
                 media: res.data
             })
         })
 
-        Axios.get('/captions/7').then((res) => {
+        Axios.get(`/captions/${Number(this.props.match.params.id)}`).then((res) => {
             // console.log(res)
             this.setState({
                 captions: res.data
@@ -81,7 +82,7 @@ export default class CaseCreator extends Component {
                 // console.log(this.state.captions)
                 // console.log(captionsIndex1, captionsIndex2, captionsIndex3)
                 return (
-                    <div key={i}><OneFullFontGrid 
+                    <div key={i}><OneFullFontGrid
                         media1={this.state.media[mediaIndex1]}
                         media2={this.state.media[mediaIndex2]}
                         media3={this.state.media[mediaIndex3]}
@@ -116,43 +117,52 @@ export default class CaseCreator extends Component {
             } else if (ele.componentType === 'ColorPicker' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
                 let captionsIndex1 = this.state.captions.findIndex(e => { return e.caption_id === ele.captionsId[0] })
                 return (
-                    <div key={i}><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg'/></div>//needs a hardcoded colorpicker image
+                    <div key={i}><ColorPicker caption1={this.state.captions[captionsIndex1]} media1='https://wbcomdesigns-8cc9.kxcdn.com/wp-content/uploads/2017/06/Best-Color-Picker-Tools.jpg' /></div>//needs a hardcoded colorpicker image
                 )
 
-                 } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
-                     let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
-                     return (
-                         <div key={i}><TwoThirdsIPad media1={this.state.media[mediaIndex1]}/></div>
-                     )
-                 } else if (ele.componentType === 'FullGrid6PicsInIcons' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
-                    let mediaIndex1 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[0]})
-                    // console.log(mediaIndex1)
-                    let mediaIndex2 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[1]})
-                    let mediaIndex3 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[2]})
-                    let mediaIndex4 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[3]})
-                    let mediaIndex5 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[4]})
-                    let mediaIndex6 = this.state.media.findIndex(e=>{return e.media_id===ele.mediaId[5]})
-                 return (
-                     <div key={i}><FullGrid6PicsInIcons media1={this.state.media[mediaIndex1]} 
-                                                media2={this.state.media[mediaIndex2]} 
-                                                media3={this.state.media[mediaIndex3]} 
-                                                media4={this.state.media[mediaIndex4]} 
-                                                media5={this.state.media[mediaIndex5]} 
-                                                media6={this.state.media[mediaIndex6]}
-                                                /></div>
-                 )
+            } else if (ele.componentType === 'TwoThirdsIPad' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
+                let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
+                return (
+                    <div key={i}><TwoThirdsIPad media1={this.state.media[mediaIndex1]} /></div>
+                )
+            } else if (ele.componentType === 'FullGrid6PicsInIcons' && this.state.media[0] !== 'media' && this.state.captions[0] !== 'captions') {
+                let mediaIndex1 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[0] })
+                // console.log(mediaIndex1)
+                let mediaIndex2 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[1] })
+                let mediaIndex3 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[2] })
+                let mediaIndex4 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[3] })
+                let mediaIndex5 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[4] })
+                let mediaIndex6 = this.state.media.findIndex(e => { return e.media_id === ele.mediaId[5] })
+                return (
+                    <div key={i}><FullGrid6PicsInIcons media1={this.state.media[mediaIndex1]}
+                        media2={this.state.media[mediaIndex2]}
+                        media3={this.state.media[mediaIndex3]}
+                        media4={this.state.media[mediaIndex4]}
+                        media5={this.state.media[mediaIndex5]}
+                        media6={this.state.media[mediaIndex6]}
+                    /></div>
+                )
             } else {
                 return '';
             }
 
         })
 
-
-
+        let br = '';
+        if (this.state.case[0] !== ['case']) {
+            br = this.state.case.brand
+        }
+        let componentToggle = this.props.match.params.id === '7' ? componentStructure : '';
         return (
-            <div className = "caseCreator">
-                <TopArea indCase={this.state.case}/>
-                <div> {componentStructure}</div>
+            <div className="caseCreator">
+                <MetaTags>
+                    <title>BiA - {br}</title>
+                    <meta id="meta-description" name="description" content="Some description." />
+                    <meta id="og-title" property="og:title" content="MyApp" />
+                </MetaTags>
+                <TopArea indCase={this.state.case} />
+                {/* <div> {componentStructure}</div> */}
+                <div> {componentToggle}</div>
             </div>
         )
     }
