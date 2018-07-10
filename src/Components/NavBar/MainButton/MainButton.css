@@ -1,6 +1,59 @@
 .main-button{
   cursor: pointer;  
+  z-index: 4;
+  margin-top: 0;
+}
+.main-buttonPage{
+  cursor: pointer;  
   position: fixed;
+  top: 40px;
+  right: 35px;
+  overflow: hidden;
+}
+.hideButton {
+  height: 0;
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+
+.hamburger{
+  height:12px;
+  width: 19px;
+  z-index: 3;
+}
+
+.bar{
+  height: 2px;
+  width: 19px;
+  background: #171719;
+  margin-bottom: 3px;
+}
+.hamTrans {
+  z-index: 3;
+  margin-top: 0;
+}
+.barLeft {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #171719;
+  font-size: 25px;
+  background: transparent;
+}
+.barMiddle {
+  height: 2px;
+  width: 22.5PX;
+  background: #171719;
+  transform: rotate(135deg);
+  opacity: 0;
+  display: none;
+}
+.barRight {
+  height: 2px;
+  width: 22.5PX;
+  background: #171719;
+  opacity: 0;
+  display: none;
 }
 
 .circle{
@@ -11,35 +64,14 @@
   justify-content: center;
   align-items: center;
   background: #fbf9f6;
-  
+  z-index: 6;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+         transition:         transform .1s ease-in-out;
 }
-
-.hamburger{
-  height:12px;
-  width: 19px;
-  z-index: 3;
-}
-
 .circle:hover {
-  animation: turnThatJazz;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  /* animation */
-}
-@keyframes turnThatJazz {
-  from {
-    transform: rotate(0deg)
-  }
-  to {
-    transform: rotate(90deg)
-  }
-}
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 
-.bar{
-  height: 2px;
-  width: 19px;
-  background: #171719;
-  margin-bottom: 3px;
 }
 
 .button-slide {
@@ -51,4 +83,60 @@
   color: white;
   overflow: hidden;
   transition: 1s all ease;
+}
+
+.popOutBox {
+  overflow: hidden;
+  position: fixed;
+  top: 40px;
+  /* white-space: nowrap; */
+  right: 50px;
+  height: 45px;
+  /* width: 120px; */
+  width: 0px;
+  z-index: -1;
+  transition: 0.5s all ease;
+  /* background: green; */
+  border-radius: 45px;
+  /* opacity: 0; */
+}
+
+.popOutBox_inner {
+  transition: 0.5s all ease;
+  /* width: 0px; */
+  height: 45px;
+  /* white-space: nowrap; */
+  background-color: rgba(0,0,0,.22);
+  /* transform: translateX(-100%); */
+  /* transition: .4s transform cubic-bezier(.19,1,.22,1),.4s background-color ease; */
+  font-weight: 400;
+  /* z-index: 2; */
+  padding: 13px 55px 14px 25px;
+  font-family: Circular, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.main-buttonPage:hover .popOutBox{
+  /* white-space: nowrap; */
+  /* opacity: 1; */
+  transition: 0.5s all ease;
+  width: 110px;
+  /* z-index: 2; */
+  /* width: 0px; */
+  /* position: static; */
+  /* overflow: auto; */
+  /* z-index: 4; */
+  /* transform: translateX(-100%); */
+}
+.main-button:hover .popOutBox{
+  /* white-space: nowrap; */
+  /* opacity: 1; */
+  transition: 0.5s all ease;
+  width: 110px;
+  /* width: 0px; */
+  /* position: static; */
+  /* overflow: auto; */
+  /* z-index: -1; */
+  /* transform: translateX(-100%); */
 }
