@@ -117,7 +117,7 @@ export default class Cases extends Component {
                     <div className='case_item'>
                         <div className='button_group'>
                             <DeleteButton className='button' id={cases.case_id} />
-                            <button onClick={() => this.toggleEditable(i)}>Edit</button>
+                            <button style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em', letterSpacing:'.1em'}} onClick={() => this.toggleEditable(i)}>Edit</button>
                         </div>
                         <div className={`images images${[i]}`}>
                             <img className='pic' src={cases.background_url} alt='caseimg' />
@@ -136,8 +136,8 @@ export default class Cases extends Component {
                         <div className='case_item'>
                             <div className='button_group'>
                                 <DeleteButton className='button' id={cases.case_id} />
-                                <button onClick={() => this.toggleEditable(i)}>Edit</button>
-                                <EditButton className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
+                                <button style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em'}} onClick={() => this.toggleEditable(i)}>Edit</button>
+                                <EditButton style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em'}} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
                             </div>
                             <div className={`images images${[i]}`}>
                                 <img className='pic' src={cases.background_url} alt='caseimg' />

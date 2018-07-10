@@ -6,7 +6,7 @@ export default function Post(props){
     console.log(props)
     return(
     <div>
-        <button onClick={() => Axios.post(`/newcase/`).then(res => props.addFalse)}>Post</button>
+        <button style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', letterSpacing:'.1em'}} onClick={() => Axios.post(`/newcase/`).then(res => props.addFalse)}>Post</button>
     </div>
     )
 }
