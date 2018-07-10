@@ -186,12 +186,12 @@ export default class Cases extends Component {
             <meta id="meta-description" name="description" content="Some description." />
             <meta id="og-title" property="og:title" content="MyApp" />
           </MetaTags>
-                <button onClick={() => this.toggleAdmin()}>Toggle</button>
+                <div className='toggle_button'><button onClick={() => this.toggleAdmin()}>Toggle</button></div>
                     {casesSlideshow}
-                {postButton}
+                <span className='post_button'>{postButton}</span>
                 <div className='left_arrows' onClick={() => {this.leftScroll()}}>
                     <div className='circle_left'>
-                        <LeftArrow />
+                       <LeftArrow />
                     </div>
                 </div>
                 <div className='right_arrows' onClick={() => {this.rightScroll()}}>
