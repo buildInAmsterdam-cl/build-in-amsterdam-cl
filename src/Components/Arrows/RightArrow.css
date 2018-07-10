@@ -8,3 +8,7 @@
     transition-timing-function: ease;
     transition-delay: initial;
 } */
+
+.arrow_svg {
+    transform: matrix(1,0,0,1,0,0)
+}

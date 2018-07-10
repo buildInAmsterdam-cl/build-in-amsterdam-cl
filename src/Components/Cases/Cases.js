@@ -137,7 +137,7 @@ export default class Cases extends Component {
                             <div className='button_group'>
                                 <DeleteButton className='button' id={cases.case_id} />
                                 <button style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em'}} onClick={() => this.toggleEditable(i)}>Edit</button>
-                                <EditButton style={{color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em'}} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
+                                <EditButton style={{ fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em'}} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
                             </div>
                             <div className={`images images${[i]}`}>
                                 <img className='pic' src={cases.background_url} alt='caseimg' />
@@ -193,7 +193,7 @@ export default class Cases extends Component {
                     <div className='circle_left'>
                         <div className='left_drawer'>
                             <div className='left_drawer_inner'>
-                                <span>Previous</span>
+                                <span>More Cases</span>
                             </div>
                         </div>
                         <div className='left_arrow'>

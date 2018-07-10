@@ -14,7 +14,7 @@ export default class RightArrow extends Component {
             <div className='right_footer'> 
             {/* onClick in this div will use props to change the starting index of cases in state */}
                 <div className=''>
-                    <svg viewBox='0 0 0'>
+                    <svg className='arrow_svg'viewBox='0 0 0'>
                         <use href='#right_arrow' >
                             <polygon id='right_arrow' points="13.493,4.995 11.993,6.662 14.097,9 1.5,9 1.5,11 14.089,11 11.993,13.329 13.493,14.995 17.993,9.995">
                             </polygon>
