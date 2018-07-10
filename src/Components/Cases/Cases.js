@@ -65,17 +65,17 @@ export default class Cases extends Component {
 
     rightScroll() {
         window.scrollBy({
-            top:0,
-            left:1920,
+            top: 0,
+            left: 1920,
             behavior: 'smooth'
         })
     }
 
     leftScroll() {
         window.scrollBy({
-            top:0,
-            left:-1920,
-            behavior:'smooth'
+            top: 0,
+            left: -1920,
+            behavior: 'smooth'
         })
     }
 
@@ -112,8 +112,8 @@ export default class Cases extends Component {
         // }
 
         let casesSlideshow = this.state.casesData ? this.state.admin ? this.state.casesData.map((cases, i) => {
-                if (!this.state.editable[i]){
-                 return(   <div key={i} className='contentEditor'>
+            if (!this.state.editable[i]) {
+                return (<div key={i} className='contentEditor'>
                     <div className='case_item'>
                         <div className='button_group'>
                             <DeleteButton className='button' id={cases.case_id} />
@@ -124,11 +124,11 @@ export default class Cases extends Component {
                         </div>
                         <div className='case_header'>
                             <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
-                                <p>{cases.brand}</p>
-                            </div>
+                            <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                            <p>{cases.brand}</p>
                         </div>
-                    </div>)
+                    </div>
+                </div>)
             }
             else {
                 return (
@@ -153,48 +153,56 @@ export default class Cases extends Component {
 
 
                 )
-            }            
-        }) 
-        :
-        
-        this.state.casesData.map((cases, i) => {
-            // console.log(i)
-            return (
-                <div className='content' key={i} >
-                    <Link to={`/case/${cases.case_id}`} >
-                        <div className='case_item'>
-                            <div className={`images images${[i]}`}>
-                                <img className='pic' src={cases.background_url} alt='caseimg' />
+            }
+        })
+            :
+
+            this.state.casesData.map((cases, i) => {
+                // console.log(i)
+                return (
+                    <div className='content' key={i} >
+                        <Link to={`/case/${cases.case_id}`} >
+                            <div className='case_item'>
+                                <div className={`images images${[i]}`}>
+                                    <img className='pic' src={cases.background_url} alt='caseimg' />
+                                </div>
+                                <div className='case_header'>
+                                    <h1 >{cases.title}</h1>
+                                    <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                                    <p>{cases.brand}</p>
+                                </div>
                             </div>
-                            <div className='case_header'>
-                                <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
-                                <p>{cases.brand}</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-            )
-        }) : ''
+                        </Link>
+                    </div>
+                )
+            }) : ''
 
         let postButton = this.state.admin ? <PostButton addFalse={this.addFalse} /> : <span />
 
         return (
             <div className='case_parent'>
-            <MetaTags>
-            <title>BiA - Cases</title>
-            <meta id="meta-description" name="description" content="Some description." />
-            <meta id="og-title" property="og:title" content="MyApp" />
-          </MetaTags>
+                <MetaTags>
+                    <title>BiA - Cases</title>
+                    <meta id="meta-description" name="description" content="Some description." />
+                    <meta id="og-title" property="og:title" content="MyApp" />
+                </MetaTags>
                 <button onClick={() => this.toggleAdmin()}>Toggle</button>
-                    {casesSlideshow}
+                {casesSlideshow}
                 {postButton}
-                <div className='left_arrows' onClick={() => {this.leftScroll()}}>
+                <div className='left_arrows' onClick={() => { this.leftScroll() }}>
                     <div className='circle_left'>
-                        <LeftArrow />
+                        <div className='left_drawer'>
+                            <div className='left_drawer_inner'>
+                                <span>Previous</span>
+                            </div>
+                        </div>
+                        <div className='left_arrow'>
+
+                            <LeftArrow />
+                        </div>
                     </div>
                 </div>
-                <div className='right_arrows' onClick={() => {this.rightScroll()}}>
+                <div className='right_arrows' onClick={() => { this.rightScroll() }}>
                     <div className='circle_right right-next'>
                         <div className='right_drawer next'>
                             <div className='right_drawer_inner'>
