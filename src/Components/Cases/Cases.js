@@ -65,17 +65,17 @@ export default class Cases extends Component {
 
     rightScroll() {
         window.scrollBy({
-            top:0,
-            left:1920,
+            top: 0,
+            left: 1920,
             behavior: 'smooth'
         })
     }
 
     leftScroll() {
         window.scrollBy({
-            top:0,
-            left:-1920,
-            behavior:'smooth'
+            top: 0,
+            left: -1920,
+            behavior: 'smooth'
         })
     }
 
@@ -112,23 +112,23 @@ export default class Cases extends Component {
         // }
 
         let casesSlideshow = this.state.casesData ? this.state.admin ? this.state.casesData.map((cases, i) => {
-                if (!this.state.editable[i]){
-                 return(   <div key={i} className='contentEditor'>
+            if (!this.state.editable[i]) {
+                return (<div key={i} className='contentEditor'>
                     <div className='case_item'>
                         <div className='button_group'>
                             <DeleteButton className='button' id={cases.case_id} />
-                            <button onClick={() => this.toggleEditable(i)}>Edit</button>
+                            <button style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em', letterSpacing: '.1em' }} onClick={() => this.toggleEditable(i)}>Edit</button>
                         </div>
                         <div className={`images images${[i]}`}>
                             <img className='pic' src={cases.background_url} alt='caseimg' />
                         </div>
                         <div className='case_header'>
                             <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
-                                <p>{cases.brand}</p>
-                            </div>
+                            <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                            <p>{cases.brand}</p>
                         </div>
-                    </div>)
+                    </div>
+                </div>)
             }
             else {
                 return (
@@ -136,8 +136,8 @@ export default class Cases extends Component {
                         <div className='case_item'>
                             <div className='button_group'>
                                 <DeleteButton className='button' id={cases.case_id} />
-                                <button onClick={() => this.toggleEditable(i)}>Edit</button>
-                                <EditButton className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
+                                <button style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em' }} onClick={() => this.toggleEditable(i)}>Edit</button>
+                                <EditButton style={{ fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em' }} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
                             </div>
                             <div className={`images images${[i]}`}>
                                 <img className='pic' src={cases.background_url} alt='caseimg' />
@@ -153,56 +153,64 @@ export default class Cases extends Component {
 
 
                 )
-            }            
-        }) 
-        :
-        
-        this.state.casesData.map((cases, i) => {
-            // console.log(i)
-            return (
-                <div className='content' key={i} >
-                    <Link to={`/case/${cases.case_id}`} >
-                        <div className='case_item'>
-                            <div className={`images images${[i]}`}>
-                                <img className='pic' src={cases.background_url} alt='caseimg' />
+            }
+        })
+            :
+
+            this.state.casesData.map((cases, i) => {
+                // console.log(i)
+                return (
+                    <div className='content' key={i} >
+                        <Link to={`/case/${cases.case_id}`} >
+                            <div className='case_item'>
+                                <div className={`images images${[i]}`}>
+                                    <img className='pic' src={cases.background_url} alt='caseimg' />
+                                </div>
+                                <div className='case_header'>
+                                    <h1 >{cases.title}</h1>
+                                    <div className='blurb'><h5>{cases.subtitle}</h5></div>
+                                    <p>{cases.brand}</p>
+                                </div>
                             </div>
-                            <div className='case_header'>
-                                <h1 >{cases.title}</h1>
-                                <div className='blurb'><h5>{cases.subtitle}</h5></div>
-                                <p>{cases.brand}</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-            )
-        }) : ''
+                        </Link>
+                    </div>
+                )
+            }) : ''
 
         let postButton = this.state.admin ? <PostButton addFalse={this.addFalse} /> : <span />
 
         return (
             <div className='case_parent'>
-            <MetaTags>
-            <title>BiA - Cases</title>
-            <meta id="meta-description" name="description" content="Some description." />
-            <meta id="og-title" property="og:title" content="MyApp" />
-          </MetaTags>
-                <div className='toggle_button'><button onClick={() => this.toggleAdmin()}>Toggle</button></div>
-                    {casesSlideshow}
-                <span className='post_button'>{postButton}</span>
-                <div className='left_arrows' onClick={() => {this.leftScroll()}}>
+                <MetaTags>
+                    <title>BiA - Cases</title>
+                    <meta id="meta-description" name="description" content="Some description." />
+                    <meta id="og-title" property="og:title" content="MyApp" />
+                </MetaTags>
+                {casesSlideshow}
+                <div className='left_arrows' onClick={() => { this.leftScroll() }}>
                     <div className='circle_left'>
-                       <LeftArrow />
-                    </div>
-                </div>
-                <div className='right_arrows' onClick={() => {this.rightScroll()}}>
-                    <div className='circle_right right-next'>
-                        <div className='right_drawer next'>
-                            <div className='right_drawer_inner'>
+                        <div className='left_drawer'>
+                            <div className='left_drawer_inner'>
                                 <span>More Cases</span>
                             </div>
                         </div>
-                        <div className='right_arrow'>
-                            <RightArrow />
+                        <div className='left_arrow'>
+
+                            <LeftArrow />
+                        </div>
+                    </div>
+                    <div className='toggle_button'><button onClick={() => this.toggleAdmin()}>Toggle</button></div>
+                    <span className='post_button'>{postButton}</span>
+                    <div className='right_arrows' onClick={() => { this.rightScroll() }}>
+                        <div className='circle_right right-next'>
+                            <div className='right_drawer next'>
+                                <div className='right_drawer_inner'>
+                                    <span>More Cases</span>
+                                </div>
+                            </div>
+                            <div className='right_arrow'>
+                                <RightArrow />
+                            </div>
                         </div>
                     </div>
                 </div>
