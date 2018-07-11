@@ -472,5 +472,27 @@ width: 33vw;
 .button{
     margin: 3rem;
 }
+ .toggle_button{
+    opacity: 0;
+    position: fixed;
+    z-index: 6;
+    /* left: 250px;
+    top: 50px; */
+}
+    
+ 
 
+ .post_button{
+    position: fixed;
+    z-index: 6;
+    left: 55px;
+    
+ }
 
+ .toggle_button:hover{
+    opacity: 100;
+    position: fixed;
+    z-index: 6;
+    /* left: 250px;
+    top: 50px; */
+ }

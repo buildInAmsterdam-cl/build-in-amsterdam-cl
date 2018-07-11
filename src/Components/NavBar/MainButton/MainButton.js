@@ -8,7 +8,8 @@ export default class MainButton extends Component {
 
         this.state = {
             // menuDrawerAppear: false,
-            menuAppear: false
+            // menuAppear: true,
+            menuAppear: false,
         }
 
         this.toggleMenu = this.toggleMenu.bind(this)
@@ -24,11 +25,6 @@ export default class MainButton extends Component {
         return (
             <div>
                 <div className={!this.state.menuAppear ? "main-buttonPage" : "main-buttonPage hideButton"} >
-                    {/* <div className='popOutBox' >
-                        <div className='popOutBox_inner' >
-                            <span>Menu</span>
-                        </div>
-                    </div> */}
                     <div
                         // className="circle circleAnime" 
                         className="circle"
@@ -37,6 +33,11 @@ export default class MainButton extends Component {
                             <div className="bar"></div>
                             <div className="bar"></div>
                             <div className="bar"></div>
+                        </div>
+                    </div>
+                    <div className='popOutBox' >
+                        <div className='popOutBox_inner' >
+                            <span>Menu</span>
                         </div>
                     </div>
                     {/* <div className="button-slide">Menu</div> */}

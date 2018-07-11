@@ -1,18 +1,19 @@
 .main-button{
   cursor: pointer;  
-  position: fixed;
+  z-index: 4;
+  margin-top: 0;
 }
 .main-buttonPage{
   cursor: pointer;  
   position: fixed;
   top: 40px;
   right: 35px;
-  /* z-index: 6; */
-  align-items: flex-end;
   overflow: hidden;
 }
 .hideButton {
   height: 0;
+  opacity: 0;
+  transition: 1s all ease;
 }
 
 
@@ -22,99 +23,37 @@
   z-index: 3;
 }
 
-
-.popOutBox {
-  /* display: inline; */
-  /* position: relative; */
-  transform: translateX(100%);
-  white-space: nowrap;
-  height: 45px;
-  border-radius: 45px;
-  background: pink;
-  overflow: hidden;
-  /* position: fixed;
-  height: 45px;
-  width: 120px;
-  top: 100px;
-  right: 35px; */
-  /* border-radius: 30px; */
-  /* background: gray; */
-  /* z-index: 5; */
+.bar{
+  height: 2px;
+  width: 19px;
+  background: #171719;
+  margin-bottom: 3px;
+}
+.hamTrans {
+  z-index: 3;
+  margin-top: 0;
+}
+.barLeft {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #171719;
+  font-size: 25px;
+  background: transparent;
+}
+.barMiddle {
+  height: 2px;
+  width: 22.5PX;
+  background: #171719;
+  transform: rotate(135deg);
   opacity: 0;
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-  transition:         transform 2s ease-in-out;
+  display: none;
 }
-.popOutBox_inner {
-  background-color: rgba(0,0,0,.22);
-  transform: translateX(-100%);
-  border-radius: 45px;
-  padding: 13px 55px 14px 25px;
-  color: #fff;
-  font-family: Cirular, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  transition: .4s transform cubic-bezier(.19,1,.22,1),.4s background-color ease;
-  /* transition-property: transform, background-color; */
-  transition-duration: 0.4s, 0.4s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), ease;
-  transition-delay: initial, initial;
-  display: inline-block;
-}
-.popOutBox:hover {
-  cursor: pointer;
-    background-color: black;
-    opacity: .9;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-bottom: 45px;
-    z-index: 4;
-    transition: .4s transform cubic-bezier(.19,1,.22,1),.6s opacity cubic-bezier(.19,1,.22,1);
-    /* transition-property: transform, opacity; */
-    transition-duration: 0.4s, 0.6s;
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    transition-delay: initial, initial;
-    transform: translate3d(0,0,0);
-  /* transform: translateX(100%);
-  white-space: nowrap;
-  height: 45px;
-  border-radius: 45px;
-  transition: transform .4s; 
-  transform: cubic-bezier(.19,1,.22,1),.4s background-color ease;
-  transition-property: transform, background-color;
-  transition-duration: 0.4s, 0.4s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1), ease;
-  transition-delay: initial, initial;
-  opacity: 1; */
-
-  
-  /* animation: stretchOut; */
-  /* animation-duration: 2s; */
-  /* animation-delay: 1s; */
-  /* animation-fill-mode: linear; */
-  /* animation-iteration-count: ease-in-out; */
-  
-  
-  /* -ebkit-transform: rotate(90deg); */
-  /* -webkit-transform: left 40px; */
-  /* -webkit-transform: width 40px; */
-  /* transform: rotateX(40px); */
-  /* transform: translateX(-100%); */
-  /* transform: scaleX(0.5); */
-  /* transform: matrix(2, 0, 0,0, 1, 0); */
-  /* transform: stretchOut; */
-  /* transform: rotate(90deg); */
-}
-@keyframes stretchOut {
-  from {
-    left: 45px;
-    /* left: 0; */
-  }
-  to {
-    left: 90px;
-    /* left: -100px; */
-  }
+.barRight {
+  height: 2px;
+  width: 22.5PX;
+  background: #171719;
+  opacity: 0;
+  display: none;
 }
 
 .circle{
@@ -125,7 +64,7 @@
   justify-content: center;
   align-items: center;
   background: #fbf9f6;
-  /* transition: 3s all ease; */
+  z-index: 6;
   -webkit-transition: -webkit-transform .1s ease-in-out;
          transition:         transform .1s ease-in-out;
 }
@@ -133,13 +72,6 @@
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 
-}
-
-.bar{
-  height: 2px;
-  width: 19px;
-  background: #171719;
-  margin-bottom: 3px;
 }
 
 .button-slide {
@@ -151,4 +83,60 @@
   color: white;
   overflow: hidden;
   transition: 1s all ease;
+}
+
+.popOutBox {
+  overflow: hidden;
+  position: fixed;
+  top: 40px;
+  /* white-space: nowrap; */
+  right: 50px;
+  height: 45px;
+  /* width: 120px; */
+  width: 0px;
+  z-index: -1;
+  transition: 0.5s all ease;
+  /* background: green; */
+  border-radius: 45px;
+  /* opacity: 0; */
+}
+
+.popOutBox_inner {
+  transition: 0.5s all ease;
+  /* width: 0px; */
+  height: 45px;
+  /* white-space: nowrap; */
+  background-color: rgba(0,0,0,.22);
+  /* transform: translateX(-100%); */
+  /* transition: .4s transform cubic-bezier(.19,1,.22,1),.4s background-color ease; */
+  font-weight: 400;
+  /* z-index: 2; */
+  padding: 13px 55px 14px 25px;
+  font-family: Circular, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.main-buttonPage:hover .popOutBox{
+  /* white-space: nowrap; */
+  /* opacity: 1; */
+  transition: 0.5s all ease;
+  width: 110px;
+  /* z-index: 2; */
+  /* width: 0px; */
+  /* position: static; */
+  /* overflow: auto; */
+  /* z-index: 4; */
+  /* transform: translateX(-100%); */
+}
+.main-button:hover .popOutBox{
+  /* white-space: nowrap; */
+  /* opacity: 1; */
+  transition: 0.5s all ease;
+  width: 110px;
+  /* width: 0px; */
+  /* position: static; */
+  /* overflow: auto; */
+  /* z-index: -1; */
+  /* transform: translateX(-100%); */
 }

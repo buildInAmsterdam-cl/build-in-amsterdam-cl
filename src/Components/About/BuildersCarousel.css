@@ -1,0 +1,73 @@
+/* @import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css"; */
+
+.slider {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    font-family: 'Circular', san-serif;
+    /* max-height: 100vh; */
+    width: 66.66666vw;
+    float: right;
+  }
+
+  .slick-slide {
+    /* height: 100%; */
+    background: #fbf9f6;
+    text-align: center;
+    color: #171719;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+
+  }
+
+  .slick-track{
+      display: flex;
+      background: #fbf9f6;
+  }
+    .slide-img-sizer{
+       /* height: 100vh; */
+        /* width: 100%; */
+        overflow: hidden;
+        display: block;
+       justify-content: end;
+    }
+    .slick-slide img {
+        width: 100%;
+        /* height: 100%; */
+    }
+    .name-tag{
+        font-family: 'Circular', sans-serif;
+        font-weight: 100;
+        font-size: 1rem;
+        line-height: 1.563rem;
+        letter-spacing: .03rem;
+        text-align: left;
+        padding: 4.25rem 5rem 4.25rem 5rem!important;
+  }
+  .example-enter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.01;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+  .example-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+  }

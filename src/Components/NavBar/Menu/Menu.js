@@ -17,10 +17,15 @@ export default class Menu extends Component {
                         className="circle"
                         // onClick={this.props.menuClose}
                         >
-                         <div className="hamburger">
-                             <div className="bar"></div> 
-                             <div className="bar"></div> 
-                             <div className="bar"></div> 
+                         <div className="hamTrans">
+                             <div className="barLeft">x</div> 
+                             <div className="barMiddle"></div> 
+                             <div className="barRight"></div> 
+                        </div>
+                    </div>
+                    <div className='popOutBox' >
+                        <div className='popOutBox_inner' >
+                            <span>Close</span>
                         </div>
                     </div>
                     {/* <div className="button-slide">Menu</div> */}

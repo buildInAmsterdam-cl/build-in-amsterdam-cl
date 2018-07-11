@@ -13,7 +13,9 @@
     "react-parallax": "^1.8.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-vimeo": "^2.0.0"
+    "react-slick": "^0.23.1",
+    "react-vimeo": "^2.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
