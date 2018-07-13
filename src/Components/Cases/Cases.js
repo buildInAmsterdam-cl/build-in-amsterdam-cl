@@ -117,7 +117,7 @@ export default class Cases extends Component {
                     <div className='case_item'>
                         <div className='button_group'>
                             <DeleteButton className='button' id={cases.case_id} />
-                            <button style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em', letterSpacing: '.1em' }} onClick={() => this.toggleEditable(i)}>Edit</button>
+                            <div style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', letterSpacing: '.1em', marginTop:'10px', marginRight: '12px' }} onClick={() => this.toggleEditable(i)}>Edit</div>
                         </div>
                         <div className={`images images${[i]}`}>
                             <img className='pic' src={cases.background_url} alt='caseimg' />
@@ -136,8 +136,8 @@ export default class Cases extends Component {
                         <div className='case_item'>
                             <div className='button_group'>
                                 <DeleteButton className='button' id={cases.case_id} />
-                                <button style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em' }} onClick={() => this.toggleEditable(i)}>Edit</button>
-                                <EditButton style={{ fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop: '1em' }} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
+                                <div style={{ color: '#fff', fontFamily: 'circular, sans-serif', fontSize: '.7em', marginTop:'10px', marginRight: '12px'}} onClick={() => this.toggleEditable(i)}>Edit</div>
+                                <EditButton style={{ fontFamily: 'circular, sans-serif', fontSize: '.7em'}} className='button' newTitle={this.state.title} newSubtitle={this.state.subtitle} newBrand={this.state.brand1} id={cases.case_id} />
                             </div>
                             <div className={`images images${[i]}`}>
                                 <img className='pic' src={cases.background_url} alt='caseimg' />
@@ -186,6 +186,8 @@ export default class Cases extends Component {
                     <meta id="meta-description" name="description" content="Some description." />
                     <meta id="og-title" property="og:title" content="MyApp" />
                 </MetaTags>
+                <div className='toggle_button'><span className='admin_text' onClick={() => this.toggleAdmin()}>Admin</span></div>
+                <span className='post_button'>{postButton}</span>
                 {casesSlideshow}
                 <div className='left_arrows' onClick={() => { this.leftScroll() }}>
                     <div className='circle_left'>
@@ -195,22 +197,19 @@ export default class Cases extends Component {
                             </div>
                         </div>
                         <div className='left_arrow'>
-
                             <LeftArrow />
                         </div>
                     </div>
-                    <div className='toggle_button'><button onClick={() => this.toggleAdmin()}>Toggle</button></div>
-                    <span className='post_button'>{postButton}</span>
-                    <div className='right_arrows' onClick={() => { this.rightScroll() }}>
-                        <div className='circle_right right-next'>
-                            <div className='right_drawer next'>
-                                <div className='right_drawer_inner'>
-                                    <span>More Cases</span>
-                                </div>
+                </div>
+                <div className='right_arrows' onClick={() => { this.rightScroll() }}>
+                    <div className='circle_right right-next'>
+                        <div className='right_drawer next'>
+                            <div className='right_drawer_inner'>
+                                <span>More Cases</span>
                             </div>
-                            <div className='right_arrow'>
-                                <RightArrow />
-                            </div>
+                        </div>
+                        <div className='right_arrow'>
+                            <RightArrow />
                         </div>
                     </div>
                 </div>
