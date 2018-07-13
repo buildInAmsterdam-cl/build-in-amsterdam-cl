@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.6.1",
     "axios": "^0.18.0",
     "massive": "^5.0.0",
     "material-ui": "^0.20.1",
     "material-ui-image": "^3.0.0",
     "react": "^16.4.1",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.4.1",
     "react-meta-tags": "^0.4.1",
     "react-parallax": "^1.8.0",

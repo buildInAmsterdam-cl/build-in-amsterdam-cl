@@ -22,19 +22,27 @@
     padding-right: 2.988rem;
     padding-top: 40vh;
     width: 60vw;
-    margin-left: 33.3vw;
+    margin-left: 32vw;
     /* height: auto; */
     /* height: 90vh; */
     padding-bottom: 6.25rem;
     padding-left: 6.25rem;
+    position: fixed;
+    top:0;
+    z-index: -1;
+    
 }
+
 .about-text{
-    width: 100vw;
-    display: flex;
+    width: 100%;
+    
+    /* display: flex;
     flex-direction: row;
     text-align: left;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start; */
+   
 }
 
 .titleHeadAbout {
@@ -73,26 +81,26 @@
 .size-about{
     height: 100vh;
     background-color:#171719;
-   
+    width: 100%;
 }
 
 .about{
     color: #fbf9f6;
-    height: 100vh;
+    /* height: 100vh; */
     width: 60vw;
-    padding:200px 50px 100px 100px;
+    padding:200px 50px 100px;
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-   background-color:#171719;
+   /* background-color:#171719; */
    margin-left: 33.3vw;
 }
 
 .builders{
     background-color:#171719;
     color: white;
-    width: 100%;
-    /* height: 100%; */
+    width: 100vw;
+    /* height: 100vh; */
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
@@ -125,6 +133,7 @@
     font-size: 3.125rem!important;
     margin-bottom: 50px;
     margin-top: 0;
+    margin-left: 50px;
     letter-spacing: .07rem;
 }
 
