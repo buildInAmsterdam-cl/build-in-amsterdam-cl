@@ -15,45 +15,340 @@
   opacity: 0;
   transition: 1s all ease;
 }
-
-
 .hamburger{
   height:12px;
   width: 19px;
   z-index: 3;
 }
-
 .bar{
   height: 2px;
   width: 19px;
   background: #171719;
   margin-bottom: 3px;
 }
-.hamTrans {
+.hamTransNorm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:12px;
+  width: 19px;
   z-index: 3;
-  margin-top: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+.hamTrans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  margin-top: 0px;
+  animation-name: hamShrink;
+  animation-duration: 4s;
+  animation-fill-mode: ease-in-out;
+  animation-iteration-count: initial;
+}
+@keyframes hamShrink {
+  0% {
+    margin-bottom: 10px;
+  }
+  15% {
+    margin-bottom: 0px;
+  }
+
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
+.barLeftAnimatIn {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  /* margin-top: 10px; */
+  animation-name: barLeftShrink;
+  margin-right: 10px;
+  animation-duration: 1.5s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+  /* animation-fill-mode: ease; */
+ background: #171719;
+}
+.barMiddleAnimatIn {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  /* margin-right: 30px; */
+  margin-right: 10px;
+  /* margin-left: 30px; */
+  background: #171719;
+  animation-name: barMidGone;
+  animation-duration: 1.5s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+
+}
+.barRightAnimatIn {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  margin-right: 60px;
+  /* margin-top: 5px; */
+  background: #171719;
+  animation-name: barRightShrink;
+  animation-duration: 1.5s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+
+}
+
+@keyframes barLeftShrink {
+  0%{
+    margin-top: 10px;
+  }
+  25%{
+    margin-top: 0px;
+  }
+  35%{
+    margin-top: 0px;
+    transform: rotate(10deg);
+  }
+  100%{
+    margin-top: 0px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes barMidGone {
+  0%{
+    opacity: 1;
+    /* margin-top: 10px; */
+  }
+  25%{
+    /* margin-top: 0px; */
+    opacity: 0;
+    /* transform: rotate(10deg); */
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes barRightShrink {
+  0%{
+    margin-top: 5px;
+  }
+  25%{
+    margin-top: 0px;
+  }
+  35%{
+    margin-top: 0px;
+    transform: rotate(-10deg);
+  }
+/* 
+  50%{
+    margin-top: 0px;
+    transform: rotate(-10deg);
+  }
+  75%{
+    margin-top: 0px;
+    transform: rotate(-10deg);
+  } */
+  100%{
+    margin-top: 0px;
+    transform: rotate(-45deg);
+  }
+}
+
+.hamTransOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: white; */
+  /* position: absolute; */
+  /* height:12px; */
+  /* width: 19px; */
+  z-index: 80;
+  /* margin-right: 20px; */
+  /* margin-left: 20px; */
+  margin-top: 0px;
+  /* margin-bottom: 10px; */
+  animation-name: hamExpand;
+  animation-duration: 2.2s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+
+
+  
+}
+@keyframes hamExpand {
+  0% {
+    margin-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 10px;
+  }
+
+  100% {
+    margin-bottom: 10px;
+  }
+}
+
+.barLeftAnimatOut {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  /* margin-top: 10px; */
+  animation-name: barLeftExpand;
+  margin-right: 10px;
+  animation-duration: 2.2s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+  /* animation-fill-mode: ease; */
+ background: #171719;
+ z-index: 21;
+}
+.barMiddleAnimatOut {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  /* margin-right: 30px; */
+  margin-right: 10px;
+  /* margin-left: 30px; */
+  background: #171719;
+  animation-name: barMidHello;
+  animation-duration: 2.2s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+  z-index: 21;
+
+}
+.barRightAnimatOut {
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  margin-right: 60px;
+  /* margin-top: 5px; */
+  background: #171719;
+  animation-name: barRightExpand;
+  animation-duration: 2.2s;
+  animation-fill-mode: ease-in-out;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: initial;
+  z-index: 21;
+}
+
+@keyframes barLeftExpand {
+  0%{
+    margin-top: 0px;
+    transform: rotate(45deg);
+  }
+  50%{
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  65%{
+    margin-top: 10px;
+    transform: rotate(0deg);
+  }
+  
+  /* 50%{
+    margin-top: 0px;
+    transform: rotate(25deg);
+  }
+  75%{
+    margin-top: 0px;
+    transform: rotate(10deg);
+  } */
+  100%{
+    margin-top: 10px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes barMidHello {
+  0%{
+    opacity: 0;
+    /* margin-top: 10px; */
+  }
+  50%{
+    /* margin-top: 0px; */
+    opacity: 1;
+    /* transform: rotate(10deg); */
+  }
+  
+  /* 50%{
+    margin-top: 0px;
+    transform: rotate(25deg);
+  }
+  75%{
+    margin-top: 0px;
+    transform: rotate(10deg);
+  } */
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes barRightExpand {
+  0%{
+    margin-top: 0px;
+    transform: rotate(-45deg);
+  }
+  50%{
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  65%{
+    margin-top: 5px;
+    transform: rotate(0deg);
+  }
+/* 
+  50%{
+    margin-top: 0px;
+    transform: rotate(-10deg);
+  }
+  75%{
+    margin-top: 0px;
+    transform: rotate(-10deg);
+  } */
+  100%{
+    margin-top: 5px;
+    transform: rotate(0deg);
+  }
+}
+
+
+
 .barLeft {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #171719;
-  font-size: 25px;
-  background: transparent;
+  /* display: static; */
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  background: #171719;
+  transform: rotate(45deg);
+  /* margin-bottom: 3px; */
 }
 .barMiddle {
+  /* display: static; */
+  position: absolute;
   height: 2px;
-  width: 22.5PX;
+  width: 19px;
   background: #171719;
-  transform: rotate(135deg);
+  /* background: green; */
   opacity: 0;
-  display: none;
+  /* margin-bottom: 3px; */
 }
 .barRight {
+  /* display: static; */
+  position: absolute;
   height: 2px;
-  width: 22.5PX;
+  width: 19px;
   background: #171719;
-  opacity: 0;
-  display: none;
+  /* background: pink; */
+  transform: rotate(135deg);
+  /* margin-bottom: 3px; */
 }
 
 .circle{

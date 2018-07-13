@@ -1,42 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
-
-.hide{
+ 
+.hide{ /* This is an animation applied to the hide object, so that the hide when being used will not stop the outgoing animations. */
     animation-name: slowerHeightHide;
     animation-duration: 2.01s;
     animation-fill-mode: ease;
     animation-iteration-count: initial;
-    /* height: 0px; */
 }
-
-@keyframes slowerHeightHide {
-    /* from {left: 0px;} */
-    /* to {left: 200px;} */
+@keyframes slowerHeightHide { /* Until a millisecond before the animation cycle is complete, the height of the menu will remain the same during the output animation. */
     0% {
         height: 100vh;
-    }
-    25% {
-        height: 100vh;
-    }
-    50% {
-        height: 100vh;
-        
-    }
-    75% {
-        height: 100vh;
-        
     }
     99% {
         height: 100vh;
     }
     100% {
-        height: 0vh;
-        
+        height: 0vh;       
     }
 }
-
-
-
-.menu{
+.menu{ /* This is the main menu prop that is passed down with hide into the menu.js page. It is referenced in both the MainButton.js and Menu.js */
     font-family: 'Circular', sans-serif;
     font-weight: 100;
     font-size: 1rem;
@@ -55,7 +36,7 @@
     z-index: 2;
     
 }
-.menu h1{
+.menu h1{ /* This manipulates any h1 tags in the menu class. */
     font-size: 3.75rem;
     font-weight: 550;
     margin-bottom: 0;
@@ -64,51 +45,30 @@
     padding-bottom: 0;
     top: 14px;
 } 
-
-/* .h1Con {
-    display: flex;
-    flex-direction: row;
-    font-size: 3.75rem;
-    font-weight: 550;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    top: 14px;
-} */
-/* 
-.h1ContainerMenu {
-    display: flex;
-    flex-direction: row;
-} */
-
-.flexRMen {
+.flexRMen { /* This is a subclass I made but may not be used right now. TODO: Could be deleted potentially if not being used.  */
     display: flex;
     flex-direction: row;
 }
-
-.menu-bar{
+.menu-bar{ /* The first panel on the left of the menu */
     height: 100vh;
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
     align-items: center;
     min-width: 33%;
-
 }
 
-.menu-text{
+.menu-text{ /* Text sizing using throughout all menu text */
     height: 80px;
     max-width: 300px;
     line-height: 1.5rem;
-    /* overflow: hidden; */
 }
-.outerMenuThirdBox {
+.outerMenuThirdBox { /* This is a div that is included so that when collapsing width on the animated div, the animated div will stay in the location that it's supposed to and not 'accordian' out. */
     width: 33.333333vw; 
     height: 100vh; 
     background: transparent;
 }
-.cases{
+.cases{ 
     background-color:#1F1F21;
     height: 100vh;
     width: 33.333333vw;
@@ -132,14 +92,12 @@
     animation-fill-mode: ease;
     animation-iteration-count: initial;
 }
-
 @keyframes slideInToRight {
     0% {
         width: 0%;
     }
     100% {
         width: 100%;
-        
     }
 }
 @keyframes slideOutToRight {
@@ -150,7 +108,6 @@
         width: 0%;
     }
 }
-
 .menu-about{
     background-color:#171718;
     height: 100vh;
@@ -163,7 +120,6 @@
     width: 33.3333333vw;
     overflow: hidden;
 }
-
 .main-button{
     position: absolute;
     top: 0;
@@ -173,15 +129,12 @@
     height: 45px;
     cursor: pointer;  
 }
-
 .underline {
     display: inline;
     position: relative;
     overflow: hidden;
     z-index: 3;
 }
-
-/* .menu-bar:hover:after,  */
 .underline:after {
     content: "";
     position: absolute;
@@ -199,9 +152,7 @@
 .underline:active:after {
   right: 0;
 }
-
 .h1ContainerMenu {
-    /* border: 1px solid white; */
     height: 80px;
     overflow: hidden;
     margin-bottom: 0;
@@ -209,40 +160,22 @@
     padding-top: 0;
     padding-bottom: 0;
 }
-
 .text-expand {
     height: 0;
     overflow: hidden;
     opacity: 0;
     transition: 0.5s all ease;
 }
-
 .menu-bar:hover .h1Con  {
-    /* transition: 1s all ease; */
-    
     animation: peekaSlide;
     animation-duration: 0.4s;
     animation-play-state: inherit;
-    /* animation-timing-function: 1s all; */
-    /* animation-iteration-count: initial; */
 }
-
-/* Still Need to fix this one to animate out. */
-
-
-
-
-
 .menu-bar:hover:focus:after .h1Con:hover:focus:after  {
-    /* transition: 1s all ease; */
-    
     animation: peekaSlideReverse;
     animation-duration: 0.4s;
     animation-play-state: initial;
-    /* animation-timing-function: 1s all; */
-    /* animation-iteration-count: initial; */
 }
-
 @keyframes peekaSlide {
  0% {
     top: 14px;
@@ -272,45 +205,41 @@
     0% {
         top: 14px;
         left: 0px;
-     }
+    }
      25%{
          top: 100px;
          left: 300px;
-     }
+    }
      30% {
          top: -100px;
          left: 300px;
-     }
+    }
      40% {
          top: -100px;
          left: 0px;
-     }
+    }
      60% {
          top: 100px;
          left: 0px;
-        }
-                 100% {
-                    top: 14px;
-                }
+    }
+    100% {
+        top: 14px;
+    }
 }
-
 .menu-bar:hover,
 .menu-bar:focus .h1ContainMenu .h1Con {
     transform: translateY(-120px);
 
 }
-
 .menu-bar:hover .text-expand {
     height: 120px;
     transform: translateY(-20px);
-    /* line-height: 20px; */
     transition: 1s all ease;
     opacity: 1;
 }
 .menu-bar:hover:after .h1ContainMenu .h1Con {
     transition: 1s ease all;
     transform: translateY(0px);
-
 }
 .boldPTag {
     font-weight: bold;

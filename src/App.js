@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-// import LoadingAnimation from './Components/LoadingPage/LoadAnimation';
+import LoadingAnimation from './Components/LoadingPage/LoadAnimation';
 import Routes from './Routes';
 import NavBar from './Components/NavBar/NavBar';
 
@@ -35,7 +35,7 @@ timer = () => {
       <div className="App">
       {this.timer()}
       <div><NavBar/></div>
-      {/* {this.state.show ? <LoadingAnimation /> : ''} */}
+      {this.state.show ? <LoadingAnimation /> : ''}
         {Routes}
       </div>
     );
