@@ -1,5 +1,6 @@
 
 .oneHalfImageMain {
+    display: flex;
     width: 50vw;
     height: 100vh;
     background: yellowgreen;

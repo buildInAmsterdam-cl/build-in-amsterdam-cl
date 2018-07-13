@@ -2,12 +2,25 @@
     width: 66.66666vw;
     height: 100vh;
     overflow: hidden;
-    background: #ED5965;
+    /* background: #ED5965; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .twoThirdsImageResize {
+    max-width: 66.666vw;
+    /* height: 100vh; */
+}
+.boxerImageResize {
+    max-width: 66.666vw;
+}
+
+.twoThirdsImageResizeIcons {
+    max-width: 66.666vw;
+    height: 100vh;
+}
+
+.twoThirdsImageResizeLogo {
     top: 50;
     bottom: 50;
     max-width: 1280px;
