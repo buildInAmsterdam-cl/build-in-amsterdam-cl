@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animate.css": "^3.6.1",
-    "axios": "^0.18.0",
-    "massive": "^5.0.0",
-    "material-ui": "^0.20.1",
-    "material-ui-image": "^3.0.0",
-    "react": "^16.4.1",
+    "animate.css": "^3.7.2",
+    "axios": "^0.18.1",
+    "massive": "^5.11.0",
+    "material-ui": "^0.20.2",
+    "material-ui-image": "^3.2.0",
+    "react": "^16.8.6",
     "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "^16.4.1",
-    "react-meta-tags": "^0.4.1",
+    "react-dom": "^16.8.6",
+    "react-meta-tags": "^0.4.2",
     "react-parallax": "^1.8.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-slick": "^0.23.1",
+    "react-slick": "^0.23.2",
     "react-vimeo": "^2.0.0",
     "slick-carousel": "^1.8.1"
   },
@@ -28,6 +28,6 @@
   "main": "server/index.js",
   "proxy": "http://localhost:3003",
   "devDependencies": {
-    "jest": "^23.2.0"
+    "jest": "^23.6.0"
   }
 }
