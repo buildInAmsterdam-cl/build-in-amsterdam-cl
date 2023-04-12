@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@supabase/supabase-js": "^2.10.0",
     "animate.css": "^3.6.1",
     "axios": "^0.18.0",
     "massive": "^5.0.0",
